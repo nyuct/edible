@@ -1,0 +1,662 @@
+/*
+  utilities-responsive-grid.css
+  Ready-to-use utility CSS (Bootstrap-like) with responsive breakpoints and a simple grid system.
+  Usage: include this file and use utility classes directly in markup.
+
+  Breakpoints (mobile-first):
+    -- sm: 576px
+    -- md: 768px
+    -- lg: 992px
+    -- xl: 1200px
+
+  Notes:
+    - Class naming follows Bootstrap-like shorthand (e.g., .m-2, .d-flex, .w-50).
+    - Responsive variants use the pattern: .{breakpoint}:{utility} (e.g., .md:d-flex or .lg:w-50).
+    - Grid: .container, .row, .col, with responsive column sizing using .col-{n} and .col-{breakpoint}-{n}.
+*/
+
+:root {
+  /* breakpoints */
+  --break-sm: 576px;
+  --break-md: 768px;
+  --break-lg: 992px;
+  --break-xl: 1200px;
+
+  /* spacing scale (rem based) */
+  --sp-0: 0rem;
+  --sp-1: 0.25rem; /* 4px */
+  --sp-2: 0.5rem; /* 8px */
+  --sp-3: 1rem; /* 16px */
+  --sp-4: 1.5rem; /* 24px */
+  --sp-5: 3rem; /* 48px */
+
+  /* container widths aligned with breakpoints */
+  --container-sm: 540px;
+  --container-md: 720px;
+  --container-lg: 960px;
+  --container-xl: 1140px;
+
+  /* typography */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --font-base-size: 16px;
+}
+
+/* -----------------------------
+   Reset / Base
+   ----------------------------- */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: var(--font-sans);
+  font-size: var(--font-base-size);
+  line-height: 1.4;
+}
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* -----------------------------
+   Containers & Grid
+   ----------------------------- */
+.container {
+  width: 100%;
+  padding-left: var(--sp-3);
+  padding-right: var(--sp-3);
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-sm {
+  max-width: var(--container-sm);
+}
+.container-md {
+  max-width: var(--container-md);
+}
+.container-lg {
+  max-width: var(--container-lg);
+}
+.container-xl {
+  max-width: var(--container-xl);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(var(--sp-2) * -1);
+  margin-right: calc(var(--sp-2) * -1);
+}
+.row.no-gutters {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+[class*="col-"] {
+  position: relative;
+  padding-left: var(--sp-2);
+  padding-right: var(--sp-2);
+}
+.col {
+  flex: 1 0 0%;
+  max-width: 100%;
+}
+
+/* column sizes (1-12) */
+@media (min-width: 0) {
+  .col-1 {
+    flex: 0 0 8.333333%;
+    max-width: 8.333333%;
+  }
+  .col-2 {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+  }
+  .col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  .col-5 {
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+  }
+  .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-7 {
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+  }
+  .col-8 {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+  .col-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .col-10 {
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+  }
+  .col-11 {
+    flex: 0 0 91.666667%;
+    max-width: 91.666667%;
+  }
+  .col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* responsive column helpers */
+@media (min-width: var(--break-sm)) {
+  .sm\:col-1 {
+    flex: 0 0 8.333333%;
+    max-width: 8.333333%;
+  }
+  .sm\:col-2 {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+  }
+  .sm\:col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .sm\:col-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  .sm\:col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .sm\:col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: var(--break-md)) {
+  .md\:col-1 {
+    flex: 0 0 8.333333%;
+    max-width: 8.333333%;
+  }
+  .md\:col-2 {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+  }
+  .md\:col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .md\:col-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  .md\:col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .md\:col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: var(--break-lg)) {
+  .lg\:col-1 {
+    flex: 0 0 8.333333%;
+    max-width: 8.333333%;
+  }
+  .lg\:col-2 {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+  }
+  .lg\:col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .lg\:col-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  .lg\:col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .lg\:col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: var(--break-xl)) {
+  .xl\:col-1 {
+    flex: 0 0 8.333333%;
+    max-width: 8.333333%;
+  }
+  .xl\:col-2 {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+  }
+  .xl\:col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .xl\:col-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  .xl\:col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .xl\:col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* -----------------------------
+   Width / Height / Display
+   ----------------------------- */
+.w-100 {
+  width: 100%;
+}
+.w-auto {
+  width: auto;
+}
+.w-50 {
+  width: 50%;
+}
+.w-25 {
+  width: 25%;
+}
+.w-75 {
+  width: 75%;
+}
+
+.h-100 {
+  height: 100%;
+}
+.h-auto {
+  height: auto;
+}
+.min-h-100 {
+  min-height: 100%;
+}
+
+.d-block {
+  display: block;
+}
+.d-inline {
+  display: inline;
+}
+.d-inline-block {
+  display: inline-block;
+}
+.d-flex {
+  display: flex;
+}
+.d-grid {
+  display: grid;
+}
+.d-none {
+  display: none;
+}
+
+/* responsive display helpers (example) */
+@media (min-width: var(--break-md)) {
+  .md\:d-flex {
+    display: flex;
+  }
+  .md\:d-block {
+    display: block;
+  }
+  .md\:d-none {
+    display: none;
+  }
+}
+
+/* -----------------------------
+   Flex / Grid helpers
+   ----------------------------- */
+.flex-row {
+  flex-direction: row;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.items-start {
+  align-items: flex-start;
+}
+.items-center {
+  align-items: center;
+}
+.items-end {
+  align-items: flex-end;
+}
+.flex-1 {
+  flex: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--sp-3);
+}
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* -----------------------------
+   Margin / Padding (scale)
+   ----------------------------- */
+.m-0 {
+  margin: var(--sp-0);
+}
+.m-1 {
+  margin: var(--sp-1);
+}
+.m-2 {
+  margin: var(--sp-2);
+}
+.m-3 {
+  margin: var(--sp-3);
+}
+.m-4 {
+  margin: var(--sp-4);
+}
+.m-5 {
+  margin: var(--sp-5);
+}
+
+.mt-0 {
+  margin-top: var(--sp-0);
+}
+.mt-1 {
+  margin-top: var(--sp-1);
+}
+.mt-2 {
+  margin-top: var(--sp-2);
+}
+.mt-3 {
+  margin-top: var(--sp-3);
+}
+.mb-1 {
+  margin-bottom: var(--sp-1);
+}
+.mb-2 {
+  margin-bottom: var(--sp-2);
+}
+.mb-3 {
+  margin-bottom: var(--sp-3);
+}
+.ml-1 {
+  margin-left: var(--sp-1);
+}
+.mr-1 {
+  margin-right: var(--sp-1);
+}
+.mr-2 {
+  margin-right: var(--sp-2);
+}
+.mr-3 {
+  margin-right: var(--sp-3);
+}
+
+.p-0 {
+  padding: var(--sp-0);
+}
+.p-1 {
+  padding: var(--sp-1);
+}
+.p-2 {
+  padding: var(--sp-2);
+}
+.p-3 {
+  padding: var(--sp-3);
+}
+.p-4 {
+  padding: var(--sp-4);
+}
+.p-5 {
+  padding: var(--sp-5);
+}
+
+.pt-1 {
+  padding-top: var(--sp-1);
+}
+.pb-1 {
+  padding-bottom: var(--sp-1);
+}
+.pl-1 {
+  padding-left: var(--sp-1);
+}
+.pr-1 {
+  padding-right: var(--sp-1);
+}
+
+/* responsive spacing examples */
+@media (min-width: var(--break-md)) {
+  .md\:m-0 {
+    margin: var(--sp-0);
+  }
+  .md\:p-3 {
+    padding: var(--sp-3);
+  }
+}
+
+/* -----------------------------
+   Position helpers
+   ----------------------------- */
+.pos-relative {
+  position: relative;
+}
+.pos-absolute {
+  position: absolute;
+}
+.pos-fixed {
+  position: fixed;
+}
+.pos-sticky {
+  position: sticky;
+}
+.top-0 {
+  top: 0;
+}
+.bottom-0 {
+  bottom: 0;
+}
+.left-0 {
+  left: 0;
+}
+.right-0 {
+  right: 0;
+}
+.z-0 {
+  z-index: 0;
+}
+.z-10 {
+  z-index: 10;
+}
+.z-20 {
+  z-index: 20;
+}
+
+/* -----------------------------
+   Text / Font helpers
+   ----------------------------- */
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-lowercase {
+  text-transform: lowercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+.text-bold {
+  font-weight: 700;
+}
+.text-medium {
+  font-weight: 500;
+}
+.text-light {
+  font-weight: 300;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+.fw-medium {
+  font-weight: 500;
+}
+.fw-light {
+  font-weight: 300;
+}
+.fs-12 {
+  font-size: 12px;
+}
+.fs-14 {
+  font-size: 14px;
+}
+.fs-16 {
+  font-size: 16px;
+}
+.fs-18 {
+  font-size: 18px;
+}
+.fs-20 {
+  font-size: 20px;
+}
+
+/* -----------------------------
+   Visibility / Utilities
+   ----------------------------- */
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-auto {
+  overflow: auto;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.rounded {
+  border-radius: 6px;
+}
+.shadow-sm {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* -----------------------------
+   Helper selectors for responsive shorthand generation
+   (Examples: .md:d-flex, .lg:w-50) - you can add more as needed
+   ----------------------------- */
+@media (min-width: var(--break-sm)) {
+  .sm\:w-100 {
+    width: 100%;
+  }
+  .sm\:d-block {
+    display: block;
+  }
+}
+@media (min-width: var(--break-md)) {
+  .md\:w-100 {
+    width: 100%;
+  }
+  .md\:d-block {
+    display: block;
+  }
+}
+@media (min-width: var(--break-lg)) {
+  .lg\:w-50 {
+    width: 50%;
+  }
+}
+
+/* -----------------------------
+   Small helpers for forms/buttons
+   ----------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-primary {
+  background: #0d6efd;
+  color: #fff;
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid #ddd;
+}
+.input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* -----------------------------
+   End of utilities
+   Add more responsive variants or utilities as needed.
+*/
+
+h1 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #ede5d3;
+  margin: 0;
+}

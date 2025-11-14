@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+:root {
+  --bg-blue: #1e1e1e;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+  background: #ede5d3;
+  width: 100vw;
+  overflow-x: hidden;
+}
+.preloader {
+  background-color: var(--bg-blue);
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.preloader-text {
+  text-align: center;
+  transition: all 0.2s;
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+/* Ticker css  */
+:root {
+  /* px travelled per second (lower = slower). You can override per-row via data attribute. */
+  --px-per-sec: 50;
+  --gap: 40px;
+  --thumb-w: 134px;
+  --thumb-h: 68px;
+  --font-size: 42px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ticker {
+  overflow: hidden;
+  width: 100%;
+  padding: 100px 0 50px;
+  min-height: 100vh;
+  background: #ede5d3;
+  display: flex;
+  flex-direction: column;
+}
+
+.ticker_uppersection {
+  margin-inline: 40px;
+  display: flex;
+  gap: 40px;
+}
+.ticker_line {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+.ticker_line_inner {
+  width: 0%;
+  height: 1px;
+  background: black;
+}
+.group {
+  display: grid;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.row {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  will-change: transform;
+  --px-per-sec-row: var(--px-per-sec);
+  margin-top: 30px;
+}
+
+/* The track that contains original + cloned items */
+.row .track {
+  display: flex;
+  gap: var(--gap);
+  align-items: center;
+  white-space: nowrap;
+  transform: translate3d(0, 0, 0);
+}
+
+/* items */
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+  font-size: var(--font-size);
+  white-space: nowrap;
+  margin-right: 0;
+  text-transform: uppercase;
+}
+
+/* italic */
+.italic {
+  font-style: italic;
+}
+
+/* thumbnail box */
+.thumb {
+  width: var(--thumb-w);
+  height: var(--thumb-h);
+  background: #b2a7a7;
+  display: inline-block;
+}
+
+/* animation applied via inline styles from JS (per-row @keyframes) */
+/* pause on hover */
+/* .row:hover .track,
+.row.pause .track {
+  animation-play-state: paused !important;
+} */
+.row:hover {
+  .thumb {
+    border-radius: 10px;
+    transition: border-radius 3s;
+  }
+}
+
+/* responsive tweaks */
+@media (max-width: 700px) {
+  :root {
+    --font-size: 16px;
+    --thumb-w: 110px;
+    --thumb-h: 56px;
+    --gap: 24px;
+    --px-per-sec: 30;
+  }
+}
+
+.business_tool {
+  background: #ede5d3;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.business_tool_line {
+  text-align: center;
+  height: 200px;
+}
+
+.business_tool_line_inner {
+  margin: 0 auto;
+  width: 1px;
+  height: 0%;
+  background: #000;
+}
+
+.business_tool_text {
+  padding-block: 50px;
+  text-align: center;
+}
+
+.concept_img {
+  width: 354px;
+  height: 379px;
+  background: #000;
+}
+
+.business_text {
+  font-size: 42px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.business_tool_inner {
+  padding-top: 100px;
+  position: relative;
+  min-height: 100vh;
+}
+
+.business_concept {
+  position: absolute;
+  text-align: center;
+}
+
+.business_design {
+  position: absolute;
+  top: 20%;
+  opacity: 0;
+}
+
+.design_img {
+  width: 354px;
+  height: 147px;
+  background: #000;
+}
+
+.business_development {
+  position: absolute;
+  top: 30%;
+  opacity: 0;
+}
+
+.development_img {
+  width: 400px;
+  height: 331px;
+  background: #000;
+}
+
+.business_launch {
+  position: absolute;
+  bottom: 10%;
+  opacity: 0;
+}
+
+.launch_img {
+  width: 354px;
+  height: 379px;
+  background: #000;
+}
+
+.business_tool_inner_two {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-block: 50px;
+}
+
+.business_tool_inner_two_first {
+  width: 50%;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  opacity: 0;
+}
+.business_tool_inner_line {
+  width: 0%;
+  height: 1px;
+  background: #000;
+}
+
+.business_tool_inner_two_second {
+  width: 50%;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  opacity: 0;
+}
+
+.venture_tranform-div {
+  width: 20vw;
+  height: 20vh;
+  background: #313e47;
+}
+.venture_tranform-div1 {
+  width: 100vw;
+  height: 100vh;
+  background: #313e47;
+  padding: 100px;
+}
+.venture_tranform {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.venture_tranform-img {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #000;
+  opacity: 0;
+}
+
+.venture_tranform-img1 {
+  left: 0%;
+}
+
+.venture_tranform-img2 {
+  left: 25%;
+  transform: translateX(10%);
+}
+
+.venture_tranform-img3 {
+  right: 25%;
+  transform: translateX(-10%);
+}
+
+.venture_tranform-img4 {
+  right: 0%;
+  /* transform: translateX(100%); */
+}
+
+/* steps css  */
+
+.steps_boxes {
+  border-top: 1px solid #000;
+}
+.step_box {
+  max-width: 1400px;
+  margin: 0 auto !important; 
+  padding: 50px 0px;
+  height: 100%;
+  max-height: 150px;
+  transition: all 1s;
+}
+.step_box:hover {
+  height: 100%;
+  max-height: 100vh;
+}
+
+.step_number {
+  font-size: 64px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.step_title {
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+.steps-text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.steps-line {
+  padding-top: 30px;
+}
+.steps-line-animation {
+  width: 0%;
+  height: 1px;
+  background: #000;
+  transition: all 0.5s;
+}
+.step_box:hover .steps-line-animation{
+  width: 100%;
+}
+
+.steps-text-img {
+  width: 100%;
+  background: grey;
+  margin-right: 20px;
+  transition: all 1.5s;
+  opacity: 0;
+}
+.step_box:hover .steps-text-img{
+  opacity: 1;
+}
