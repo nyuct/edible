@@ -347,6 +347,9 @@ svg {
 .justify-between {
   justify-content: space-between;
 }
+.justify-evenly {
+  justify-content: space-evenly;
+}
 .justify-end {
   justify-content: flex-end;
 }
@@ -659,4 +662,8 @@ h1 {
   line-height: 1.2;
   color: #ede5d3;
   margin: 0;
+}
+
+.text-black {
+  color: black;
 }

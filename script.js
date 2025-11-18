@@ -52,6 +52,7 @@ tickerLine.to(".ticker_line_inner", {
     el.style.visibility = "hidden";
     el.style.whiteSpace = "nowrap";
     el.style.pointerEvents = "none";
+    el.style.display = "none";
     document.body.appendChild(el);
     return {
       measure(html) {
@@ -261,7 +262,7 @@ let ventureTranform = gsap.timeline({
   scrollTrigger: {
     trigger: ".venture_tranform",
     start: "top 0% ",
-    end: "200% 100%",
+    end: "120% 100%",
     markers: false,
     scrub: true,
     pin: true,
@@ -315,3 +316,63 @@ ventureTranform1.to(".venture_tranform-img4", {
   opacity: 10,
   bottom: "10px",
 },0.3);
+
+
+let bridgeTheGap = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".bridge-the-gap-section-outer",
+    start: "top 0% ",
+    end: "1000% 100%",
+    markers: false,
+    scrub: true,
+    pin: true,
+    pinSpacing: true,
+  },
+});
+bridgeTheGap.to(".bridge-the-gap-sticky2", {
+  x: "-100%",
+},1);
+bridgeTheGap.to(".bridge-the-gap-sticky1 .opacity-1", {
+  opacity: "0.2",
+}, 1);
+bridgeTheGap.to(".bridge-the-gap-span", { 
+  width: "20%",
+},1);
+bridgeTheGap.to(".bridge-the-gap-sticky3", {
+  x: "-200%",
+},2);
+bridgeTheGap.to(".bridge-the-gap-sticky2 .opacity-1", {
+  opacity: "0.2",
+}, 2);
+bridgeTheGap.to(".bridge-the-gap-span", { 
+  width: "10%",
+},2);
+bridgeTheGap.to(".bridge-the-gap-sticky4", {
+  x: "-300%",
+},3);
+bridgeTheGap.to(".bridge-the-gap-sticky3 .opacity-1", {
+  opacity: "0.2",
+}, 3);
+bridgeTheGap.to(".bridge-the-gap-span", { 
+  width: "0%",
+},3);
+
+let footerTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section_footer",
+    start: "top 50% ",
+    end: "50% 50%",
+    markers: true,
+    scrub: true,
+    pin: true,
+  },
+});
+footerTimeline.to(".bridge-the-gap-footer", {
+  fontSize: "15vw",
+  y: "75%",
+  textAlign: "center",
+  color: "#fff"
+}, "a");
+footerTimeline.to(".steps_section", {
+  backgroundColor: "#171f24"
+})
