@@ -1,7 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: "crimson";
+  src: url("./fonts/CrimsonText-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "crimson-italic";
+  src: url("./fonts/CrimsonText-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 :root {
   --bg-blue: #1e1e1e;
+}
+html {
+  overflow-y: overlay;
+}
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.4);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.7);
 }
 body,
 html {
@@ -13,6 +46,12 @@ html {
   background: #ede5d3;
   width: 100vw;
   overflow-x: hidden;
+}
+.crimson{
+  font-family: 'crimson';
+}
+.crimson-italic{
+  font-family: 'crimson-italic';
 }
 .preloader {
   background-color: var(--bg-blue);
@@ -369,6 +408,7 @@ html {
 }
 .bridge-the-gap {
   padding: 100px 0;
+  padding-bottom: 0;
 }
 
 .bridge-the-gap-section {
@@ -376,7 +416,9 @@ html {
   display: flex;
   width: max-content;
 }
-
+.mt-40{
+  margin-top: -45vh;
+}
 .bridge-the-gap-text {
   display: flex;
   flex-direction: column;
@@ -423,22 +465,50 @@ html {
 .bridge-the-gap-footer {
   margin: 10px 50px;
   padding: 20px 0;
-  font-size: 5vw;
-  font-family: "Libre Baskerville", serif;
+  font-size: 12vw;
+  text-align: center;
+  color: #313E47;
+  justify-content: center;
+  gap: 32px;
+  /* font-family: "Libre Baskerville", serif; */
   font-weight: 300;
-  border-top: 1px solid #171f24;
-  border-bottom: 1px solid #171f24;
+  /* border-top: 1px solid #171f24;
+  border-bottom: 1px solid #171f24; */
 }
-
+.d-flex{
+  display: flex;
+}
 .bridge-the-gap-span {
     display: inline-block;
-    width: 30%;
-    height: 10px;
+    /* width: 30%; */
+    /* height: 10px; */
 }
 
 .section_footer{
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
+/* bridge the gap updated css  */
+.bridge-title-sticky{
+  padding: 0;
+  font-size: 28px;
+}
+.bridge-the-gap-sticky-title{
+  padding: 0 12px;
+  justify-content: space-around;
+}
+.slide-left-container{
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  left: 0;
+}
+.slide-container{
+  padding-top: 30px;
+}
+.bridge-the-gap-text-container{
+  position: relative;
+}
+/* bridge the gap updated css  */
 
 footer {
   padding: 100px;

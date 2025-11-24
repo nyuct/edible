@@ -36,19 +36,21 @@ export class BlurScrollEffect {
     const words = this.splitter.getWords();
     gsap.fromTo(words, {
       opacity: 0,
+      y: 20,
       skewX: -20,
       willChange: 'filter, transform',
       filter: 'blur(8px)'
     }, {
       ease: 'sine', // Animation easing.
       opacity: 1,
+      y: 0,
       skewX: 0,
       filter: 'blur(0px)',
       stagger: 0.04, // Delay between starting animations for each word.
       scrollTrigger: {
         trigger: this.textElement, // Element that triggers the animation.
-        start: 'top bottom-=15%', // Animation starts when element hits bottom of viewport.
-        end: 'bottom center+=15%', // Animation ends in the center of the viewport.
+        start: 'top bottom-=20%', // Animation starts when element hits bottom of viewport.
+        end: '200% center+=15%', // Animation ends in the center of the viewport.
         scrub: true, // Animation progress tied to scroll position.
       },
     });
