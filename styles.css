@@ -21,7 +21,7 @@ html {
 }
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 0px;
 }
 
 ::-webkit-scrollbar-track {
@@ -222,39 +222,40 @@ html {
 }
 
 .business_concept {
+  top: 7%;
   position: absolute;
   text-align: center;
 }
 
 .business_design {
   position: absolute;
-  top: 20%;
+  top: 13%;
   left: 20%;
   opacity: 0;
 }
 
 .design_img {
-  width: 354px;
-  height: 147px;
+  width: 320px;
+  height: 155px;
   background: #000;
 }
 
 .business_development {
   position: absolute;
-  top: 30%;
+  top: 40%;
   right: 30%;
   opacity: 0;
 }
 
 .development_img {
   width: 400px;
-  height: 331px;
+  height: 280px;
   background: #000;
 }
 
 .business_launch {
   position: absolute;
-  bottom: 10%;
+  bottom: 7%;
   right: 0%;
   opacity: 0;
 }
@@ -273,7 +274,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-block: 50px;
+  padding-block: 7%;
 }
 
 .business_tool_inner_two_first {
@@ -285,7 +286,7 @@ html {
   opacity: 0;
 }
 .business_tool_inner_line {
-  width: 0%;
+  width: 100%;
   height: 1px;
   background: #000;
 }
@@ -295,7 +296,9 @@ html {
   margin-right: auto;
   display: flex;
   align-items: center;
-  gap: 50px;
+  font-size: 16px;
+  font-weight: 300;
+  gap: 32px;
   opacity: 0;
 }
 
@@ -417,7 +420,7 @@ html {
   width: max-content;
 }
 .mt-40{
-  margin-top: -45vh;
+  margin-top: -40vh;
 }
 .bridge-the-gap-text {
   display: flex;
@@ -427,8 +430,8 @@ html {
 .bridge-the-gap-sticky {
   width: 100vw;
   margin: 50px auto 0px !important;
-  position: sticky;
-  left: 0px;
+  /* position: sticky; */
+  /* left: 0px; */
   justify-content: space-evenly;
 }
 .bridge-the-gap-sticky .justify-between {
@@ -437,8 +440,8 @@ html {
 }
   .bridge-the-gap-img {
     width: 100%;
-  height: 400px;
-  background: grey;
+    height: 400px;
+    background: grey;
 }
 .bridge-title-sticky {
   font-size: 40px;
@@ -463,8 +466,9 @@ html {
   width: 100%;
 }
 .bridge-the-gap-footer {
-  margin: 10px 50px;
-  padding: 20px 0;
+  /* margin: 10px 50px; */
+  /* padding: 20px 0; */
+  margin-top: -12px;
   font-size: 12vw;
   text-align: center;
   color: #313E47;
@@ -472,6 +476,7 @@ html {
   gap: 32px;
   /* font-family: "Libre Baskerville", serif; */
   font-weight: 300;
+  /* line-height: 1; */
   /* border-top: 1px solid #171f24;
   border-bottom: 1px solid #171f24; */
 }
@@ -493,8 +498,8 @@ html {
   font-size: 28px;
 }
 .bridge-the-gap-sticky-title{
-  padding: 0 12px;
-  justify-content: space-around;
+  padding: 0 50px;
+  justify-content: space-between;
 }
 .slide-left-container{
   position: absolute;
@@ -503,7 +508,7 @@ html {
   left: 0;
 }
 .slide-container{
-  padding-top: 30px;
+  /* padding-top: 30px; */
 }
 .bridge-the-gap-text-container{
   position: relative;

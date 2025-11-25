@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
 // Create Lenis instance
 const lenis = new Lenis({
   // you can tweak if needed
-  duration: 1.2,
+  duration: 1.5,
   smooth: true,
 });
 
@@ -49,17 +49,17 @@ function initAnimations() {
   let tickerLine = gsap.timeline({
     scrollTrigger: {
       trigger: ".ticker_line_inner",
-      start: "top 40% ",
+      start: "top 60% ",
       end: "bottom 10%",
-      markers: false,
+      markers: true,
       scrub: true,
     },
   });
   tickerLine.to(".ticker_line_inner", {
     width: "100%",
-    duration: 2,
+    // duration: 2,
     ease: "power4.out",
-    delay: 1,
+    // delay: 1,
   });
 
   /* JS: duplicate each .row's content, measure, create per-row keyframes and animation */
@@ -275,8 +275,8 @@ function initAnimations() {
       pin: true,
     },
   });
-  businesTools.to(".business_design", { left: "25%", opacity: 1 });
-  businesTools.to(".business_development", { right: "25%", opacity: 1 });
+  businesTools.to(".business_design", { left: "27%", opacity: 1 });
+  businesTools.to(".business_development", { left: "45%", opacity: 1 });
   businesTools.to(".business_launch", { right: 0, opacity: 1 });
   businesTools.to(".business_tool_inner_two_first", { opacity: 1 });
   businesTools.to(".business_tool_inner_two_first .business_tool_inner_line", { width: "100%" });
@@ -288,7 +288,7 @@ function initAnimations() {
       trigger: ".venture_tranform",
       start: "top 0% ",
       end: "200% 100%",
-      markers: true,
+      // markers: true,
       scrub: true,
       pin: true,
       pinSpacing: true,
@@ -448,7 +448,7 @@ function initAnimations() {
       trigger: ".section_footer",
       start: "20% 100% ",
       end: "150% 20%",
-      markers: true,
+      // markers: true,
       scrub: true,
       pin: true,
     },
@@ -474,6 +474,10 @@ function initAnimations() {
     backgroundColor: "#171f24",
     ease: "power4.out" 
   }, "a")
+  // footerTimeline.to(".bridge-the-gap-footer", {
+  //   lineHeight:'1.4',
+  //   ease: "power4.out" 
+  // }, "a")
   // footerTimeline.to(".bridge-the-gap-footer", {
   //   y:'20%',
   //   ease: "power4.out" 
