@@ -92,13 +92,23 @@ html {
   flex-direction: column;
 }
 
+.ticker_uppersection p{
+  margin: 0;
+  width: 40%;
+}
 .ticker_uppersection {
-  margin-inline: 40px;
+  margin-inline: 80px;
   display: flex;
-  gap: 40px;
+  gap: 24px;
+  align-items: center;
+  justify-content: left;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #313E47;
 }
 .ticker_line {
-  width: 70%;
+  width: 35%;
   display: flex;
   align-items: center;
 }
@@ -110,7 +120,7 @@ html {
 .group {
   display: grid;
   gap: 12px;
-  margin-top: auto;
+  margin-top: 30vh;
 }
 
 .row {
@@ -203,16 +213,22 @@ html {
   text-align: center;
 }
 
-.concept_img {
-  width: 354px;
-  height: 379px;
-  background: #000;
+.concept_img, .design_img, .development_img, .launch_img {
+  height: 55vh;
+  width: 23vw;
+  background: url(./assets/img/concept-img.png);
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
 
 .business_text {
-  font-size: 42px;
-  text-align: center;
+  font-size: 48px;
+  text-align: left;
+  font-family: 'crimson-italic';
   text-transform: uppercase;
+  color: #313E47;
+  margin-left: 36px;
 }
 
 .business_tool_inner {
@@ -222,7 +238,7 @@ html {
 }
 
 .business_concept {
-  top: 7%;
+  top: 5%;
   position: absolute;
   text-align: center;
 }
@@ -230,40 +246,37 @@ html {
 .business_design {
   position: absolute;
   top: 13%;
-  left: 20%;
-  opacity: 0;
+  left:27%;
 }
 
 .design_img {
-  width: 320px;
-  height: 155px;
-  background: #000;
+  width: 24vw;
+  height: 23vh;
+  background: url(./assets/img/design-img.png);
 }
 
 .business_development {
   position: absolute;
-  top: 40%;
-  right: 30%;
-  opacity: 0;
+  top: 43%;
+  left: 46%;
 }
 
 .development_img {
-  width: 400px;
-  height: 280px;
-  background: #000;
+  width: 29vw;
+  height: 36vh;
+  background: url(./assets/img/development-img.png); 
 }
 
 .business_launch {
   position: absolute;
-  bottom: 7%;
+  bottom: 5%;
   right: 0%;
-  opacity: 0;
 }
 
 .launch_img {
-  width: 354px;
-  height: 379px;
-  background: #000;
+  width: 21vw;
+  height: 55vh;
+  background: url(./assets/img/launch-img.png);
 }
 
 .business_tool_inner_two {
@@ -278,19 +291,30 @@ html {
 }
 
 .business_tool_inner_two_first {
-  width: 50%;
+  width: 40%;
   margin-left: auto;
   display: flex;
   align-items: center;
   gap: 50px;
+  font-size: 24px;
+  font-weight: 300;
   opacity: 0;
 }
-.business_tool_inner_line {
+.business_tool_inner_text{
   width: 100%;
+}
+.business_tool_inner_line {
+  width: 45%;
   height: 1px;
+  /* clip-path: inset(0 0 0 0); */
   background: #000;
 }
-
+.text-right{
+  text-align: right;
+}
+.mt-48{
+  margin-top: 48px;
+}
 .business_tool_inner_two_second {
   width: 40%;
   margin-right: auto;
@@ -301,17 +325,30 @@ html {
   gap: 32px;
   opacity: 0;
 }
-
+.business_tool_inner_two_first .business_tool_inner_line{
+  width: 65%;
+}
+.business_tool_inner_two_first .business_tool_inner_text{
+  line-height: 1;
+}
 .venture_tranform-div {
-  width: 20vw;
-  height: 20vh;
+  width: 100vw;
+  height: 100vh;
   background: #313e47;
 }
 .venture_tranform-div1 {
   width: 100vw;
   height: 100vh;
   background: #313e47;
-  padding: 100px;
+  padding: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.venture_tranform-img-container{
+  position: relative;
+  justify-content: space-between;
 }
 .venture_tranform {
   min-height: 100vh;
@@ -322,36 +359,62 @@ html {
 }
 
 .venture_tranform-img {
-  position: absolute;
-  width: 300px;
-  height: 300px;
+  /* position: absolute; */
+  /* bottom: 20px; */
+  width: 20vw;
+  height: auto;
+  aspect-ratio: 1;
   background: #000;
-  opacity: 0;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  /* opacity: 0; */
 }
 
 .venture_tranform-img1 {
-  left: 0%;
+  /* left: 0%; */
+  background: url(./assets/img/transform-img-1.png);
 }
 
 .venture_tranform-img2 {
-  left: 25%;
-  transform: translateX(10%);
+  /* left: 25%; */
+  /* transform: translateX(10%); */
+  background: url(./assets/img/transform-img-2.png);
 }
 
 .venture_tranform-img3 {
-  right: 25%;
-  transform: translateX(-10%);
+  /* right: 25%; */
+  /* transform: translateX(-10%); */
+  background: url(./assets/img/transform-img-3.png);
 }
 
 .venture_tranform-img4 {
-  right: 0%;
+  /* right: 0%; */
+  background: url(./assets/img/transform-img-4.png);
   /* transform: translateX(100%); */
 }
 
 /* steps css  */
-
+.steps_heading h1{
+  font-style: italic;
+  font-weight: 300;
+  color: #313E47;
+  font-size: 48px;
+  padding: 48px 0; 
+  font-family: 'crimson-italic';
+  gap: 26px;
+  justify-content: center
+}
+.steps_heading{
+  text-align: center;
+  text-transform: uppercase;
+  text-align: center;
+}
 .steps_boxes {
   border-top: 1px solid #000;
+}
+.steps_innersection{
+  padding: 0 80px;
 }
 .step_box {
   max-width: 1400px;
@@ -402,12 +465,27 @@ html {
   transition: all 1.5s;
   opacity: 0;
 }
+.image-banner img{
+  width: 100%;
+  padding: 20px 0 60px;
+}
+.trace-oval {
+  position: relative;
+}
+.trace-oval svg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 130%;
+}
 .step_box:hover .steps-text-img {
   opacity: 1;
 }
 .venture_tranform1 {
-  margin-top: -10px;
+  margin-top: -120vh;
   margin-bottom: 100px;
+  background: #313e47;
 }
 .bridge-the-gap {
   padding: 100px 0;
@@ -513,7 +591,86 @@ html {
 .bridge-the-gap-text-container{
   position: relative;
 }
+.reveal-left {
+  overflow: hidden;            /* optional but safe */
+  will-change: clip-path;      /* smoother animation */
+}
+.hidden-text div{
+  width: 100%;
+  font-size: 24px;
+}
+.hidden-text{
+  position: absolute;
+  bottom: 60px;
+  right: 40px;
+  z-index: -1;
+  width: 100%;
+}
+.reveal-image{
+  z-index: 3;
+  position: relative;
+  object-fit: cover;
+  height: 100%;
+}
+.hidden-text .business_tool_inner_line{
+  width: 60%;
+  clip-path: inset(0 100% 0 0);
+}
+.hidden-text .business_tool_inner_text{
+  width: 40%;
+}
+.fade-in-img-2{
+  z-index: 2;
+}
+.fade-in-img-3{
+  z-index: 1;
+}
+.fade-in-img-4{
+  z-index: 0;
+}
+.fade-in-img-5{
+  z-index: -1;
+}
 /* bridge the gap updated css  */
+/* left to right section  */
+.text-banner-section{
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  margin-bottom: 20vh;
+  flex-direction: column;
+}
+.text-banner-image{
+  position: relative;
+  height: 100vh;
+  position: absolute;
+}
+.fade-in-img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+.text-banner-text p{
+  margin: 0;
+  width: max-content;
+  text-align: left;
+  margin-left: 0;
+  box-sizing: border-box;
+}
+
+.text-banner-text{
+  padding: 40px 80px;
+  z-index: 9;
+  background: #ede5d3;
+  color: #313E47;
+  font-size: 32px;
+  font-family: 'crimson-italic';
+}
+/* left to right section  */
 
 footer {
   padding: 100px;

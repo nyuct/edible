@@ -5,6 +5,12 @@ import { BlurScrollEffect } from './blurScrollEffect.js';
 ------------------------------------------------------------*/
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
 
+
+ScrollTrigger.config({
+  fastScrollEnd: true,
+  ignoreMobileResize: true,
+});
+
 /* ---------------------------------------------------------
    2) LENIS + SCROLLTRIGGER INTEGRATION (from Lenis docs)
 ------------------------------------------------------------*/
@@ -14,6 +20,8 @@ const lenis = new Lenis({
   // you can tweak if needed
   duration: 1.5,
   smooth: true,
+  lerp: 0.08,     // <= LOWER = smoother & more even motion
+  wheelMultiplier: 0.7,
 });
 
 // Let ScrollTrigger update on Lenis scroll
@@ -51,7 +59,7 @@ function initAnimations() {
       trigger: ".ticker_line_inner",
       start: "top 60% ",
       end: "bottom 10%",
-      markers: true,
+      // markers: true,
       scrub: true,
     },
   });
@@ -254,6 +262,21 @@ function initAnimations() {
     setupAll();
   })();
 
+  gsap.utils.toArray(".reveal-left").forEach((elem) => {
+    gsap.from(elem, {
+      clipPath: "inset(0 100% 0 0)",
+      ease: "power3.out",
+      scrub: true,
+      scrollTrigger: {
+        trigger: elem,
+        start: "top 80%",
+        // markers: true,
+        scrub: true,
+        toggleActions: "play none none reverse",
+      },
+    });
+  });
+
   let businesTool = gsap.timeline({
     scrollTrigger: {
       trigger: ".business_tool_line",
@@ -275,15 +298,15 @@ function initAnimations() {
       pin: true,
     },
   });
-  businesTools.to(".business_design", { left: "27%", opacity: 1 });
-  businesTools.to(".business_development", { left: "45%", opacity: 1 });
-  businesTools.to(".business_launch", { right: 0, opacity: 1 });
+  businesTools.from(".business_design", {clipPath: "inset(0 100% 0 0)",  opacity: 1 });
+  businesTools.from(".business_development", {clipPath: "inset(0 100% 0 0)", opacity: 1 });
+  businesTools.from(".business_launch", { clipPath: "inset(0 100% 0 0)", opacity: 1 });
   businesTools.to(".business_tool_inner_two_first", { opacity: 1 });
-  businesTools.to(".business_tool_inner_two_first .business_tool_inner_line", { width: "100%" });
+  businesTools.from(".business_tool_inner_two_first .business_tool_inner_line", { clipPath: "inset(0 0 0 100%)", ease: "power4.out" });
   businesTools.to(".business_tool_inner_two_second", { opacity: 1 });
-  businesTools.to(".business_tool_inner_two_second .business_tool_inner_line", { width: "100%" });
+  businesTools.from(".business_tool_inner_two_second .business_tool_inner_line", { clipPath: "inset(0 100% 0 0)", ease: "power4.out" });
 
-  let ventureTranform = gsap.timeline({
+  let ventureTranformpin = gsap.timeline({
     scrollTrigger: {
       trigger: ".venture_tranform",
       start: "top 0% ",
@@ -294,9 +317,24 @@ function initAnimations() {
       pinSpacing: true,
     },
   });
-  ventureTranform.to(".venture_tranform-div", {
-    width: "100vw",
-    height: "100vh",
+  let ventureTranform = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".venture_tranform",
+      start: "top 50% ",
+      end: "110% 100%",
+      // markers: true,
+      scrub: true,
+      // pin: true,
+      pinSpacing: true,
+    },
+  });
+  ventureTranform.from(".venture_tranform-div", {
+    width: "80vw",
+    height: "80vh",
+    scale:0.7,
+    y:200,
+    ease: "power4.out" 
+
   });
 
   const init = () => {
@@ -316,34 +354,130 @@ function initAnimations() {
     scrollTrigger: {
       trigger: ".venture_tranform1",
       start: "top 0% ",
-      end: "200% 100%",
+      end: "300% 100%",
       // markers: true,
       scrub: true,
       pin: true,
       pinSpacing: true,
     },
   });
-  ventureTranform1.to(".venture_tranform-img1", {
-    opacity: 10,
-    bottom: "10px",
-  }, 0);
-  ventureTranform1.to(".venture_tranform-img2", {
-    opacity: 10,
-    bottom: "10px",
-  }, 0.1);
-  ventureTranform1.to(".venture_tranform-img3", {
-    opacity: 10,
-    bottom: "10px",
-  }, 0.2);
-  ventureTranform1.to(".venture_tranform-img4", {
-    opacity: 10,
-    bottom: "10px",
-  }, 0.3);
+  ventureTranform1.from(".venture_tranform-img", {
+    opacity: 0,
+    y:'-100%',
+    stagger:0.1,
+    ease: "power4.out" 
+  },1);
+  ventureTranform1.from(".fade-last", {
+    opacity: 0,
+    ease: "power4.out" 
+  });
+
+  let imagreveal= gsap.timeline({
+    scrollTrigger: {
+      trigger: '.text-banner-section',
+      start: "top 80%",
+      end: "bottom 100%",
+      // markers: true,
+      scrub: true,
+      toggleActions: "play none none reverse",
+    },
+  });
+  imagreveal.from(".reveal-image", {
+    clipPath: "inset(0 100% 0 0)",
+    ease: "power3.out",
+    scrub: true,
+  });     
+  
+
+  let leftToRight = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".text-banner-section",
+      start: "top top",
+      end: "280% top",
+      scrub: 3,
+      pin: true,
+      pinSpacing: true 
+    }
+  });
+  leftToRight.from(".fade-in-img", {
+    opacity:0,
+    ease: "power4.out" 
+  },'asdf');
+  leftToRight.to(".text-banner-text-1", {
+    marginLeft: "auto",
+    ease: "power4.out" 
+  },'asdf');
+  leftToRight.to(".reveal-image", {
+    clipPath: "inset(0 0% 0 100%)",
+    ease: "power4.out" 
+  },'asdf');
+  leftToRight.to(".text-banner-text-2", {
+    marginLeft: "auto",
+    ease: "power4.out" 
+  },'qwer');
+  leftToRight.to(".fade-in-img-2", {
+    clipPath: "inset(0 0% 0 100%)",
+    ease: "power4.out" 
+  },'qwer');
+  leftToRight.to(".text-banner-text-3", {
+    marginLeft: "auto",
+    ease: "power4.out" 
+  },'ret');
+  leftToRight.to(".fade-in-img-3", {
+    clipPath: "inset(0 0% 0 100%)",
+    ease: "power4.out" 
+  },'ret');
+  leftToRight.to(".fade-in-img-4", {
+    clipPath: "inset(0 0% 100% 0%)",
+    ease: "power4.out" 
+  },'jdi');
+  leftToRight.to(".text-banner-text", {
+    clipPath: "inset(0 0% 100% 0%)",
+    ease: "power4.out" 
+  },'jdi');
+  leftToRight.to(".fade-in-img-5", {
+    clipPath: "inset(0 0% 30% 0%)",
+    ease: "power4.out" 
+  },'jdi');
+  leftToRight.from(".hidden-text .business_tool_inner_text", {
+    opacity:0,
+    ease: "power4.out" 
+  },'lkj');
+  leftToRight.to(".hidden-text .business_tool_inner_line", {
+    clipPath: "inset(0 0% 0% 0%)",
+    ease: "power4.out" 
+  },'lkj');
+
+  const ovalPath = document.querySelector("#ovalPath");
+
+  if (ovalPath) {
+    const length = ovalPath.getTotalLength();
+
+    // prepare the stroke
+    gsap.set(ovalPath, {
+      strokeDasharray: length,
+      strokeDashoffset: length,
+    });
+
+    gsap.to(ovalPath, {
+      strokeDashoffset: 0,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ovalPath,
+        start: "top 60%",
+        end: "top 10%",
+        toggleActions: "play none none reverse",
+        scrub: true,        // set true if you want scroll-controlled drawing
+        // markers: true
+      },
+    });
+  }
+
 
   let bridgeTheGap = gsap.timeline({
     scrollTrigger: {
       trigger: ".bridge-the-gap-section-outer",
-      start: "top 0% ",
+      start: "top 0%",
       end: "500% 100%",
       markers: false,
       scrub: true,
@@ -354,67 +488,67 @@ function initAnimations() {
   bridgeTheGap.from(".slide-left-container-1", {
     x: "120%",
     ease: "power4.out" 
-  }, 1);
+  },'bridge-1');
   bridgeTheGap.from(".bridge-title-2", {
     x: "600%",
     ease: "power4.out" 
-  }, 1);
+  },'bridge-1');
   bridgeTheGap.to(".bridge-title-1", {
     opacity:0.4,
     ease: "power4.out" 
-  }, 1);
+  },'bridge-1');
   bridgeTheGap.fromTo(".bridge-the-gap-span",
     { x: "120%" },
     { x: "80%", ease: "power4.out" },
-  1);
+    'bridge-1');
   bridgeTheGap.from(".slide-left-container-2", {
     x: "120%",
     ease: "power4.out" 
-  }, 2);
+  }, 'bridge-2');
   bridgeTheGap.from(".bridge-title-3", {
     x: "500%",
     ease: "power4.out" 
-  }, 2);
+  }, 'bridge-2');
   bridgeTheGap.to(".bridge-title-2", {
     opacity:0.4,
     ease: "power4.out" 
-  }, 2);
+  }, 'bridge-2');
   bridgeTheGap.to(".bridge-the-gap-span",{
     x:'50%',
     ease: "power4.out" 
-  },  2);
+  }, 'bridge-2');
   bridgeTheGap.from(".slide-left-container-3", {
     x: "120%",
     ease: "power4.out" 
-  }, 3);
+  }, 'bridge-3');
   bridgeTheGap.from(".bridge-title-4", {
     x: "500%",
     ease: "power4.out" 
-  }, 3);
+  }, 'bridge-3');
   bridgeTheGap.to(".bridge-title-3", {
     opacity:0.4,
     ease: "power4.out" 
-  }, 3);
+  }, 'bridge-3');
   bridgeTheGap.to(".bridge-the-gap-span",{
     x:'25%',
     ease: "power4.out" 
-  },  3);
+  }, 'bridge-3');
   bridgeTheGap.from(".slide-left-container-4", {
     x: "120%",
     ease: "power4.out" 
-  }, 4);
+  }, 'bridge-4');
   bridgeTheGap.from(".bridge-title-5", {
     x: "500%",
     ease: "power4.out" 
-  }, 4);
+  }, 'bridge-4');
   bridgeTheGap.to(".bridge-the-gap-span",{
     x:'0%',
     ease: "power4.out" 
-  }, 4);
+  }, 'bridge-4');
   bridgeTheGap.to(".bridge-title-4", {
     opacity:0.4,
     ease: "power4.out" 
-  }, 4);
+  }, 'bridge-4');
   // bridgeTheGap.to(".bridge-the-gap-sticky2", {
   //   x: "-100%",
   // }, 1);
@@ -474,28 +608,28 @@ function initAnimations() {
     backgroundColor: "#171f24",
     ease: "power4.out" 
   }, "a")
-  // footerTimeline.to(".bridge-the-gap-footer", {
-  //   lineHeight:'1.4',
-  //   ease: "power4.out" 
-  // }, "a")
-  // footerTimeline.to(".bridge-the-gap-footer", {
-  //   y:'20%',
-  //   ease: "power4.out" 
-  // }, "a")
-  // footerTimeline.to(".bridge-the-gap-footer", {
-  //   fontSize: "15vw",
-  //   y: "75%",
-  //   textAlign: "center",
-  //   color: "#fff"
-  // }, "a");
-  // footerTimeline.to(".steps_section", {
-  //   backgroundColor: "#171f24"
-  // });
 }
+
+// let topTobottom = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".text-banner-section",
+//     start: "top 15%",
+//     end: "100% top",
+//     scrub: true,
+//     pin: true,
+//     markers: true,
+//     pinSpacing: true
+//   }
+// });
+// topTobottom.to(".fade-in-img-4", {
+//   clipPath: "inset(0 0% 100% 0 )",
+//   ease: "power4.out" 
+// });
 
 /* ---------------------------------------------------------
    4) ENSURE initAnimations RUNS EVEN IF DOM IS ALREADY LOADED
 ------------------------------------------------------------*/
+
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initAnimations);
