@@ -140,14 +140,14 @@ function initAnimations() {
     x: targetLeftX - leftRect.left,
     y: targetLeftY - leftRect.top,
     duration: 0.8,
-    delay:0.5,
+    // delay:0.5,
     ease: "power4.out"
   }, 'preload2');
   preloader.to(".number-right", {
     x: targetRightX - rightRect.left,
     y: targetRightY - rightRect.top,
     duration: 0.8,
-    delay:0.5,
+    // delay:0.5,
     ease: "power4.out"
   }, 'preload2');
   preloader.to(".number-right, .number-left", {
