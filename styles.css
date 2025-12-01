@@ -50,24 +50,106 @@ html {
 .crimson{
   font-family: 'crimson';
 }
+.header{
+  position: fixed;
+  top: 0;
+  padding: 60px 80px;
+  width: 100%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  color: #fff;
+  font-size: 32px;
+  font-family: 'crimson-italic';
+  font-weight: bold;
+  transition: transform 0.6s ease;
+  transform: translateY(0); /* default visible */
+}
+
+.header.hidden {
+  transform: translateY(-100%); /* slide up */
+}
+#edible, #ventures{
+  position: absolute;
+  top: 0%;
+  left: -1%;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end; 
+  margin-right: 12px;
+  transform: translateX(-12%);
+  z-index: 1;
+}
+#ventures{
+  justify-content: start;
+  left: auto;
+  margin-left: 12px;
+  margin-right: 0;
+  right: -1%;
+}
+.numbers-container{
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  display: flex;
+  position: absolute;
+  width: 28vw;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  margin-left: -2.5%;
+
+}
 .crimson-italic{
   font-family: 'crimson-italic';
 }
 .preloader {
-  background-color: var(--bg-blue);
+  /* background-color: var(--bg-blue); */
   height: 100vh;
   color: white;
+  background-color: #313E47;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.opacity-0{
+  /* opacity:   0; */
 }
 .preloader-text {
   text-align: center;
   transition: all 0.2s;
-  transform: translateY(30px);
-  opacity: 0;
+  /* transform: translateY(30px); */
+  /* opacity: 1; */
 }
-
+.header-video img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.header-video{
+  width: 20vw;
+  z-index: 2;
+  height: 25vh;
+}
+.header-container{
+  align-items: center;
+  font-family: 'crimson-italic';
+  font-weight: bold;
+  gap: 48px;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 128px;
+  margin-right: 5vw;
+}
+.numbers{
+  font-family: 'crimson';
+  font-size: 32px;
+}
 /* Ticker css  */
 :root {
   /* px travelled per second (lower = slower). You can override per-row via data attribute. */
@@ -117,9 +199,12 @@ html {
   height: 1px;
   background: black;
 }
+.ticker_uppersection .text-end{
+  margin-left: 32px;
+}
 .group {
   display: grid;
-  gap: 12px;
+  /* gap: 12px; */
   margin-top: 30vh;
 }
 
@@ -129,13 +214,13 @@ html {
   position: relative;
   will-change: transform;
   --px-per-sec-row: var(--px-per-sec);
-  margin-top: 30px;
+  margin-top: 36px;
 }
 
 /* The track that contains original + cloned items */
 .row .track {
   display: flex;
-  gap: var(--gap);
+  gap: 24px;
   align-items: center;
   white-space: nowrap;
   transform: translate3d(0, 0, 0);
@@ -152,7 +237,11 @@ html {
   margin-right: 0;
   text-transform: uppercase;
 }
-
+.ticker .item{
+  gap: 24px;
+  font-family: 'crimson';
+  color: #313E47;
+}
 /* italic */
 .italic {
   font-style: italic;
@@ -192,13 +281,14 @@ html {
 
 .business_tool {
   background: #ede5d3;
-  padding-top: 50px;
+  padding-top: 20px;
   padding-bottom: 100px;
 }
 
 .business_tool_line {
   text-align: center;
-  height: 200px;
+  height: 100px;
+  /* margin: 48px 0; */
 }
 
 .business_tool_line_inner {
@@ -209,8 +299,12 @@ html {
 }
 
 .business_tool_text {
-  padding-block: 50px;
+  padding-block:40px;
   text-align: center;
+  font-size: 32px;
+  color: #313e47;
+  font-weight: 300;
+  margin-bottom: 15vh;
 }
 
 .concept_img, .design_img, .development_img, .launch_img {
@@ -323,7 +417,7 @@ html {
   font-size: 16px;
   font-weight: 300;
   gap: 32px;
-  opacity: 0;
+  /* opacity: 0; */
 }
 .business_tool_inner_two_first .business_tool_inner_line{
   width: 65%;
@@ -422,6 +516,7 @@ html {
   padding: 50px 0px;
   height: 100%;
   max-height: 150px;
+  justify-content: space-evenly;
   transition: all 1s;
 }
 .step_box:hover {
@@ -430,19 +525,24 @@ html {
 }
 
 .step_number {
-  font-size: 64px;
+  font-size: 80px;
   text-transform: uppercase;
-  line-height: 1;
+  font-family: 'crimson-italic';
+  font-weight: normal;
+  color: #313E47;
+  line-height: 0.8;
 }
 
 .step_title {
-  font-size: 20px;
+  font-size: 24px;
+  color: #313E47;
   text-transform: uppercase;
-  line-height: 1.5;
+  line-height: 1.1;
 }
 .steps-text {
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-left: 24px;
 }
 
 .steps-line {
@@ -514,20 +614,24 @@ html {
 }
 .bridge-the-gap-sticky .justify-between {
   background-color: #ede5d3;
-  margin-inline: 50px;
+  margin-inline: 80px;
+  height: 100%;
 }
   .bridge-the-gap-img {
     width: 100%;
-    height: 400px;
+    height: 30vh;
     background: grey;
+}
+.bridge-the-gap-img-right{
+  height: 100%;
 }
 .bridge-title-sticky {
   font-size: 40px;
   text-transform: uppercase;
-  letter-spacing: 1px;
   padding-inline: 50px;
   font-family: "Fira Sans", sans-serif;
   font-weight: 300;
+  color: #313E47;
 }
 .bridge-title-sticky.opacity-0 {
   opacity: 0;
@@ -573,10 +677,12 @@ html {
 /* bridge the gap updated css  */
 .bridge-title-sticky{
   padding: 0;
-  font-size: 28px;
+  font-size: 24px;
+  color: #313E47;
+  font-weight: normal;
 }
 .bridge-the-gap-sticky-title{
-  padding: 0 50px;
+  padding: 0 80px;
   justify-content: space-between;
 }
 .slide-left-container{
@@ -670,6 +776,50 @@ html {
   font-size: 32px;
   font-family: 'crimson-italic';
 }
+.slide-container p{
+  width: 50%;
+  margin: 0;
+  text-align: right;
+  line-height: 1.2;
+  font-weight: 300;
+  margin-left: auto;
+  font-size: 16px;
+}
+.slide-container h2{
+  /* width: 60%; */
+  font-weight: 300;
+  font-size: 24px;
+}
+.slide-container .d-flex{
+  gap: 24px;
+  width: 100%;
+}
+.bridge-left-cont{
+  width: 75%;
+}
+.bridge-right-cont{
+  width: 25%;
+}
+.development-container .bridge-left-cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+}
+.development-container .bridge-right-cont{
+  width: 30%;
+}
+.development-container p{
+  margin-left: 0;
+  width: 100%;
+  padding-right: 12px;
+  text-align: left;
+}
+.bridge-the-gap-img-right.d-flex{
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 /* left to right section  */
 
 footer {

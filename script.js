@@ -43,15 +43,124 @@ gsap.ticker.lagSmoothing(0);
       wrapped in an init function to ensure DOM is ready
 ------------------------------------------------------------*/
 
+
+// Step A — Calculate offsets so numbers land in corners
+const numLeft = document.getElementById("numLeft");
+const numRight = document.getElementById("numRight");
+
+// Measure current screen positions
+const leftRect = numLeft.getBoundingClientRect();
+const rightRect = numRight.getBoundingClientRect();
+
+// Desired final corner positions
+const targetLeftX = 80;  // px from left
+const targetLeftY = 60;  // px from top
+
+const targetRightX = window.innerWidth - 80 - rightRect.width;
+const targetRightY = 60;
+
+
 function initAnimations() {
   // PRELOADER
-  gsap.to(".preloader-text", {
-    y: 0,
+  // gsap.to(".preloader-text", {
+  //   y: 0,
+  //   duration: 1,
+  //   opacity: 1,
+  //   ease: "power4.out",
+  //   stagger: 0.25,
+  //   delay: 0.5,
+  // });
+  
+  let lastScrollY = window.scrollY;
+  const navbar = document.querySelector(".header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > lastScrollY) {
+      // scrolling down → hide navbar
+      navbar.classList.add("hidden");
+    } else {
+      // scrolling up → show navbar
+      navbar.classList.remove("hidden");
+    }
+
+    lastScrollY = window.scrollY;
+  });  
+
+  const preloader = gsap.timeline({ delay: 1, ease: "power3.out" });
+
+  preloader.to("#edible", {
+    x: "-40%",
+    duration: 0.7,
+    ease: "power4.out"
+  }, 'preloader');                 // ← 0 means start at the same time
+  preloader.to("#ventures", {
+    x: "25%",
+    duration: 0.7,
+    ease: "power4.out"
+  }, 'preloader');    
+  preloader.from(".number-left", {
+    x: 100, 
+    opacity: 0, 
+    duration: 0.7,
+    ease: "power4.out"
+  }, 'preloader');    
+  preloader.from(".number-right", {
+    x: -100, 
+    opacity: 0, 
     duration: 1,
-    opacity: 1,
-    ease: "power4.out",
-    stagger: 0.25,
+    ease: "power4.out"
+  }, 'preloader');    
+  preloader.from(".header-video", {
+    clipPath: "inset(100% 100% 100% 100%)",
+    opacity: 0, 
+    duration: 1,
+    ease: "power4.out"
+  }, 'preloader');    
+  preloader.to(".header-container", {
+    marginRight: "0",
+    duration: 1,
     delay: 0.5,
+    ease: "power4.out"
+  }, 'preload2');    
+  preloader.to(".header-video", {
+    width: "102vw",
+    // x: "2vw",
+    height: "100vh",
+    delay: 0.5,
+    duration: 1,
+    ease: "power4.out"
+  }, 'preload2');    
+  preloader.to("#edible, #ventures", {
+    x: "0%",
+    duration: 1,
+    delay: 0.5,
+    ease: "power4.out"
+  }, 'preload2'); 
+  preloader.to(".number-left", {
+    x: targetLeftX - leftRect.left,
+    y: targetLeftY - leftRect.top,
+    duration: 0.8,
+    delay:0.5,
+    ease: "power4.out"
+  }, 'preload2');
+  preloader.to(".number-right", {
+    x: targetRightX - rightRect.left,
+    y: targetRightY - rightRect.top,
+    duration: 0.8,
+    delay:0.5,
+    ease: "power4.out"
+  }, 'preload2');
+  preloader.to(".number-right, .number-left", {
+    opacity: 0,
+    ease: "power4.out"
+  }, 'preload3');
+  preloader.from(".header .header-left, .header .header-right", {
+    opacity: 0,
+    ease: "power4.out"
+  }, 'preload3');
+  preloader.from(".header-center", {
+    y: -200,
+    ease: "power4.out"
   });
 
   let tickerLine = gsap.timeline({
@@ -302,9 +411,9 @@ function initAnimations() {
   businesTools.from(".business_development", {clipPath: "inset(0 100% 0 0)", opacity: 1 });
   businesTools.from(".business_launch", { clipPath: "inset(0 100% 0 0)", opacity: 1 });
   businesTools.to(".business_tool_inner_two_first", { opacity: 1 });
-  businesTools.from(".business_tool_inner_two_first .business_tool_inner_line", { clipPath: "inset(0 0 0 100%)", ease: "power4.out" });
-  businesTools.to(".business_tool_inner_two_second", { opacity: 1 });
+  businesTools.from(".business_tool_inner_two_first .business_tool_inner_line", { clipPath: "inset(0 100% 0 0 )", ease: "power4.out" });
   businesTools.from(".business_tool_inner_two_second .business_tool_inner_line", { clipPath: "inset(0 100% 0 0)", ease: "power4.out" });
+  businesTools.from(".business_tool_inner_two_second .business_tool_inner_text", { opacity: 0 });
 
   let ventureTranformpin = gsap.timeline({
     scrollTrigger: {
@@ -366,7 +475,7 @@ function initAnimations() {
     y:'-100%',
     stagger:0.1,
     ease: "power4.out" 
-  },1);
+  },'thisshouldo');
   ventureTranform1.from(".fade-last", {
     opacity: 0,
     ease: "power4.out" 
