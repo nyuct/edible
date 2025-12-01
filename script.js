@@ -162,6 +162,21 @@ function initAnimations() {
     y: -200,
     ease: "power4.out"
   });
+  preloader.from(".horizontal-line", {
+    clipPath: "inset(0 100% 0 0)",
+    duration:0.5,
+    ease: "power4.out"
+  });
+  preloader.from(".upper-text div", {
+    y:200,
+    duration:0.5,
+    ease: "power4.out"
+  },'together');
+  preloader.from(".lower-text div", {
+    y:-200,
+    duration:0.5,
+    ease: "power4.out"
+  },'together');
 
   let tickerLine = gsap.timeline({
     scrollTrigger: {
