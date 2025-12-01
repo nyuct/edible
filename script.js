@@ -402,7 +402,7 @@ function initAnimations() {
     scrollTrigger: {
       trigger: ".business_tool_inner",
       start: "top 0% ",
-      end: "200% 0%",
+      end: "250% 0%",
       scrub: true,
       pin: true,
     },
@@ -548,7 +548,7 @@ function initAnimations() {
     clipPath: "inset(0 0% 30% 0%)",
     ease: "power4.out" 
   },'jdi');
-  leftToRight.from(".hidden-text .business_tool_inner_text", {
+  leftToRight.from(".text-banner-section .business_tool_inner_text_anim", {
     opacity:0,
     ease: "power4.out" 
   },'lkj');
