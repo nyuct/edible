@@ -94,7 +94,7 @@ function initAnimations() {
     ease: "power4.out"
   }, 'preloader');                 // ← 0 means start at the same time
   preloader.to("#ventures", {
-    x: "25%",
+    x: "30%",
     duration: 0.7,
     ease: "power4.out"
   }, 'preloader');    
