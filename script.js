@@ -119,21 +119,21 @@ function initAnimations() {
   preloader.to(".header-container", {
     marginRight: "0",
     duration: 1,
-    delay: 0.5,
+    // delay: 0.5,
     ease: "power4.out"
   }, 'preload2');    
   preloader.to(".header-video", {
     width: "102vw",
     // x: "2vw",
     height: "100vh",
-    delay: 0.5,
+    // delay: 0.5,
     duration: 1,
     ease: "power4.out"
   }, 'preload2');    
   preloader.to("#edible, #ventures", {
     x: "0%",
     duration: 1,
-    delay: 0.5,
+    // delay: 0.5,
     ease: "power4.out"
   }, 'preload2'); 
   preloader.to(".number-left", {
@@ -548,14 +548,14 @@ function initAnimations() {
     clipPath: "inset(0 0% 30% 0%)",
     ease: "power4.out" 
   },'jdi');
-  leftToRight.from(".text-banner-section .business_tool_inner_text_anim", {
-    opacity:0,
-    ease: "power4.out" 
-  },'lkj');
   leftToRight.to(".hidden-text .business_tool_inner_line", {
     clipPath: "inset(0 0% 0% 0%)",
     ease: "power4.out" 
   },'lkj');
+  leftToRight.from(".text-banner-section .business_tool_inner_text_anim", {
+    opacity:0,
+    ease: "power4.out" 
+  });
 
   const ovalPath = document.querySelector("#ovalPath");
 
