@@ -63,9 +63,9 @@ html {
   font-size: 32px;
   font-family: 'crimson-italic';
   font-weight: bold;
-  /* mix-blend-mode: difference; */
   transition: transform 0.6s ease;
-  transform: translateY(0); /* default visible */
+  transform: translateY(0); 
+  opacity: 0;
 }
 
 .header.hidden {
@@ -82,7 +82,7 @@ html {
   justify-content: end; 
   margin-right: 12px;
   transform: translateX(-12%);
-  z-index: 1;
+  z-index: 100;
   font-weight: 400;
 }
 #ventures{
@@ -108,36 +108,58 @@ html {
 .header-banner-text{
   position: fixed;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
+  bottom: 0;
+  transform: translate(-50%, 0%);
+  width: 100%;
   z-index: 55;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:baseline;
   gap: 12px;
+  padding: 0 40px;
   flex-direction: column;
+  padding-bottom: 40px;
   /* mix-blend-mode: difference; */
 }
 .upper-text{
-  font-size: 92px;
+  font-size: 112px;
   font-family: 'crimson-italic', serif;
   line-height: 1;
   font-weight: 300;
   overflow: hidden;
+  width: 100%;
+  text-align: left;
+}
+.loader-layer{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #313e47;
+  z-index: 99;
 }
 .lower-text{
   overflow: hidden;
-  font-size: 40px;
-  font-family: 'Fira Sans';
-  font-style: normal;
+  font-size: 32px;
+  font-family: 'crimson-italic';
+  font-style: normal; 
   font-weight: 300;
   text-transform: none;
-  justify-content: space-evenly;
-  width: 50%;
+  justify-content: flex-end;
+  gap: 20px;
+  width: 100%;
+  text-transform: uppercase;
+}
+.video2{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 0;
+  height: 100%;
 }
 .horizontal-line{
-  width: 70%;
+  width: 100%;
   height: 1px;
   background: #ede5d3;
 }
@@ -304,6 +326,33 @@ html {
   height: var(--thumb-h);
   background: #b2a7a7;
   display: inline-block;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+.exp .thumb{
+  background: url(https://s3.nyuct.com/edible/ticker/EXPERIENCES.webp);
+}
+.culture .thumb{
+  background: url(https://s3.nyuct.com/edible/ticker/CULTURE.webp);
+}
+.design .thumb{
+  background: url(https://s3.nyuct.com/edible/ticker/DESIGN.webp);
+}
+.makers .thumb{
+  background: url(https://s3.nyuct.com/edible/ticker/MAKERS.webp);
+}
+.kitchen .thumb{
+  background: url(https://s3.nyuct.com/edible/ticker/KITCHEN.webp);
+}
+.growers .thumb{
+  background: url(https://s3.nyuct.com/edible/ticker/GROWERS.webp);
+}
+.services .thumb{
+  background: url(https://s3.nyuct.com/edible/ticker/SERVICES.webp);
+}
+.communities .thumb{
+  background: url(https://s3.nyuct.com/edible/ticker/COMMUNITIES.webp);
 }
 
 /* animation applied via inline styles from JS (per-row @keyframes) */
@@ -361,7 +410,7 @@ html {
 .concept_img, .design_img, .development_img, .launch_img {
   height: 55vh;
   width: 23vw;
-  background: url(./assets/img/concept-img.png);
+  background: url(https://s3.nyuct.com/edible/four-stages/CONCEPT.webp);
   background-position: center !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -397,7 +446,7 @@ html {
 .design_img {
   width: 24vw;
   height: 23vh;
-  background: url(./assets/img/design-img.png);
+  background: url(https://s3.nyuct.com/edible/four-stages/DESIGN.webp);
 }
 
 .business_development {
@@ -409,7 +458,7 @@ html {
 .development_img {
   width: 29vw;
   height: 36vh;
-  background: url(./assets/img/development-img.png); 
+  background: url(https://s3.nyuct.com/edible/four-stages/DEVELOPMENT.webp);
 }
 
 .business_launch {
@@ -421,9 +470,15 @@ html {
 .launch_img {
   width: 21vw;
   height: 55vh;
-  background: url(./assets/img/launch-img.png);
+  background: url(https://s3.nyuct.com/edible/four-stages/LAUNCH.webp);
 }
-
+.gradient-bg{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left: 0;
+}
 .business_tool_inner_two {
   position: absolute;
   top: 0;
@@ -668,7 +723,8 @@ html {
 }
 .bridge-the-gap-sticky .justify-between {
   background-color: #ede5d3;
-  margin-inline: 80px;
+  margin-inline: 64px;
+  padding:0 24px;
   height: 100%;
 }
   .bridge-the-gap-img {
@@ -799,6 +855,12 @@ html {
   overflow: hidden;
   margin-bottom: 20vh;
   flex-direction: column;
+}
+.team-header{
+  font-family: 'crimson-italic';
+  font-size: 48px;
+  font-weight: 300;
+  color: #313E47;
 }
 .text-banner-image{
   position: relative;

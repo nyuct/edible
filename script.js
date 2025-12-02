@@ -73,6 +73,8 @@ function initAnimations() {
   
   let lastScrollY = window.scrollY;
   const navbar = document.querySelector(".header");
+  const headerVideo = document.querySelector("#bannerVideo");
+  const video2 = document.querySelector(".video2");
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > lastScrollY) {
@@ -88,6 +90,15 @@ function initAnimations() {
 
   const preloader = gsap.timeline({ delay: 1, ease: "power3.out" });
 
+  preloader.to(".numbers-container", {
+    zIndex:999,
+    ease: "power4.out"
+  }, 'pre-preloader');  
+  preloader.add(() => headerVideo.play())  
+  preloader.to(".header-video", {
+    zIndex:99,
+    ease: "power4.out"
+  }, 'pre-preloader');  
   preloader.to("#edible", {
     x: "-40%",
     duration: 0.7,
@@ -98,6 +109,14 @@ function initAnimations() {
     duration: 0.7,
     ease: "power4.out"
   }, 'preloader');    
+  preloader.to(".header-video", {
+    zIndex:101,
+    ease: "power4.out"
+  }, 'preloader'); 
+  preloader.to(".header", {
+    opacity:1,
+    ease: "power4.out"
+  }, 'preloader'); 
   preloader.from(".number-left", {
     x: 100, 
     opacity: 0, 
@@ -109,13 +128,13 @@ function initAnimations() {
     opacity: 0, 
     duration: 1,
     ease: "power4.out"
-  }, 'preloader');    
+  }, 'preloader');   
   preloader.from(".header-video", {
     clipPath: "inset(100% 100% 100% 100%)",
     opacity: 0, 
     duration: 1,
     ease: "power4.out"
-  }, 'preloader');    
+  }, 'preloader');     
   preloader.to(".header-container", {
     marginRight: "0",
     duration: 1,
@@ -130,12 +149,17 @@ function initAnimations() {
     duration: 1,
     ease: "power4.out"
   }, 'preload2');    
+  preloader.add(() => video2.play())  
   preloader.to("#edible, #ventures", {
     x: "0%",
     duration: 1,
     // delay: 0.5,
     ease: "power4.out"
   }, 'preload2'); 
+  preloader.to("#edible, #ventures", {
+    opacity: 0,
+    ease: "power4.out"
+  }, 'preload2');
   preloader.to(".number-left", {
     x: targetLeftX - leftRect.left,
     y: targetLeftY - leftRect.top,
@@ -150,8 +174,20 @@ function initAnimations() {
     // delay:0.5,
     ease: "power4.out"
   }, 'preload2');
+  preloader.to("#bannerVideo", {
+    opacity: 0,
+    ease: "power4.out"
+  }, 'preload3');
+  preloader.from(".video2", {
+    opacity: 0,
+    ease: "power4.out"
+  }, 'preload3');
   preloader.to(".number-right, .number-left", {
     opacity: 0,
+    ease: "power4.out"
+  }, 'preload3');
+  preloader.to(".header-banner-text", {
+    zIndex:102,
     ease: "power4.out"
   }, 'preload3');
   preloader.from(".header .header-left, .header .header-right", {
@@ -164,17 +200,17 @@ function initAnimations() {
   });
   preloader.from(".horizontal-line", {
     clipPath: "inset(0 100% 0 0)",
-    duration:0.5,
+    duration:1,
     ease: "power4.out"
   });
   preloader.from(".upper-text div", {
     y:200,
-    duration:0.5,
+    duration:0.8,
     ease: "power4.out"
   },'together');
   preloader.from(".lower-text div", {
     y:-200,
-    duration:0.5,
+    duration:0.8,
     ease: "power4.out"
   },'together');
 
@@ -614,7 +650,7 @@ function initAnimations() {
     ease: "power4.out" 
   },'bridge-1');
   bridgeTheGap.from(".bridge-title-2", {
-    x: "600%",
+    x: "620%",
     ease: "power4.out" 
   },'bridge-1');
   bridgeTheGap.to(".bridge-title-1", {
