@@ -53,7 +53,7 @@ html {
 .header{
   position: fixed;
   top: 0;
-  padding: 60px 80px;
+  padding: 16px 80px;
   width: 100%; 
   mix-blend-mode: difference;
   display: flex;
@@ -63,7 +63,7 @@ html {
   color: #fff;
   font-size: 32px;
   font-family: 'crimson-italic';
-  font-weight: bold;
+  font-weight: 300;
   transition: transform 0.6s ease;
   transform: translateY(0); 
   opacity: 0;
