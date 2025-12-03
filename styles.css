@@ -47,6 +47,12 @@ html {
   width: 100vw;
   overflow-x: hidden;
 }
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh;
+  touch-action: none;        /* no touch scroll */
+  pointer-events: none;      /* block all mouse/touch */
+}
 .crimson{
   font-family: 'crimson';
 }

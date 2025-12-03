@@ -88,6 +88,7 @@ function initAnimations() {
     lastScrollY = window.scrollY;
   });  
 
+  window.scrollTo(0, 0);
   const preloader = gsap.timeline({ delay: 1, ease: "power3.out" });
 
   preloader.to(".numbers-container", {
@@ -213,6 +214,9 @@ function initAnimations() {
     duration:0.8,
     ease: "power4.out"
   },'together');
+  preloader.add(() => {
+    document.body.classList.remove('no-scroll');
+  });
 
   let tickerLine = gsap.timeline({
     scrollTrigger: {
