@@ -88,7 +88,7 @@ function initAnimations() {
     lastScrollY = window.scrollY;
   });  
 
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
   const preloader = gsap.timeline({ delay: 1, ease: "power3.out" });
 
   preloader.to(".numbers-container", {

@@ -347,19 +347,46 @@ margin-top: 0;
   background-repeat: no-repeat !important;
 }
 .exp .thumb{
-  background: url(https://s3.nyuct.com/edible/ticker/EXPERIENCES.webp);
+  background: url(./assets/img/food-exp.jpg);
+}
+.spaces .thumb{
+  background: url(./assets/img/spaces-2.jpg);
 }
 .culture .thumb{
-  background: url(https://s3.nyuct.com/edible/ticker/CULTURE.webp);
+  background: url(./assets/img/culture.jpg);
 }
 .design .thumb{
-  background: url(https://s3.nyuct.com/edible/ticker/DESIGN.webp);
+  background: url(./assets/img/development-2.jpg);
+}
+.revival .thumb{
+  background: url(./assets/img/revival.jpg);
+}
+.brands .thumb{
+  background: url(./assets/img/brands.jpg);
+}
+.restaurants .thumb{
+  background: url(./assets/img/restaurants.jpg);
+}
+.economics .thumb{
+  background: url(./assets/img/economics.jpg);
+}
+.sourcing .thumb{
+  background: url(./assets/img/sourcing.jpg);
+}
+.chefs .thumb{
+  background: url(./assets/img/chefs-2.jpg);
+}
+.recipes .thumb{
+  background: url(./assets/img/recipes.png);
+}
+.innovation .thumb{
+  background: url(./assets/img/innovation.jpg);
 }
 .makers .thumb{
   background: url(https://s3.nyuct.com/edible/ticker/MAKERS.webp);
 }
 .kitchen .thumb{
-  background: url(https://s3.nyuct.com/edible/ticker/KITCHEN.webp);
+  background: url(./assets/img/kitchen.jpg);
 }
 .growers .thumb{
   background: url(https://s3.nyuct.com/edible/ticker/GROWERS.webp);
@@ -368,7 +395,7 @@ margin-top: 0;
   background: url(https://s3.nyuct.com/edible/ticker/SERVICES.webp);
 }
 .communities .thumb{
-  background: url(https://s3.nyuct.com/edible/ticker/COMMUNITIES.webp);
+  background: url(./assets/img/communities.JPG);
 }
 
 /* animation applied via inline styles from JS (per-row @keyframes) */
@@ -426,7 +453,7 @@ margin-top: 0;
 .concept_img, .design_img, .development_img, .launch_img {
   height: 55vh;
   width: 23vw;
-  background: url(https://s3.nyuct.com/edible/four-stages/CONCEPT.webp);
+  background: url(./assets/img/concept-2.jpg);
   background-position: center !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -462,7 +489,7 @@ margin-top: 0;
 .design_img {
   width: 24vw;
   height: 23vh;
-  background: url(https://s3.nyuct.com/edible/four-stages/DESIGN.webp);
+  background: url(./assets/img/design-3.jpg);
 }
 
 .business_development {
@@ -474,7 +501,7 @@ margin-top: 0;
 .development_img {
   width: 29vw;
   height: 36vh;
-  background: url(https://s3.nyuct.com/edible/four-stages/DEVELOPMENT.webp);
+  background: url(./assets/img/design.jpg);
 }
 
 .business_launch {
@@ -577,6 +604,11 @@ margin-top: 0;
   align-items: center;
 }
 
+.venture_tranform-img video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 .venture_tranform-img {
   /* position: absolute; */
   /* bottom: 20px; */
@@ -797,7 +829,7 @@ margin-top: 0;
 }
 .bridge-the-gap-sticky .justify-between {
   background-color: #ede5d3;
-  margin-inline: 64px;
+  margin-inline: 56px;
   padding:0 24px;
   height: 100%;
 }
@@ -805,6 +837,51 @@ margin-top: 0;
     width: 100%;
     height: 35vh;
     background: grey;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+.community-img{
+  background: url(./assets/img/communities.JPG);
+}
+.community-img-1{
+  background: url(./assets/img/maker-1.JPG);
+}
+.community-img-2{
+  background: url(./assets/img/makers-2.JPG);
+}
+.hospitality-img-3{
+  background: url(./assets/img/hospitality-3.png);
+}
+.hospitality-img-1{
+  background: url(./assets/img/hospitality-1.png);
+}
+.hospitality-img-2{
+  background: url(./assets/img/hospitality-2.png);
+}
+.architect-img-3{
+  background: url(./assets/img/architect-3.png);
+}
+.architect-img-1{
+  background: url(./assets/img/architect-1.png);
+}
+.architect-img-2{
+  background: url(./assets/img/architect-2.png);
+}
+.development-img-1{
+  background: url(./assets/img/development-img-1.png);
+}
+.development-img-2{
+  background: url(./assets/img/development-img-2.png);
+}
+.development-img-3{
+  background: url(./assets/img/development-img-3.png);
+}
+.venture-design-img-1{
+  background: url(./assets/img/venture-designer-1.png);
+}
+.venture-design-img-2{
+  background: url(./assets/img/venture-designer-2.png);
 }
 .bridge-the-gap-img-right{
   height: 100%;
@@ -900,6 +977,7 @@ margin-top: 0;
   z-index: 3;
   position: relative;
   object-fit: cover;
+  width: 100%;
   height: 100%;
 }
 .hidden-text .business_tool_inner_line{
@@ -939,6 +1017,7 @@ margin-top: 0;
 .text-banner-image{
   position: relative;
   height: 100vh;
+  width: 100%;
   position: absolute;
 }
 .fade-in-img{
