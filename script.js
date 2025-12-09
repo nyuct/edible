@@ -650,7 +650,7 @@ function initAnimations() {
     },
   });
   bridgeTheGap.from(".slide-left-container-1", {
-    x: "120%",
+    x: "220%",
     ease: "power4.out" 
   },'bridge-1');
   bridgeTheGap.from(".bridge-title-2", {
@@ -666,7 +666,7 @@ function initAnimations() {
     { x: "80%", ease: "power4.out" },
     'bridge-1');
   bridgeTheGap.from(".slide-left-container-2", {
-    x: "120%",
+    x: "220%",
     ease: "power4.out" 
   }, 'bridge-2');
   bridgeTheGap.from(".bridge-title-3", {
@@ -682,7 +682,7 @@ function initAnimations() {
     ease: "power4.out" 
   }, 'bridge-2');
   bridgeTheGap.from(".slide-left-container-3", {
-    x: "120%",
+    x: "220%",
     ease: "power4.out" 
   }, 'bridge-3');
   bridgeTheGap.from(".bridge-title-4", {
@@ -698,7 +698,7 @@ function initAnimations() {
     ease: "power4.out" 
   }, 'bridge-3');
   bridgeTheGap.from(".slide-left-container-4", {
-    x: "120%",
+    x: "220%",
     ease: "power4.out" 
   }, 'bridge-4');
   bridgeTheGap.from(".bridge-title-5", {

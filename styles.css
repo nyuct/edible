@@ -671,7 +671,7 @@ margin-top: 0;
   margin: 0 auto !important;
   padding: 40px 0px 30px;
   height: 100%;
-  max-height: 120px;
+  max-height: 130px;
   justify-content: space-evenly;
   transition: all 1s;
 }
@@ -687,7 +687,6 @@ margin-top: 0;
   font-weight: normal;
   color: #313E47;
   line-height: 0.8;
-  margin-top: -10px;
 }
 
 .step_title {
@@ -695,7 +694,6 @@ margin-top: 0;
   color: #313E47;
   text-transform: uppercase;
   line-height: 1.1;
-  margin-top: -6px;
 }
 .steps-text {
   font-size: 16px;
@@ -831,6 +829,7 @@ margin-top: 0;
   margin-inline: 56px;
   padding:0 24px;
   height: 100%;
+  width: 100%;
 }
   .bridge-the-gap-img {
     width: 100%;
