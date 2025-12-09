@@ -1,0 +1,142 @@
+@media (max-width: 768px) {
+  .ticker_uppersection {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-inline: 30px;
+
+    p,
+    .ticker_line {
+      width: 100%;
+    }
+  }
+
+  footer {
+    padding: 100px 30px;
+  }
+  .steps_innersection {
+    padding-inline: 30px;
+  }
+
+  .step_box {
+    max-height: 300px;
+  }
+  .trace-oval {
+    justify-content: center;
+
+    svg {
+      max-width: 50%;
+    }
+  }
+  .bridge-the-gap-sticky .justify-between {
+    margin-inline: 30px;
+  }
+  .bridge-the-gap-img {
+    display: none;
+  }
+  .bridge-the-gap-footer {
+    padding-top: 50px;
+  }
+  .upper-text {
+    font-size: 40px;
+  }
+  .lower-text {
+    overflow: hidden;
+    font-size: 14px;
+  }
+  .concept_img,
+  .design_img,
+  .development_img,
+  .launch_img {
+    height: 20vh;
+    width: 50vw;
+  }
+  .business_text {
+    font-size: 21px;
+    margin-left: 0;
+    text-align: center;
+  }
+  .business_concept {
+    top: 2%;
+    position: absolute;
+    text-align: center;
+  }
+  .business_design {
+    position: absolute;
+    left: unset;
+    top: 22%;
+    right: 0%;
+  }
+  .business_development {
+    position: absolute;
+    top: 42%;
+    left: 0%;
+  }
+  .business_launch {
+    top: 62%;
+  }
+  .business_tool_inner_two .business_tool_inner_line {
+    display: none;
+  }
+  .business_tool_inner_text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .business_tool_inner_two_second {
+    width: 100%;
+    padding-inline: 20px;
+  }
+  .venture_tranform-div1 {
+    padding: 60px 20px;
+    h1 {
+      font-size: 21px;
+    }
+  }
+  .text-banner-text {
+    padding: 40px 20px;
+    z-index: 9;
+    background: #ede5d3;
+    color: #313e47;
+    font-size: 14px;
+    font-family: "begum";
+  }
+  .hidden-text {
+    right: 20px;
+
+    div {
+      width: 100%;
+      font-size: 14px;
+    }
+    .business_tool_inner_text_anim {
+      width: 100% !important;
+    }
+  }
+  .steps_heading h1 {
+    flex-direction: column;
+  }
+
+  .step_box {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+
+    .step_number,
+    .step_title,
+    .steps-line,
+    .steps-text {
+      width: 100% !important;
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+  .steps-line  {
+    display: none;
+  }
+  .venture-designer-container {
+    .d-flex {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+}
