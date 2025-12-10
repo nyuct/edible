@@ -36,7 +36,7 @@ html {
   padding: 0;
   font-family: "Fira Sans", sans-serif;
   font-weight: 300;
-  font-size: 22px;
+  font-size: 1.5vw;
 
   font-style: normal;
   background: #ede5d3;
@@ -252,7 +252,7 @@ html {
 
 .ticker_uppersection p {
   margin: 0;
-  width: 40%;
+  width: 390px;
 }
 .ticker_uppersection {
   margin-inline: 80px;
@@ -264,7 +264,7 @@ html {
   color: #313e47;
 }
 .ticker_line {
-  width: 35%;
+  width: calc(100% - 580px);
   display: flex;
   align-items: center;
 }
@@ -445,8 +445,8 @@ html {
 .design_img,
 .development_img,
 .launch_img {
-  height: 55vh;
-  width: 23vw;
+  height: 50vh;
+  width: 25vw;
   background: url(./assets/img/concept-2.jpg);
   background-position: center !important;
   background-size: cover !important;
@@ -454,12 +454,12 @@ html {
 }
 
 .business_text {
-  font-size: 48px;
+  font-size: 1.5vw;
   text-align: left;
-  font-family: "Erode";
   text-transform: uppercase;
   color: #313e47;
-  margin-left: 36px;
+  margin-top: 10px;
+  font-weight: 500;
 }
 
 .business_tool_inner {
@@ -470,43 +470,44 @@ html {
 
 .business_concept {
   top: 5%;
+  left: 2%;
   position: absolute;
   text-align: center;
 }
 
 .business_design {
   position: absolute;
-  top: 13%;
-  left: 27%;
+  top: 5%;
+  left: 30%;
 }
 
 .design_img {
-  width: 24vw;
-  height: 23vh;
+  width: 30vw;
+  height: 40vh;
   background: url(./assets/img/design-3.jpg);
 }
 
 .business_development {
   position: absolute;
-  top: 43%;
-  left: 46%;
+  top: 50%;
+  left: 40%;
 }
 
 .development_img {
-  width: 29vw;
-  height: 36vh;
+  width: 30vw;
+  height: 40vh;
   background: url(./assets/img/design.jpg);
 }
 
 .business_launch {
   position: absolute;
   bottom: 5%;
-  right: 0%;
+  right: 2%;
 }
 
 .launch_img {
-  width: 21vw;
-  height: 55vh;
+  width: 25vw;
+  height: 50vh;
   background: url(https://s3.nyuct.com/edible/four-stages/LAUNCH.webp);
 }
 .gradient-bg {
@@ -528,7 +529,7 @@ html {
 }
 
 .business_tool_inner_two_first {
-  width: 40%;
+  width: 37%;
   margin-left: auto;
   display: flex;
   align-items: center;
@@ -554,7 +555,7 @@ html {
   margin-top: 48px;
 }
 .business_tool_inner_two_second {
-  width: 40%;
+  width: 37%;
   margin-right: auto;
   display: flex;
   align-items: center;
@@ -681,7 +682,7 @@ html {
 }
 
 .step_title {
-  font-size: 22px;
+  font-size: 1.5vw;
   font-weight: 500;
   color: #313e47;
   text-transform: uppercase;
@@ -925,7 +926,7 @@ html {
 /* bridge the gap updated css  */
 .bridge-title-sticky {
   padding: 0;
-  font-size: 22px;
+  font-size: 1.5vw;
   font-weight: 500;
   color: #313e47;
 }
