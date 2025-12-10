@@ -2,17 +2,9 @@
 
 @font-face {
   font-family: "Erode";
-  src: url("./fonts/Erode-Variable.woff2") format("woff2 supports variations"),
-       url("./fonts/Erode-Variable.woff") format("woff2-variations");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Erode Italic";
-  src: url("./fonts/Erode-VariableItalic.woff2") format("woff2 supports variations"),
-       url("./fonts/Erode-Variable.woff") format("woff2-variations");
-  font-weight: 100 700;
+  src: url("./fonts/Erode-Variable.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal italic;
 }
 
 :root {
@@ -44,6 +36,8 @@ html {
   padding: 0;
   font-family: "Fira Sans", sans-serif;
   font-weight: 300;
+  font-size: 22px;
+
   font-style: normal;
   background: #ede5d3;
   width: 100vw;
@@ -70,8 +64,7 @@ html {
   z-index: 9999;
   color: #fff;
   font-size: 32px;
-  font-family: "Erode Italic", serif;
-  font-variation-settings: "'wght' 200";
+  font-family: "Erode", serif;
   transition: transform 0.6s ease;
   transform: translateY(0);
   opacity: 0;
@@ -95,9 +88,8 @@ html {
   margin-right: 12px;
   transform: translateX(-12%);
   z-index: 100;
-  font-family: 'Erode italic', serif;
-  font-variation-settings: "wght" 100;
-
+  font-family: "Erode", serif;
+  font-variation-settings: "wght" 500;
 }
 #ventures {
   justify-content: start;
@@ -136,10 +128,9 @@ html {
   /* mix-blend-mode: difference; */
 }
 .upper-text {
-  font-size: 112px;
+  font-size: 100px;
   font-family: "Erode", serif;
-  line-height: 1;
-  font-weight: 300;
+  font-variation-settings: "wght" 400;
   overflow: hidden;
   width: 100%;
   text-align: left;
@@ -216,7 +207,6 @@ html {
   font-weight: bold;
   gap: 48px;
   text-transform: uppercase;
-  font-style: italic;
   font-size: 100px;
   margin-right: 5vw;
 }
@@ -234,7 +224,6 @@ html {
   background-color: #ede5d3;
 }
 .numbers {
-  font-family: "crimson";
   font-size: 32px;
 }
 /* Ticker css  */
@@ -242,9 +231,9 @@ html {
   /* px travelled per second (lower = slower). You can override per-row via data attribute. */
   --px-per-sec: 50;
   --gap: 40px;
-  --thumb-w: 134px;
-  --thumb-h: 68px;
-  --font-size: 42px;
+  --thumb-w: 200px;
+  --thumb-h: 120px;
+  --font-size: 32px;
 }
 
 * {
@@ -271,9 +260,7 @@ html {
   gap: 24px;
   align-items: center;
   justify-content: left;
-  font-size: 24px;
   font-weight: 300;
-  line-height: 1.1;
   color: #313e47;
 }
 .ticker_line {
@@ -338,7 +325,6 @@ html {
 }
 /* italic */
 .italic {
-  font-style: italic;
 }
 
 /* thumbnail box */
@@ -547,8 +533,6 @@ html {
   display: flex;
   align-items: center;
   gap: 50px;
-  font-size: 24px;
-  font-weight: 300;
   opacity: 0;
 }
 .business_tool_inner_text {
@@ -574,7 +558,6 @@ html {
   margin-right: auto;
   display: flex;
   align-items: center;
-  font-size: 16px;
   font-weight: 300;
   gap: 32px;
   /* opacity: 0; */
@@ -583,7 +566,6 @@ html {
   width: 65%;
 }
 .business_tool_inner_two_first .business_tool_inner_text {
-  line-height: 1;
 }
 .venture_tranform-div {
   width: 100vw;
@@ -655,7 +637,6 @@ html {
 
 /* steps css  */
 .steps_heading h1 {
-  font-style: italic;
   font-weight: 300;
   color: #313e47;
   font-size: 48px;
@@ -680,9 +661,10 @@ html {
   margin: 0 auto !important;
   padding: 40px 0px 30px;
   height: 100%;
-  max-height: 130px;
+  max-height: 170px;
   justify-content: space-evenly;
   transition: all 1s;
+  align-items: start;
 }
 .step_box:hover {
   height: 100%;
@@ -695,18 +677,18 @@ html {
   font-family: "Erode";
   font-weight: normal;
   color: #313e47;
-  line-height: 0.8;
 }
 
 .step_title {
-  font-size: 24px;
+  font-size: 22px;
+  font-weight: 500;
   color: #313e47;
   text-transform: uppercase;
-  line-height: 1.1;
+  letter-spacing: 0.4px;
 }
 .steps-text {
   font-size: 16px;
-  line-height: 1.2;
+
   margin-left: 24px;
 }
 .steps-text-show {
@@ -729,9 +711,10 @@ html {
   font-family: "Fira Sans";
 }
 .steps-text ul {
-  list-style: lower-alpha;
+  list-style: none;
   padding-left: 20px;
   margin: 0;
+  line-height: 1.5;
 }
 .steps-text-img img {
   height: 100%;
@@ -924,7 +907,7 @@ html {
   gap: 32px;
   /* font-family: "Libre Baskerville", serif; */
   font-weight: 300;
-  /* line-height: 1; */
+  /* */
   /* border-top: 1px solid #171f24;
   border-bottom: 1px solid #171f24; */
 }
@@ -969,7 +952,6 @@ html {
 }
 .hidden-text div {
   width: 100%;
-  font-size: 24px;
 }
 .hidden-text {
   position: absolute;
@@ -1053,7 +1035,7 @@ html {
   width: 50%;
   margin: 0;
   text-align: right;
-  line-height: 1.2;
+
   font-weight: 300;
   margin-left: auto;
   font-size: 16px;
