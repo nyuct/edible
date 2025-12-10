@@ -36,7 +36,7 @@ html {
   padding: 0;
   font-family: "Fira Sans", sans-serif;
   font-weight: 300;
-  font-size: 1.5vw;
+  font-size: 1.1vw;
 
   font-style: normal;
   background: #ede5d3;
@@ -124,7 +124,7 @@ html {
   gap: 12px;
   padding: 0 40px;
   flex-direction: column;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
   /* mix-blend-mode: difference; */
 }
 .upper-text {
@@ -243,7 +243,7 @@ html {
 .ticker {
   overflow: hidden;
   width: 100%;
-  padding: 100px 0 50px;
+  padding: 200px 0 50px;
   min-height: 100vh;
   background: #ede5d3;
   display: flex;
@@ -255,13 +255,14 @@ html {
   width: 40%;
 }
 .ticker_uppersection {
-  margin-inline: 80px;
+  margin-inline: auto;
   display: flex;
   gap: 24px;
   align-items: center;
   justify-content: left;
   font-weight: 300;
   color: #313e47;
+  max-width: 60%;
 }
 .ticker_line {
   width: calc(100% - 580px);
@@ -274,7 +275,6 @@ html {
   background: black;
 }
 .ticker_uppersection .text-end {
-  margin-left: 32px;
 }
 .group div {
   font-family: "Erode";
@@ -585,10 +585,10 @@ html {
 }
 .venture_tranform-div1 .text-uppercase {
   color: #fff;
-  font-family: 'Erode', serif;
+  font-family: "Erode", serif;
   font-size: 1.7vw;
   font-weight: 300;
-} 
+}
 .venture_tranform-img-container {
   position: relative;
   justify-content: space-between;
@@ -913,7 +913,7 @@ html {
   color: #313e47;
   justify-content: center;
   gap: 32px;
-  font-family: 'Erode', serif;
+  font-family: "Erode", serif;
   font-weight: 300;
   line-height: 1.2;
 }
