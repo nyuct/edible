@@ -10,7 +10,12 @@
       width: 100%;
     }
   }
-
+  .header-banner-text {
+    padding-inline: 10px;
+  }
+  .ticker_uppersection .text-end {
+    margin-left: 0;
+  }
   footer {
     padding: 100px 30px;
   }
@@ -19,21 +24,27 @@
   }
 
   .step_box {
-    max-height: 300px;
+    max-height: 200px;
   }
   .trace-oval {
     justify-content: center;
 
     svg {
-      max-width: 50%;
+      max-width: 75%;
     }
+  }
+  .header {
+    padding: 15px;
+  }
+  .text-banner-text p {
+    width: 100%;
   }
   .bridge-the-gap-sticky .justify-between {
     margin-inline: 30px;
   }
-  .bridge-the-gap-img {
+  /* .bridge-the-gap-img {
     display: none;
-  }
+  } */
   .bridge-the-gap-footer {
     padding-top: 50px;
   }
@@ -97,7 +108,7 @@
     z-index: 9;
     background: #ede5d3;
     color: #313e47;
-    font-size: 14px;
+    font-size: 16px;
     font-family: "begum";
   }
   .hidden-text {
@@ -130,7 +141,7 @@
       margin: 0;
     }
   }
-  .steps-line  {
+  .steps-line {
     display: none;
   }
   .venture-designer-container {
@@ -138,5 +149,28 @@
       flex-direction: column;
       gap: 30px;
     }
+  }
+  .header-container {
+    font-size: 40px;
+    flex-direction: column;
+  }
+  #edible {
+    transform: translate(25%, -20%);
+  }
+  #ventures {
+    transform: translate(-25%, 20%);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header-container {
+    font-size: 40px;
+    flex-direction: column;
+  }
+  #edible {
+    transform: translate(-12%, -20%);
+  }
+  #ventures {
+    transform: translate(-12%, 20%);
   }
 }
