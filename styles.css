@@ -63,7 +63,7 @@ html {
   align-items: center;
   z-index: 9999;
   color: #fff;
-  font-size: 32px;
+  font-size: 1.7vw;
   font-family: "Erode", serif;
   transition: transform 0.6s ease;
   transform: translateY(0);
@@ -128,7 +128,7 @@ html {
   /* mix-blend-mode: difference; */
 }
 .upper-text {
-  font-size: 100px;
+  font-size: 6vw;
   font-family: "Erode", serif;
   font-variation-settings: "wght" 400;
   overflow: hidden;
@@ -146,7 +146,7 @@ html {
 }
 .lower-text {
   overflow: hidden;
-  font-size: 32px;
+  font-size: 1.7vw;
   font-family: "Erode";
   font-style: normal;
   font-weight: 300;
@@ -224,7 +224,7 @@ html {
   background-color: #ede5d3;
 }
 .numbers {
-  font-size: 32px;
+  font-size: 1.7vw;
 }
 /* Ticker css  */
 :root {
@@ -233,7 +233,7 @@ html {
   --gap: 40px;
   --thumb-w: 200px;
   --thumb-h: 120px;
-  --font-size: 32px;
+  --font-size: 1.7vw;
 }
 
 * {
@@ -405,7 +405,7 @@ html {
 /* responsive tweaks */
 @media (max-width: 700px) {
   :root {
-    --font-size: 16px;
+    --font-size: 1vw;
     --thumb-w: 110px;
     --thumb-h: 56px;
     --gap: 24px;
@@ -435,7 +435,7 @@ html {
 .business_tool_text {
   padding-block: 40px;
   text-align: center;
-  font-size: 32px;
+  font-size: 1.7vw;
   color: #313e47;
   font-weight: 300;
   margin-bottom: 15vh;
@@ -583,6 +583,12 @@ html {
   flex-direction: column;
   justify-content: space-between;
 }
+.venture_tranform-div1 .text-uppercase {
+  color: #fff;
+  font-family: 'Erode', serif;
+  font-size: 1.7vw;
+  font-weight: 300;
+} 
 .venture_tranform-img-container {
   position: relative;
   justify-content: space-between;
@@ -637,10 +643,10 @@ html {
 }
 
 /* steps css  */
-.steps_heading h1 {
+.steps_heading .steps_heading_inner {
   font-weight: 300;
   color: #313e47;
-  font-size: 48px;
+  font-size: 3vw;
   padding: 48px 0;
   font-family: "Erode";
   gap: 26px;
@@ -650,6 +656,10 @@ html {
   text-align: center;
   text-transform: uppercase;
   text-align: center;
+
+  .text-black {
+    justify-content: center;
+  }
 }
 .steps_boxes {
   border-top: 1px solid #000;
@@ -673,7 +683,7 @@ html {
 }
 
 .step_number {
-  font-size: 80px;
+  font-size: 5vw;
   text-transform: uppercase;
   font-family: "Erode";
   font-weight: normal;
@@ -689,7 +699,7 @@ html {
   letter-spacing: 0.4px;
 }
 .steps-text {
-  font-size: 16px;
+  font-size: 1vw;
 }
 .steps-text-show {
   margin-bottom: 40px;
@@ -728,7 +738,7 @@ html {
   height: 40vh;
 }
 .text-16 {
-  font-size: 16px;
+  font-size: 1vw;
 }
 .h-40 {
   height: 40vh !important;
@@ -737,7 +747,7 @@ html {
   height: 25vh !important;
 }
 .text-12 {
-  font-size: 12px;
+  font-size: 0.8vw;
 }
 .steps-text .left-side {
   display: flex;
@@ -776,7 +786,7 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 130%;
+  max-width: 100%;
 }
 .step_box:hover .steps-text-img {
   opacity: 1;
@@ -800,7 +810,7 @@ html {
   margin-top: -40vh;
 }
 .bridge-the-gap-text h2 {
-  font-size: 20px !important;
+  font-size: 1.5vw !important;
 }
 .bridge-the-gap-text {
   display: flex;
@@ -875,7 +885,7 @@ html {
   height: 100%;
 }
 .bridge-title-sticky {
-  font-size: 40px;
+  font-size: 1.7vw;
   text-transform: uppercase;
   padding-inline: 50px;
   font-family: "Fira Sans", sans-serif;
@@ -897,19 +907,15 @@ html {
   width: 100%;
 }
 .bridge-the-gap-footer {
-  /* margin: 10px 50px; */
-  /* padding: 20px 0; */
   margin-top: -12px;
   font-size: 12vw;
   text-align: center;
   color: #313e47;
   justify-content: center;
   gap: 32px;
-  /* font-family: "Libre Baskerville", serif; */
+  font-family: 'Erode', serif;
   font-weight: 300;
-  /* */
-  /* border-top: 1px solid #171f24;
-  border-bottom: 1px solid #171f24; */
+  line-height: 1.2;
 }
 .d-flex {
   display: flex;
@@ -1028,7 +1034,7 @@ html {
   z-index: 9;
   background: #ede5d3;
   color: #313e47;
-  font-size: 32px;
+  font-size: 1.7vw;
   font-family: "Erode";
 }
 .slide-container p {
@@ -1112,7 +1118,7 @@ html {
   width: 100%;
   padding-right: 12px;
   text-align: left;
-  font-size: 14px;
+  font-size: 1vw;
 }
 .bridge-the-gap-img-right.d-flex {
   flex-direction: column;
@@ -1136,7 +1142,7 @@ html {
   gap: 30px;
 }
 .venture-designer-container h2 {
-  font-size: 20px;
+  font-size: 1.5vw;
 }
 .venture-designer-container p {
   margin-left: 0;
