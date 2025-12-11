@@ -1,10 +1,9 @@
-import { BlurScrollEffect } from './blurScrollEffect.js';
+import { BlurScrollEffect } from "./blurScrollEffect.js";
 
 /* ---------------------------------------------------------
    1) REGISTER GSAP PLUGINS RIGHT AWAY
 ------------------------------------------------------------*/
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
-
 
 ScrollTrigger.config({
   fastScrollEnd: true,
@@ -20,12 +19,12 @@ const lenis = new Lenis({
   // you can tweak if needed
   duration: 1.5,
   smooth: true,
-  lerp: 0.08,     // <= LOWER = smoother & more even motion
+  lerp: 0.08, // <= LOWER = smoother & more even motion
   wheelMultiplier: 0.7,
 });
 
 // Let ScrollTrigger update on Lenis scroll
-lenis.on('scroll', () => {
+lenis.on("scroll", () => {
   ScrollTrigger.update();
 });
 
@@ -43,7 +42,6 @@ gsap.ticker.lagSmoothing(0);
       wrapped in an init function to ensure DOM is ready
 ------------------------------------------------------------*/
 
-
 // Step A — Calculate offsets so numbers land in corners
 const numLeft = document.getElementById("numLeft");
 const numRight = document.getElementById("numRight");
@@ -53,12 +51,11 @@ const leftRect = numLeft.getBoundingClientRect();
 const rightRect = numRight.getBoundingClientRect();
 
 // Desired final corner positions
-const targetLeftX = 80;  // px from left
-const targetLeftY = 60;  // px from top
+const targetLeftX = 80; // px from left
+const targetLeftY = 60; // px from top
 
 const targetRightX = window.innerWidth - 80 - rightRect.width;
 const targetRightY = 60;
-
 
 function initAnimations() {
   // PRELOADER
@@ -70,7 +67,7 @@ function initAnimations() {
   //   stagger: 0.25,
   //   delay: 0.5,
   // });
-  
+
   let lastScrollY = window.scrollY;
   const navbar = document.querySelector(".header");
   const headerVideo = document.querySelector("#bannerVideo");
@@ -86,136 +83,224 @@ function initAnimations() {
     }
 
     lastScrollY = window.scrollY;
-  });  
+  });
 
   // window.scrollTo(0, 0);
   const preloader = gsap.timeline({ delay: 1, ease: "power3.out" });
 
-  preloader.to(".numbers-container", {
-    zIndex:999,
-    ease: "power4.out"
-  }, 'pre-preloader');  
-  preloader.add(() => headerVideo.play())  
-  preloader.to(".header-video", {
-    zIndex:99,
-    ease: "power4.out"
-  }, 'pre-preloader');  
-  preloader.to("#edible", {
-    x: "-40%",
-    duration: 0.7,
-    ease: "power4.out"
-  }, 'preloader');                 // ← 0 means start at the same time
-  preloader.to("#ventures", {
-    x: "30%",
-    duration: 0.7,
-    ease: "power4.out"
-  }, 'preloader');    
-  preloader.to(".header-video", {
-    zIndex:101,
-    ease: "power4.out"
-  }, 'preloader'); 
-  preloader.to(".header", {
-    opacity:1,
-    ease: "power4.out"
-  }, 'preloader'); 
-  preloader.from(".number-left", {
-    x: 100, 
-    opacity: 0, 
-    duration: 0.7,
-    ease: "power4.out"
-  }, 'preloader');    
-  preloader.from(".number-right", {
-    x: -100, 
-    opacity: 0, 
-    duration: 1,
-    ease: "power4.out"
-  }, 'preloader');   
-  preloader.from(".header-video", {
-    clipPath: "inset(100% 100% 100% 100%)",
-    opacity: 0, 
-    duration: 1,
-    ease: "power4.out"
-  }, 'preloader');     
-  preloader.to(".header-container", {
-    marginRight: "0",
-    duration: 1,
-    // delay: 0.5,
-    ease: "power4.out"
-  }, 'preload2');    
-  preloader.to(".header-video", {
-    width: "102vw",
-    // x: "2vw",
-    height: "100vh",
-    // delay: 0.5,
-    duration: 1,
-    ease: "power4.out"
-  }, 'preload2');    
-  preloader.add(() => video2.play())  
-  preloader.to("#edible, #ventures", {
-    x: "0%",
-    duration: 1,
-    // delay: 0.5,
-    ease: "power4.out"
-  }, 'preload2'); 
-  preloader.to("#edible, #ventures", {
-    opacity: 0,
-    ease: "power4.out"
-  }, 'preload2');
-  preloader.to(".number-left", {
-    x: targetLeftX - leftRect.left,
-    y: targetLeftY - leftRect.top,
-    duration: 0.8,
-    // delay:0.5,
-    ease: "power4.out"
-  }, 'preload2');
-  preloader.to(".number-right", {
-    x: targetRightX - rightRect.left,
-    y: targetRightY - rightRect.top,
-    duration: 0.8,
-    // delay:0.5,
-    ease: "power4.out"
-  }, 'preload2');
-  preloader.to("#bannerVideo", {
-    opacity: 0,
-    ease: "power4.out"
-  }, 'preload3');
-  preloader.from(".video2", {
-    opacity: 0,
-    ease: "power4.out"
-  }, 'preload3');
-  preloader.to(".number-right, .number-left", {
-    opacity: 0,
-    ease: "power4.out"
-  }, 'preload3');
-  preloader.to(".header-banner-text", {
-    zIndex:102,
-    ease: "power4.out"
-  }, 'preload3');
-  preloader.from(".header .header-left, .header .header-right", {
-    opacity: 0,
-    ease: "power4.out"
-  }, 'preload3');
+  preloader.to(
+    ".numbers-container",
+    {
+      zIndex: 999,
+      ease: "power4.out",
+    },
+    "pre-preloader"
+  );
+  preloader.add(() => headerVideo.play());
+  preloader.to(
+    ".header-video",
+    {
+      zIndex: 99,
+      ease: "power4.out",
+    },
+    "pre-preloader"
+  );
+  preloader.to(
+    "#edible",
+    {
+      x: "-40%",
+      duration: 0.7,
+      ease: "power4.out",
+    },
+    "preloader"
+  ); // ← 0 means start at the same time
+  preloader.to(
+    "#ventures",
+    {
+      x: "30%",
+      duration: 0.7,
+      ease: "power4.out",
+    },
+    "preloader"
+  );
+  preloader.to(
+    ".header-video",
+    {
+      zIndex: 101,
+      ease: "power4.out",
+    },
+    "preloader"
+  );
+  preloader.to(
+    ".header",
+    {
+      opacity: 1,
+      ease: "power4.out",
+    },
+    "preloader"
+  );
+  preloader.from(
+    ".number-left",
+    {
+      x: 100,
+      opacity: 0,
+      duration: 0.7,
+      ease: "power4.out",
+    },
+    "preloader"
+  );
+  preloader.from(
+    ".number-right",
+    {
+      x: -100,
+      opacity: 0,
+      duration: 1,
+      ease: "power4.out",
+    },
+    "preloader"
+  );
+  preloader.from(
+    ".header-video",
+    {
+      clipPath: "inset(100% 100% 100% 100%)",
+      opacity: 0,
+      duration: 1,
+      ease: "power4.out",
+    },
+    "preloader"
+  );
+  preloader.to(
+    ".header-container",
+    {
+      marginRight: "0",
+      duration: 1,
+      // delay: 0.5,
+      ease: "power4.out",
+    },
+    "preload2"
+  );
+  preloader.to(
+    ".header-video",
+    {
+      width: "102vw",
+      // x: "2vw",
+      height: "100vh",
+      // delay: 0.5,
+      duration: 1,
+      ease: "power4.out",
+    },
+    "preload2"
+  );
+  preloader.add(() => video2.play());
+  preloader.to(
+    "#edible, #ventures",
+    {
+      x: "0%",
+      duration: 1,
+      // delay: 0.5,
+      ease: "power4.out",
+    },
+    "preload2"
+  );
+  preloader.to(
+    "#edible, #ventures",
+    {
+      opacity: 0,
+      ease: "power4.out",
+    },
+    "preload2"
+  );
+  preloader.to(
+    ".number-left",
+    {
+      x: targetLeftX - leftRect.left,
+      y: targetLeftY - leftRect.top,
+      duration: 0.8,
+      // delay:0.5,
+      ease: "power4.out",
+    },
+    "preload2"
+  );
+  preloader.to(
+    ".number-right",
+    {
+      x: targetRightX - rightRect.left,
+      y: targetRightY - rightRect.top,
+      duration: 0.8,
+      // delay:0.5,
+      ease: "power4.out",
+    },
+    "preload2"
+  );
+  preloader.to(
+    "#bannerVideo",
+    {
+      opacity: 0,
+      ease: "power4.out",
+    },
+    "preload3"
+  );
+  preloader.from(
+    ".video2",
+    {
+      opacity: 0,
+      ease: "power4.out",
+    },
+    "preload3"
+  );
+  preloader.to(
+    ".number-right, .number-left",
+    {
+      opacity: 0,
+      ease: "power4.out",
+    },
+    "preload3"
+  );
+  preloader.to(
+    ".header-banner-text",
+    {
+      zIndex: 102,
+      ease: "power4.out",
+    },
+    "preload3"
+  );
+  preloader.from(
+    ".header .header-left, .header .header-right",
+    {
+      opacity: 0,
+      ease: "power4.out",
+    },
+    "preload3"
+  );
   preloader.from(".header-center", {
     y: -200,
-    ease: "power4.out"
+    ease: "power4.out",
   });
   preloader.from(".horizontal-line", {
     clipPath: "inset(0 100% 0 0)",
-    duration:1,
-    ease: "power4.out"
+    duration: 1,
+    ease: "power4.out",
   });
-  preloader.from(".upper-text div", {
-    y:200,
-    duration:0.8,
-    ease: "power4.out"
-  },'together');
-  preloader.from(".lower-text div", {
-    y:-200,
-    duration:0.8,
-    ease: "power4.out"
-  },'together');
+  preloader.from(
+    ".upper-text div",
+    {
+      y: 200,
+      duration: 0.8,
+      ease: "power4.out",
+    },
+    "together"
+  );
+  preloader.from(
+    ".lower-text div",
+    {
+      y: -200,
+      duration: 0.8,
+      ease: "power4.out",
+    },
+    "together"
+  );
   preloader.add(() => {
-    document.body.classList.remove('no-scroll');
+    document.body.classList.remove("no-scroll");
   });
 
   let tickerLine = gsap.timeline({
@@ -426,7 +511,7 @@ function initAnimations() {
     setupAll();
   })();
 
-  gsap.utils.toArray(".reveal-left").forEach((elem) => {
+  gsap.utils.toArray(".reveal-left").forEach(elem => {
     gsap.from(elem, {
       clipPath: "inset(0 100% 0 0)",
       ease: "power3.out",
@@ -462,8 +547,8 @@ function initAnimations() {
       pin: true,
     },
   });
-  businesTools.from(".business_design", {clipPath: "inset(0 100% 0 0)",  opacity: 1 });
-  businesTools.from(".business_development", {clipPath: "inset(0 100% 0 0)", opacity: 1 });
+  businesTools.from(".business_design", { clipPath: "inset(0 100% 0 0)", opacity: 1 });
+  businesTools.from(".business_development", { clipPath: "inset(0 100% 0 0)", opacity: 1 });
   businesTools.from(".business_launch", { clipPath: "inset(0 100% 0 0)", opacity: 1 });
   businesTools.to(".business_tool_inner_two_first", { opacity: 1 });
   businesTools.from(".business_tool_inner_two_first .business_tool_inner_line", { clipPath: "inset(0 100% 0 0 )", ease: "power4.out" });
@@ -495,16 +580,13 @@ function initAnimations() {
   ventureTranform.from(".venture_tranform-div", {
     width: "80vw",
     height: "80vh",
-    scale:0.7,
-    y:200,
-    ease: "power4.out" 
-
+    scale: 0.7,
+    y: 200,
+    ease: "power4.out",
   });
 
   const init = () => {
-    const effects = [
-      { selector: '[data-effect-4]', effect: BlurScrollEffect },
-    ];
+    const effects = [{ selector: "[data-effect-4]", effect: BlurScrollEffect }];
 
     effects.forEach(({ selector, effect }) => {
       document.querySelectorAll(selector).forEach(el => {
@@ -525,20 +607,24 @@ function initAnimations() {
       pinSpacing: true,
     },
   });
-  ventureTranform1.from(".venture_tranform-img", {
-    opacity: 0,
-    y:'-100%',
-    stagger:0.1,
-    ease: "power4.out" 
-  },'thisshouldo');
+  ventureTranform1.from(
+    ".venture_tranform-img",
+    {
+      opacity: 0,
+      y: "-100%",
+      stagger: 0.1,
+      ease: "power4.out",
+    },
+    "thisshouldo"
+  );
   ventureTranform1.from(".fade-last", {
     opacity: 0,
-    ease: "power4.out" 
+    ease: "power4.out",
   });
 
-  let imagreveal= gsap.timeline({
+  let imagreveal = gsap.timeline({
     scrollTrigger: {
-      trigger: '.text-banner-section',
+      trigger: ".text-banner-section",
       start: "top 80%",
       end: "bottom 100%",
       // markers: true,
@@ -550,66 +636,109 @@ function initAnimations() {
     clipPath: "inset(0 100% 0 0)",
     ease: "power3.out",
     scrub: true,
-  });     
-  
+  });
 
   let leftToRight = gsap.timeline({
     scrollTrigger: {
       trigger: ".text-banner-section",
       start: "top top",
       end: "280% top",
-      scrub: 3,
+      scrub: true,
       pin: true,
-      pinSpacing: true 
-    }
+      // pinSpacing: true
+    },
   });
-  leftToRight.from(".fade-in-img", {
-    opacity:0,
-    ease: "power4.out" 
-  },'asdf');
-  leftToRight.to(".text-banner-text-1", {
-    marginLeft: "auto",
-    ease: "power4.out" 
-  },'asdf');
-  leftToRight.to(".reveal-image", {
-    clipPath: "inset(0 0% 0 100%)",
-    ease: "power4.out" 
-  },'asdf');
-  leftToRight.to(".text-banner-text-2", {
-    marginLeft: "auto",
-    ease: "power4.out" 
-  },'qwer');
-  leftToRight.to(".fade-in-img-2", {
-    clipPath: "inset(0 0% 0 100%)",
-    ease: "power4.out" 
-  },'qwer');
-  leftToRight.to(".text-banner-text-3", {
-    marginLeft: "auto",
-    ease: "power4.out" 
-  },'ret');
-  leftToRight.to(".fade-in-img-3", {
-    clipPath: "inset(0 0% 0 100%)",
-    ease: "power4.out" 
-  },'ret');
-  leftToRight.to(".fade-in-img-4", {
-    clipPath: "inset(0 0% 100% 0%)",
-    ease: "power4.out" 
-  },'jdi');
-  leftToRight.to(".text-banner-text", {
-    clipPath: "inset(0 0% 100% 0%)",
-    ease: "power4.out" 
-  },'jdi');
-  leftToRight.to(".fade-in-img-5", {
-    clipPath: "inset(0 0% 30% 0%)",
-    ease: "power4.out" 
-  },'jdi');
-  leftToRight.to(".hidden-text .business_tool_inner_line", {
-    clipPath: "inset(0 0% 0% 0%)",
-    ease: "power4.out" 
-  },'lkj');
+  leftToRight.from(
+    ".fade-in-img",
+    {
+      opacity: 0,
+      ease: "power4.out",
+    },
+    "asdf"
+  );
+  leftToRight.to(
+    ".text-banner-text-1",
+    {
+      marginLeft: "auto",
+      ease: "power4.out",
+    },
+    "asdf"
+  );
+  leftToRight.to(
+    ".reveal-image",
+    {
+      clipPath: "inset(0 0% 0 100%)",
+      ease: "power4.out",
+    },
+    "asdf"
+  );
+  leftToRight.to(
+    ".text-banner-text-2",
+    {
+      marginLeft: "auto",
+      ease: "power4.out",
+    },
+    "qwer"
+  );
+  leftToRight.to(
+    ".fade-in-img-2",
+    {
+      clipPath: "inset(0 0% 0 100%)",
+      ease: "power4.out",
+    },
+    "qwer"
+  );
+  leftToRight.to(
+    ".text-banner-text-3",
+    {
+      marginLeft: "auto",
+      ease: "power4.out",
+    },
+    "ret"
+  );
+  leftToRight.to(
+    ".fade-in-img-3",
+    {
+      clipPath: "inset(0 0% 0 100%)",
+      ease: "power4.out",
+    },
+    "ret"
+  );
+  leftToRight.to(
+    ".fade-in-img-4",
+    {
+      clipPath: "inset(0 0% 100% 0%)",
+      ease: "power4.out",
+    },
+    "jdi"
+  );
+  leftToRight.to(
+    ".text-banner-text",
+    {
+      clipPath: "inset(0 0% 100% 0%)",
+      ease: "power4.out",
+    },
+    "jdi"
+  );
+  leftToRight.to(
+    ".fade-in-img-5",
+    {
+      clipPath: "inset(0 0% 30% 0%)",
+      ease: "power4.out",
+    },
+    "jdi"
+  );
+  leftToRight.to(
+    ".hidden-text .business_tool_inner_line",
+    {
+      clipPath: "inset(0 0% 0% 0%)",
+      ease: "power4.out",
+    },
+    "lkj"
+  );
   leftToRight.from(".text-banner-section .business_tool_inner_text_anim", {
-    opacity:0,
-    ease: "power4.out" 
+    opacity: 0,
+    ease: "power4.out",
   });
 
   const ovalPath = document.querySelector("#ovalPath");
@@ -631,12 +760,11 @@ function initAnimations() {
         start: "top 60%",
         end: "top 10%",
         toggleActions: "play none none reverse",
-        scrub: true,        // set true if you want scroll-controlled drawing
+        scrub: true, // set true if you want scroll-controlled drawing
         // markers: true
       },
     });
   }
-
 
   let bridgeTheGap = gsap.timeline({
     scrollTrigger: {
@@ -649,92 +777,162 @@ function initAnimations() {
       pinSpacing: true,
     },
   });
-  bridgeTheGap.from(".slide-left-container-1", {
-    x: "220%",
-    ease: "power4.out" 
-  },'bridge-1');
-  bridgeTheGap.from(".bridge-title-2", {
-    x: "620%",
-    ease: "power4.out" 
-  },'bridge-1');
-  bridgeTheGap.to(".bridge-title-1", {
-    opacity:0.4,
-    ease: "power4.out" 
-  },'bridge-1');
-  bridgeTheGap.fromTo(".bridge-the-gap-span",
-    { x: "120%" },
-    { x: "80%", ease: "power4.out" },
-    'bridge-1');
-  bridgeTheGap.to(".bridge-the-gap-sticky-line", {
-    width: '40%',
-    ease: "power4.out"
-  }, 'bridge-1');
-  
-  
-  bridgeTheGap.from(".slide-left-container-2", {
-    x: "220%",
-    ease: "power4.out" 
-  }, 'bridge-2');
-  bridgeTheGap.from(".bridge-title-3", {
-    x: "500%",
-    ease: "power4.out" 
-  }, 'bridge-2');
-  bridgeTheGap.to(".bridge-title-2", {
-    opacity:0.4,
-    ease: "power4.out" 
-  }, 'bridge-2');
-  bridgeTheGap.to(".bridge-the-gap-span",{
-    x:'50%',
-    ease: "power4.out" 
-  }, 'bridge-2');
-    bridgeTheGap.to(".bridge-the-gap-sticky-line", {
-    width: '60%',
-    ease: "power4.out"
-  }, 'bridge-2');
+  bridgeTheGap.from(
+    ".slide-left-container-1",
+    {
+      x: "220%",
+      ease: "power4.out",
+    },
+    "bridge-1"
+  );
+  bridgeTheGap.from(
+    ".bridge-title-2",
+    {
+      x: "620%",
+      ease: "power4.out",
+    },
+    "bridge-1"
+  );
+  bridgeTheGap.to(
+    ".bridge-title-1",
+    {
+      opacity: 0.4,
+      ease: "power4.out",
+    },
+    "bridge-1"
+  );
+  bridgeTheGap.fromTo(".bridge-the-gap-span", { x: "120%" }, { x: "80%", ease: "power4.out" }, "bridge-1");
+  bridgeTheGap.to(
+    ".bridge-the-gap-sticky-line",
+    {
+      width: "40%",
+      ease: "power4.out",
+    },
+    "bridge-1"
+  );
 
+  bridgeTheGap.from(
+    ".slide-left-container-2",
+    {
+      x: "220%",
+      ease: "power4.out",
+    },
+    "bridge-2"
+  );
+  bridgeTheGap.from(
+    ".bridge-title-3",
+    {
+      x: "500%",
+      ease: "power4.out",
+    },
+    "bridge-2"
+  );
+  bridgeTheGap.to(
+    ".bridge-title-2",
+    {
+      opacity: 0.4,
+      ease: "power4.out",
+    },
+    "bridge-2"
+  );
+  bridgeTheGap.to(
+    ".bridge-the-gap-span",
+    {
+      x: "50%",
+      ease: "power4.out",
+    },
+    "bridge-2"
+  );
+  bridgeTheGap.to(
+    ".bridge-the-gap-sticky-line",
+    {
+      width: "60%",
+      ease: "power4.out",
+    },
+    "bridge-2"
+  );
 
-  bridgeTheGap.from(".slide-left-container-3", {
-    x: "220%",
-    ease: "power4.out" 
-  }, 'bridge-3');
-  bridgeTheGap.from(".bridge-title-4", {
-    x: "500%",
-    ease: "power4.out" 
-  }, 'bridge-3');
-  bridgeTheGap.to(".bridge-title-3", {
-    opacity:0.4,
-    ease: "power4.out" 
-  }, 'bridge-3');
-  bridgeTheGap.to(".bridge-the-gap-span",{
-    x:'25%',
-    ease: "power4.out" 
-  }, 'bridge-3');
-    bridgeTheGap.to(".bridge-the-gap-sticky-line", {
-    width: '80%',
-    ease: "power4.out"
-  }, 'bridge-3');
+  bridgeTheGap.from(
+    ".slide-left-container-3",
+    {
+      x: "220%",
+      ease: "power4.out",
+    },
+    "bridge-3"
+  );
+  bridgeTheGap.from(
+    ".bridge-title-4",
+    {
+      x: "500%",
+      ease: "power4.out",
+    },
+    "bridge-3"
+  );
+  bridgeTheGap.to(
+    ".bridge-title-3",
+    {
+      opacity: 0.4,
+      ease: "power4.out",
+    },
+    "bridge-3"
+  );
+  bridgeTheGap.to(
+    ".bridge-the-gap-span",
+    {
+      x: "25%",
+      ease: "power4.out",
+    },
+    "bridge-3"
+  );
+  bridgeTheGap.to(
+    ".bridge-the-gap-sticky-line",
+    {
+      width: "80%",
+      ease: "power4.out",
+    },
+    "bridge-3"
+  );
 
-
-  bridgeTheGap.from(".slide-left-container-4", {
-    x: "220%",
-    ease: "power4.out" 
-  }, 'bridge-4');
-  bridgeTheGap.from(".bridge-title-5", {
-    x: "500%",
-    ease: "power4.out" 
-  }, 'bridge-4');
-  bridgeTheGap.to(".bridge-the-gap-span",{
-    x:'0%',
-    ease: "power4.out" 
-  }, 'bridge-4');
-  bridgeTheGap.to(".bridge-title-4", {
-    opacity:0.4,
-    ease: "power4.out" 
-  }, 'bridge-4');
-  bridgeTheGap.to(".bridge-the-gap-sticky-line", {
-    width: '100%',
-    ease: "power4.out"
-  }, 'bridge-4');
+  bridgeTheGap.from(
+    ".slide-left-container-4",
+    {
+      x: "220%",
+      ease: "power4.out",
+    },
+    "bridge-4"
+  );
+  bridgeTheGap.from(
+    ".bridge-title-5",
+    {
+      x: "500%",
+      ease: "power4.out",
+    },
+    "bridge-4"
+  );
+  bridgeTheGap.to(
+    ".bridge-the-gap-span",
+    {
+      x: "0%",
+      ease: "power4.out",
+    },
+    "bridge-4"
+  );
+  bridgeTheGap.to(
+    ".bridge-title-4",
+    {
+      opacity: 0.4,
+      ease: "power4.out",
+    },
+    "bridge-4"
+  );
+  bridgeTheGap.to(
+    ".bridge-the-gap-sticky-line",
+    {
+      width: "100%",
+      ease: "power4.out",
+    },
+    "bridge-4"
+  );
 
   let footerTimeline = gsap.timeline({
     scrollTrigger: {
@@ -746,27 +944,43 @@ function initAnimations() {
       pin: true,
     },
   });
-  footerTimeline.to(".bridge-the-gap-sticky", {
-    y:'-70%',
-    opacity:0,
-    ease: "power4.out" 
-  }, "a")
-  footerTimeline.to(".bridge-the-gap-left", {
-    transform:'translateX(45%)',
-    scale:2,
-    color: "#fff",
-    ease: "power4.out" 
-  }, "a")
-  footerTimeline.to(".bridge-the-gap-span", {
-    transform:'translate(-45%, 110%)',
-    scale:2,
-    color: "#fff",
-    ease: "power4.out" 
-  }, "a")
-  footerTimeline.to(".steps_section", {
-    backgroundColor: "#171f24",
-    ease: "power4.out" 
-  }, "a")
+  footerTimeline.to(
+    ".bridge-the-gap-sticky",
+    {
+      y: "-70%",
+      opacity: 0,
+      ease: "power4.out",
+    },
+    "a"
+  );
+  footerTimeline.to(
+    ".bridge-the-gap-left",
+    {
+      transform: "translateX(45%)",
+      scale: 2,
+      color: "#fff",
+      ease: "power4.out",
+    },
+    "a"
+  );
+  footerTimeline.to(
+    ".bridge-the-gap-span",
+    {
+      transform: "translate(-45%, 110%)",
+      scale: 2,
+      color: "#fff",
+      ease: "power4.out",
+    },
+    "a"
+  );
+  footerTimeline.to(
+    ".steps_section",
+    {
+      backgroundColor: "#171f24",
+      ease: "power4.out",
+    },
+    "a"
+  );
 }
 
 // let topTobottom = gsap.timeline({
@@ -782,16 +996,50 @@ function initAnimations() {
 // });
 // topTobottom.to(".fade-in-img-4", {
 //   clipPath: "inset(0 0% 100% 0 )",
-//   ease: "power4.out" 
+//   ease: "power4.out"
 // });
 
 /* ---------------------------------------------------------
    4) ENSURE initAnimations RUNS EVEN IF DOM IS ALREADY LOADED
 ------------------------------------------------------------*/
 
-
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initAnimations);
 } else {
   initAnimations();
 }
+gsap.registerPlugin(ScrollTrigger);
+
+const headings = gsap.utils.toArray(".step_title");
+
+headings.forEach(target => {
+  const split = new SplitType(target, { types: "words, chars" }); // NOTE: SplitType, not SplitText
+  const words = split.words;
+
+  gsap.fromTo(
+    words,
+    {
+      opacity: 0,
+      transformOrigin: "50% 0%",
+      willChange: "transform",
+      y: 20,
+      skewX: -20,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      skewX: 0,
+      ease: "sine.in",
+      stagger: {
+        each: 0.02,
+        from: "start",
+      },
+      scrollTrigger: {
+        trigger: target,
+        start: "50% 40%",
+        end: "50% 60%",
+        scrub: 1,
+      },
+    }
+  );
+});

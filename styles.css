@@ -37,7 +37,6 @@ html {
   font-family: "Fira Sans", sans-serif;
   font-weight: 300;
   font-size: 1.1vw;
-
   font-style: normal;
   background: #ede5d3;
   width: 100vw;
@@ -146,15 +145,16 @@ html {
 }
 .lower-text {
   overflow: hidden;
-  font-size: 1.7vw;
-  font-family: "Erode";
+  font-size: 1.5vw;
+  font-family: "Fira Sans", sans-serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: none;
   justify-content: flex-end;
   gap: 20px;
   width: 100%;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .video2 {
   position: absolute;
@@ -233,7 +233,7 @@ html {
   --gap: 40px;
   --thumb-w: 200px;
   --thumb-h: 120px;
-  --font-size: 1.7vw;
+  --font-size: 1.5vw;
 }
 
 * {
@@ -243,7 +243,7 @@ html {
 .ticker {
   overflow: hidden;
   width: 100%;
-  padding: 200px 0 50px;
+  padding: 400px 0 50px;
   min-height: 100vh;
   background: #ede5d3;
   display: flex;
@@ -253,6 +253,9 @@ html {
 .ticker_uppersection p {
   margin: 0;
   width: 40%;
+}
+.business_tool_inner_text_anim .word {
+  width: auto;
 }
 .ticker_uppersection {
   margin-inline: auto;
@@ -285,7 +288,7 @@ html {
 .group {
   display: grid;
   /* gap: 12px; */
-  margin-top: 30vh;
+  margin-top: 400px;
 }
 
 .row {
@@ -319,9 +322,10 @@ html {
 }
 .ticker .item {
   gap: 24px;
-  font-family: "Erode";
   color: #313e47;
-  font-weight: 300;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: "Fira Sans", sans-serif;
 }
 /* italic */
 .italic {
@@ -460,6 +464,7 @@ html {
   color: #313e47;
   margin-top: 10px;
   font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .business_tool_inner {

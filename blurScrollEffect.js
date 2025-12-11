@@ -39,7 +39,7 @@ export class BlurScrollEffect {
       y: 20,
       skewX: -20,
       willChange: 'filter, transform',
-      filter: 'blur(8px)'
+      filter: 'blur(0px)'
     }, {
       ease: 'sine', // Animation easing.
       opacity: 1,
