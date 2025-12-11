@@ -681,6 +681,7 @@ html {
   justify-content: space-evenly;
   transition: all 1s;
   align-items: start;
+  max-height: 11vw;
 }
 .step_box:hover {
   height: 100%;
