@@ -600,7 +600,7 @@ function initAnimations() {
     scrollTrigger: {
       trigger: ".venture_tranform1",
       start: "top 0% ",
-      end: "300% 100%",
+      end: "200% 100%",
       // markers: true,
       scrub: true,
       pin: true,
@@ -1036,10 +1036,10 @@ headings.forEach(target => {
       },
       scrollTrigger: {
         trigger: target,
-        start: "50% 70%",
-        end: "50% 60%",
+        start: "50% 80%",
+        end: "50% 70%",
         scrub: 1,
-        markers: true,
+        markers: 0,
       },
     }
   );
