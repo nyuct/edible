@@ -1010,25 +1010,25 @@ if (document.readyState === "loading") {
 }
 gsap.registerPlugin(ScrollTrigger);
 
-const headings = gsap.utils.toArray(".step_title");
+const headings = gsap.utils.toArray(".animation_title");
 
 headings.forEach(target => {
   const split = new SplitType(target, { types: "words, chars" }); // NOTE: SplitType, not SplitText
-  const words = split.words;
+  const chars = split.chars;
 
   gsap.fromTo(
-    words,
+    chars,
     {
-      opacity: 0,
+      opacity: 0.2,
       transformOrigin: "50% 0%",
       willChange: "transform",
-      y: 20,
-      skewX: -20,
+      x: 2,
+      // skewX: -20,
     },
     {
       opacity: 1,
-      y: 0,
-      skewX: 0,
+      x: 0,
+      // skewX: 0,
       ease: "sine.in",
       stagger: {
         each: 0.02,
@@ -1036,9 +1036,10 @@ headings.forEach(target => {
       },
       scrollTrigger: {
         trigger: target,
-        start: "50% 40%",
+        start: "50% 70%",
         end: "50% 60%",
         scrub: 1,
+        markers: true,
       },
     }
   );
