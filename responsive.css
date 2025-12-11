@@ -174,3 +174,9 @@
     transform: translate(-12%, 20%);
   }
 }
+
+@media (min-width: 1900px) {
+  .step_box {
+    max-width: 1600px;
+  }
+}
