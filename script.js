@@ -284,7 +284,7 @@ function initAnimations() {
   preloader.from(
     ".upper-text div",
     {
-      y: 200,
+      y: 600,
       duration: 0.8,
       ease: "power4.out",
     },
@@ -570,7 +570,7 @@ function initAnimations() {
     scrollTrigger: {
       trigger: ".venture_tranform",
       start: "top 50% ",
-      end: "110% 100%",
+      end: "100% 100%",
       // markers: true,
       scrub: true,
       // pin: true,
@@ -642,7 +642,7 @@ function initAnimations() {
     scrollTrigger: {
       trigger: ".text-banner-section",
       start: "top top",
-      end: "280% top",
+      end: "380% top",
       scrub: true,
       pin: true,
       // pinSpacing: true
@@ -705,14 +705,6 @@ function initAnimations() {
     "ret"
   );
   leftToRight.to(
-    ".fade-in-img-4",
-    {
-      clipPath: "inset(0 0% 100% 0%)",
-      ease: "power4.out",
-    },
-    "jdi"
-  );
-  leftToRight.to(
     ".text-banner-text",
     {
       clipPath: "inset(0 0% 100% 0%)",
@@ -721,8 +713,22 @@ function initAnimations() {
     "jdi"
   );
   leftToRight.to(
+    ".fade-in-img-4",
+    {
+      clipPath: "inset(0 0% 100% 0%)",
+      ease: "power4.out",
+      duration: 1.5,
+      y: "-20%",
+    },
+    "jdi"
+  );
+  leftToRight.fromTo(
     ".fade-in-img-5",
     {
+      opacity: -1000,
+    },
+    {
+      opacity: 1,
       clipPath: "inset(0 0% 30% 0%)",
       ease: "power4.out",
     },
@@ -734,7 +740,7 @@ function initAnimations() {
       clipPath: "inset(0 0% 0% 0%)",
       ease: "power4.out",
     },
-    "lkj"
+    "jdi"
   );
   leftToRight.from(".text-banner-section .business_tool_inner_text_anim", {
     opacity: 0,

@@ -126,8 +126,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: baseline;
-  gap: 12px;
-  padding: 0 80px;
+  gap: 40px;
+  padding: 0 40px;
   flex-direction: column;
   padding-bottom: 80px;
   /* mix-blend-mode: difference; */
@@ -142,7 +142,7 @@ html {
   text-transform: none;
   letter-spacing: -10px;
   line-height: 0.8;
-  padding-bottom: 40px;
+  padding-bottom: 23px;
 
   span {
     font-family: "Erode Italic", serif;
@@ -245,15 +245,17 @@ html {
   /* px travelled per second (lower = slower). You can override per-row via data attribute. */
   --px-per-sec: 50;
   --gap: 40px;
-  --thumb-w: 200px;
-  --thumb-h: 120px;
+  --thumb-w: 300px;
+  --thumb-h: 200px;
   --font-size: 24px;
 }
 
 * {
   box-sizing: border-box;
 }
-
+.item-row {
+  margin-top: 60px !important;
+}
 .ticker {
   overflow: hidden;
   width: 100%;
@@ -312,9 +314,12 @@ html {
 }
 
 /* The track that contains original + cloned items */
+.row .track:hover {
+  animation-play-state: paused !important;
+}
 .row .track {
   display: flex;
-  gap: 24px;
+  gap: 90px;
   align-items: center;
   white-space: nowrap;
   transform: translate3d(0, 0, 0);
@@ -322,9 +327,14 @@ html {
 
 /* items */
 .item {
-  display: inline-flex;
+  display: flex;
+  /* flex-direction: column; */
   align-items: center;
   gap: 10px;
+  color: #313e47;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: "Fira Sans", sans-serif;
   flex: 0 0 auto;
   font-size: var(--font-size);
   white-space: nowrap;
@@ -335,26 +345,23 @@ html {
     font-family: "Fira Sans", sans-serif;
   }
 }
-.ticker .item {
-  gap: 24px;
-  color: #313e47;
-  font-weight: 500;
-  letter-spacing: 1px;
-  font-family: "Fira Sans", sans-serif;
+.item:hover {
+  .thumb {
+    background-size: 100% !important;
+  }
 }
-/* italic */
-.italic {
+.item:nth-child(even) {
+  /* flex-direction: column-reverse; */
 }
-
 /* thumbnail box */
 .thumb {
   width: var(--thumb-w);
   height: var(--thumb-h);
   background: #b2a7a7;
-  display: inline-block;
   background-position: center !important;
-  background-size: cover !important;
+  background-size: 110% !important;
   background-repeat: no-repeat !important;
+  transition: all 0.5s ease;
 }
 .exp .thumb {
   background: url(./assets/img/food-exp.jpg);
@@ -475,14 +482,23 @@ html {
 .design_img,
 .development_img,
 .launch_img {
-  height: 40vh;
-  width: 20vw;
+  height: 30vh;
+  width: 25vw;
   background: url(./assets/img/concept-2.jpg);
   background-position: center !important;
-  background-size: cover !important;
+  background-size: 110% !important;
   background-repeat: no-repeat !important;
+  transition: all 0.3s linear;
 }
-
+.concept_img:hover,
+.design_img:hover,
+.development_img:hover,
+.launch_img:hover {
+  background-size: 100% !important;
+}
+.business_tool_inner_two {
+  z-index: 1;
+}
 .business_text {
   font-size: 24px;
   text-align: left;
@@ -494,51 +510,54 @@ html {
 }
 
 .business_tool_inner {
-  padding-top: 100px;
   position: relative;
   min-height: 100vh;
 }
 
 .business_concept {
-  top: 5%;
+  top: 80px;
   left: 80px;
   position: absolute;
+  z-index: 2;
   text-align: center;
 }
 
 .business_design {
   position: absolute;
-  top: 5%;
-  left: 30%;
+  z-index: 2;
+  top: 80px;
+  left: calc(30% + 80px);
 }
 
 .design_img {
   width: 25vw;
-  height: 40vh;
+  height: 30vh;
   background: url(./assets/img/design-3.jpg);
 }
 
 .business_development {
   position: absolute;
-  top: 50%;
-  right: 30%;
+  z-index: 2;
+  bottom: 80px;
+  right: calc(30% + 80px);
 }
 
 .development_img {
   width: 25vw;
-  height: 40vh;
+  height: 30vh;
   background: url(./assets/img/design.jpg);
 }
 
 .business_launch {
   position: absolute;
-  bottom: 5%;
+  z-index: 2;
+  bottom: 80px;
   right: 80px;
 }
 
 .launch_img {
-  width: 20vw;
-  height: 40vh;
+  width: 25vw;
+  height: 30vh;
   background: url(https://s3.nyuct.com/edible/four-stages/LAUNCH.webp);
 }
 .gradient-bg {
@@ -556,7 +575,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-block: 7%;
+  padding-block: 80px;
 }
 
 .business_tool_inner_two_first {
@@ -564,8 +583,12 @@ html {
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 50px;
   opacity: 0;
+  padding-top: calc(15vh - 30px);
+
+  .business_tool_inner_text {
+    width: 60%;
+  }
 }
 .business_tool_inner_text {
   width: 100%;
@@ -586,12 +609,13 @@ html {
   margin-top: 48px;
 }
 .business_tool_inner_two_second {
-  width: 40%;
+  width: 33%;
   margin-right: auto;
   display: flex;
   align-items: center;
   font-weight: 300;
   gap: 32px;
+  padding-bottom: calc(17vh - 30px);
 }
 .business_tool_inner_three_second {
   width: 100%;
@@ -627,8 +651,8 @@ html {
     justify-content: space-between;
   }
 }
-.text_venture_tranform:nth-child(1) {
-  width: 60%; 
+.text_venture_tranform1 {
+  width: 60%;
 }
 .venture_tranform-div1 .text_venture_tranform {
   color: #ede5d3;
@@ -642,9 +666,11 @@ html {
     font-family: "Erode Italic", serif;
   }
 }
-.venture_tranform-img-container {
+.venture_tranform-div1 .venture_tranform-img-container {
   position: relative;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 90px;
+  align-items: center;
 }
 .venture_tranform {
   min-height: 100vh;
@@ -662,8 +688,9 @@ html {
 .venture_tranform-img {
   /* position: absolute; */
   /* bottom: 20px; */
+  margin-bottom: 40px;
   width: 15vw;
-  height: auto;
+  height: 50vh;
   aspect-ratio: 1;
   background: #000;
   background-position: center !important;
@@ -689,11 +716,11 @@ html {
   background: url(./assets/img/transform-img-3.png);
 }
 
-.venture_tranform-img4 {
-  /* right: 0%; */
-  background: url(./assets/img/transform-img-4.png);
-  /* transform: translateX(100%); */
-}
+/* .venture_tranform-img4 { */
+/* right: 0%; */
+/* background: url(./assets/img/transform-img-4.png); */
+/* transform: translateX(100%); */
+/* } */
 
 /* steps css  */
 .steps_heading .steps_heading_inner {
@@ -855,7 +882,7 @@ html {
   background: #313e47;
 }
 .bridge-the-gap {
-  padding: 100px 0;
+  padding: 0px 0 100px;
   padding-bottom: 0;
 }
 
@@ -1040,9 +1067,7 @@ html {
 .fade-in-img-4 {
   z-index: 0;
 }
-.fade-in-img-5 {
-  z-index: -1;
-}
+
 /* bridge the gap updated css  */
 /* left to right section  */
 .text-banner-section {
@@ -1051,6 +1076,7 @@ html {
   overflow: hidden;
   flex-direction: column;
   margin-top: -200px;
+  justify-content: center;
 }
 .team-header {
   font-family: "Erode";
@@ -1072,22 +1098,32 @@ html {
   height: 100%;
   object-fit: cover;
 }
+.fade-in-img-5 {
+  z-index: -1;
+  width: 40%;
+  height: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .text-banner-text p {
   margin: 0;
   width: max-content;
   text-align: left;
   margin-left: 0;
   box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 .text-banner-text {
   padding: 40px 80px;
   z-index: 9;
   color: #ede5d3;
-  background: #313e47;
-  font-weight: 500;
-  font-size: 30px;
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Erode", serif;
+  font-size: 3vw;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
 }
 .slide-container p {
   width: 50%;
