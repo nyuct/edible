@@ -617,10 +617,10 @@ function initAnimations() {
     },
     "thisshouldo"
   );
-  ventureTranform1.from(".fade-last", {
-    opacity: 0,
-    ease: "power4.out",
-  });
+  // ventureTranform1.from(".fade-last", {
+  //   opacity: 0,
+  //   ease: "power4.out",
+  // });
 
   let imagreveal = gsap.timeline({
     scrollTrigger: {

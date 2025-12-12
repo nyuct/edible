@@ -67,7 +67,7 @@ html {
   justify-content: space-between;
   align-items: center;
   z-index: 9999;
-  color: #fff;
+  color: #ede5d3;
   font-size: 1.7vw;
   font-family: "Erode", serif;
   transition: transform 0.6s ease;
@@ -188,7 +188,7 @@ html {
 .preloader {
   /* background-color: var(--bg-blue); */
   height: 100vh;
-  color: white;
+  color: #ede5d3;
   background-color: #313e47;
   display: flex;
   justify-content: center;
@@ -615,19 +615,32 @@ html {
   width: 100vw;
   height: 100vh;
   background: #313e47;
-  padding: 80px;
+  padding: 80px 80px 0;
   position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  flex-direction: column;
+
+  .d-flex {
+    gap: 24px;
+    align-items: end;
+    justify-content: space-between;
+  }
+}
+.text_venture_tranform:nth-child(1) {
+  width: 60%; 
 }
 .venture_tranform-div1 .text_venture_tranform {
-  color: #fff;
+  color: #ede5d3;
   font-family: "Erode", serif;
   font-size: 3vw;
   font-weight: 300;
   line-height: 1;
   letter-spacing: -1px;
+
+  span {
+    font-family: "Erode Italic", serif;
+  }
 }
 .venture_tranform-img-container {
   position: relative;
@@ -706,7 +719,7 @@ html {
   border-top: 1px solid #000;
 }
 .steps_innersection {
-  padding: 0 80px;
+  padding: 400px 80px;
 }
 .step_box {
   max-width: 1400px;
@@ -817,7 +830,7 @@ html {
 }
 .image-banner img {
   width: 100%;
-  padding: 20px 0 60px;
+  padding: 100px 0 60px;
 }
 .trace-oval {
   position: relative;
@@ -834,8 +847,11 @@ html {
   opacity: 1;
 }
 .venture_tranform1 {
-  margin-top: -120vh;
-  margin-bottom: 100px;
+  padding-bottom: 400px;
+  margin-top: -200px;
+  background: #313e47;
+}
+.bg-darkblue {
   background: #313e47;
 }
 .bridge-the-gap {
@@ -1033,9 +1049,8 @@ html {
   display: flex;
   height: 100vh;
   overflow: hidden;
-  margin-bottom: 20vh;
   flex-direction: column;
-  margin-top: 260px;
+  margin-top: -200px;
 }
 .team-header {
   font-family: "Erode";
@@ -1068,8 +1083,8 @@ html {
 .text-banner-text {
   padding: 40px 80px;
   z-index: 9;
-  background: #ede5d3;
-  color: #313e47;
+  color: #ede5d3;
+  background: #313e47;
   font-weight: 500;
   font-size: 30px;
   font-family: "Fira Sans", sans-serif;
@@ -1078,10 +1093,9 @@ html {
   width: 50%;
   margin: 0;
   text-align: right;
-
   font-weight: 300;
   margin-left: auto;
-  font-size: 16px;
+  font-size: 16px !important;
 }
 .slide-container h2 {
   /* width: 60%; */
@@ -1191,11 +1205,11 @@ html {
 footer {
   padding: 100px;
   background: #171f24;
-  color: white;
+  color: #ede5d3;
 
   a {
     text-decoration: none;
-    color: white;
+    color: #ede5d3;
   }
   ul {
     padding: 0 !important;
@@ -1393,7 +1407,7 @@ footer {
   margin-bottom: 20px;
 }
 .footer-nav__item {
-  color: #fff;
+  color: #ede5d3;
   margin-bottom: 0.75rem;
   font-size: 1rem;
   text-decoration: none;
