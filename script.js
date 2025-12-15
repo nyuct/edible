@@ -625,15 +625,15 @@ function initAnimations() {
   let imagreveal = gsap.timeline({
     scrollTrigger: {
       trigger: ".text-banner-section",
-      start: "top 80%",
+      start: "top 0%",
       end: "bottom 100%",
-      // markers: true,
+      markers: true,
       scrub: true,
       toggleActions: "play none none reverse",
     },
   });
   imagreveal.from(".reveal-image", {
-    clipPath: "inset(0 100% 0 0)",
+    clipPath: "inset(0 0% 0 0)",
     ease: "power3.out",
     scrub: true,
   });
@@ -648,6 +648,22 @@ function initAnimations() {
       // pinSpacing: true
     },
   });
+  leftToRight.to(
+    ".text-banner-text-0",
+    {
+      marginRight: "auto",
+      ease: "power4.out",
+    },
+    "a"
+  );
+  leftToRight.to(
+    ".text-banner-text .ready-text",
+    {
+      opacity: 1,
+      ease: "power4.out",
+    },
+    "a"
+  );
   leftToRight.from(
     ".fade-in-img",
     {
@@ -664,6 +680,7 @@ function initAnimations() {
     },
     "asdf"
   );
+
   leftToRight.to(
     ".reveal-image",
     {
@@ -685,6 +702,7 @@ function initAnimations() {
     {
       clipPath: "inset(0 0% 0 100%)",
       ease: "power4.out",
+      opacity: 10,
     },
     "qwer"
   );
@@ -699,6 +717,7 @@ function initAnimations() {
   leftToRight.to(
     ".fade-in-img-3",
     {
+      opacity: 100,
       clipPath: "inset(0 0% 0 100%)",
       ease: "power4.out",
     },
@@ -742,8 +761,9 @@ function initAnimations() {
     },
     "jdi"
   );
-  leftToRight.from(".text-banner-section .business_tool_inner_text_anim", {
-    opacity: 0,
+  leftToRight.to(".fade-in-img-5", {
+    opacity: 1,
+    clipPath: "inset(0 0% 100% 0%)",
     ease: "power4.out",
   });
 

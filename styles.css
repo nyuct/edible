@@ -330,7 +330,7 @@ html {
   display: flex;
   /* flex-direction: column; */
   align-items: center;
-  gap: 10px;
+  gap: 90px;
   color: #313e47;
   font-weight: 500;
   letter-spacing: 1px;
@@ -660,7 +660,7 @@ html {
   font-size: 3vw;
   font-weight: 300;
   line-height: 1;
-  letter-spacing: -1px;
+  letter-spacing: -2px;
 
   span {
     font-family: "Erode Italic", serif;
@@ -726,11 +726,12 @@ html {
 .steps_heading .steps_heading_inner {
   font-weight: 400;
   color: #313e47;
-  font-size: 3vw;
+  font-size: 4vw;
   font-family: "Erode";
   gap: 26px;
   justify-content: center;
   line-height: 0.9;
+  letter-spacing: -4.4px;
 }
 .steps_heading_inner span {
   font-family: "Erode Italic", serif;
@@ -758,6 +759,12 @@ html {
   transition: all 1s;
   align-items: start;
 }
+
+.step_box.step_opened {
+  height: 100%;
+  max-height: 100vh;
+}
+
 .step_box:hover {
   height: 100%;
   max-height: 100vh;
@@ -768,16 +775,17 @@ html {
   text-transform: uppercase;
   font-family: "Erode";
   font-weight: normal;
-  color: #313e47;
+  color: #313e4730;
   line-height: 0.65;
 }
 
 .step_title {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 500;
   color: #313e47;
   text-transform: uppercase;
-  letter-spacing: 0.4px;
+  letter-spacing: 1px;
+  line-height: 1;
 }
 .steps-text {
   font-size: 22px;
@@ -867,8 +875,8 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-65%, -45%);
-  max-width: 10%;
+  transform: translate(-63%, -45%);
+  max-width: 11%;
 }
 .step_box:hover .steps-text-img {
   opacity: 1;
@@ -1050,6 +1058,7 @@ html {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  background-image: url("./assets/img/left-to-rt-1.jpg");
 }
 .hidden-text .business_tool_inner_line {
   width: 60%;
@@ -1075,14 +1084,21 @@ html {
   height: 100vh;
   overflow: hidden;
   flex-direction: column;
-  margin-top: -200px;
   justify-content: center;
 }
 .team-header {
-  font-family: "Erode";
-  font-size: 48px;
-  font-weight: 300;
+  font-weight: 400;
   color: #313e47;
+  font-size: 4vw;
+  font-family: "Erode";
+  gap: 26px;
+  justify-content: center;
+  line-height: 0.9;
+  letter-spacing: -4.4px;
+
+  span {
+    font-family: "Erode Italic", serif;
+  }
 }
 .text-banner-image {
   position: relative;
@@ -1106,7 +1122,25 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.text-banner-text .text-banner-text-0 {
+  margin: 0 auto;
+  text-align: center;
+  opacity: 1;
+  font-size: 10vw;
+  font-family: "Erode", serif;
+  font-variation-settings: "wght" 400;
+  overflow: hidden;
+  text-transform: none;
+  letter-spacing: -10px;
+  line-height: 0.8;
+  padding-bottom: 50px;
+
+  span {
+    font-family: "Erode Italic", serif;
+  }
+}
 .text-banner-text p {
+  opacity: 0;
   margin: 0;
   width: max-content;
   text-align: left;
@@ -1114,16 +1148,15 @@ html {
   box-sizing: border-box;
   margin-bottom: 10px;
 }
-
 .text-banner-text {
   padding: 40px 80px;
   z-index: 9;
   color: #ede5d3;
   font-family: "Erode", serif;
-  font-size: 3vw;
+  font-size: 4vw;
   font-weight: 300;
   line-height: 1;
-  letter-spacing: -1px;
+  letter-spacing: -3px;
 }
 .slide-container p {
   width: 50%;
