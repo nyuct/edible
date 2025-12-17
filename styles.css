@@ -42,7 +42,7 @@ html {
   padding: 0;
   font-family: "Fira Sans", sans-serif;
   font-weight: 300;
-  font-size: 22px;
+  font-size: 20px;
   font-style: normal;
   background: #ede5d3;
   width: 100vw;
@@ -133,7 +133,7 @@ html {
   /* mix-blend-mode: difference; */
 }
 .upper-text {
-  font-size: 10vw;
+  font-size: 9vw;
   font-family: "Erode", serif;
   font-variation-settings: "wght" 400;
   overflow: hidden;
@@ -247,7 +247,7 @@ html {
   --gap: 40px;
   --thumb-w: 300px;
   --thumb-h: 200px;
-  --font-size: 24px;
+  --font-size: 32px;
 }
 
 * {
@@ -292,9 +292,6 @@ html {
 }
 .ticker_uppersection .text-end {
 }
-.group div {
-  font-family: "Erode";
-}
 .steps-text .row {
   margin-top: 20px;
 }
@@ -332,18 +329,13 @@ html {
   align-items: center;
   gap: 90px;
   color: #313e47;
-  font-weight: 500;
-  letter-spacing: 1px;
-  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0px;
   flex: 0 0 auto;
   font-size: var(--font-size);
   white-space: nowrap;
   margin-right: 0;
-  text-transform: uppercase;
-  font-family: "Fira Sans", sans-serif;
-  .char {
-    font-family: "Fira Sans", sans-serif;
-  }
+  font-family: "Erode Italic", serif;
 }
 .item:hover {
   .thumb {
@@ -482,7 +474,7 @@ html {
 .design_img,
 .development_img,
 .launch_img {
-  height: 30vh;
+  height: 40vh;
   width: 25vw;
   background: url(./assets/img/concept-2.jpg);
   background-position: center !important;
@@ -500,13 +492,13 @@ html {
   z-index: 1;
 }
 .business_text {
-  font-size: 24px;
+  font-size: 32px;
+  font-family: "Erode Italic", serif;
   text-align: left;
-  text-transform: uppercase;
   color: #313e47;
   margin-top: 10px;
-  font-weight: 500;
-  letter-spacing: 1px;
+  font-weight: 400;
+  padding-left: 40px;
 }
 
 .business_tool_inner {
@@ -516,7 +508,7 @@ html {
 
 .business_concept {
   top: 80px;
-  left: 80px;
+  left: 0px;
   position: absolute;
   z-index: 2;
   text-align: center;
@@ -526,7 +518,7 @@ html {
   position: absolute;
   z-index: 2;
   top: 80px;
-  left: calc(30% + 80px);
+  left: calc(30%);
 }
 
 .design_img {
@@ -539,7 +531,7 @@ html {
   position: absolute;
   z-index: 2;
   bottom: 80px;
-  right: calc(30% + 80px);
+  right: calc(30%);
 }
 
 .development_img {
@@ -552,12 +544,12 @@ html {
   position: absolute;
   z-index: 2;
   bottom: 80px;
-  right: 80px;
+  right: 0px;
 }
 
 .launch_img {
   width: 25vw;
-  height: 30vh;
+  height: 40vh;
   background: url(https://s3.nyuct.com/edible/four-stages/LAUNCH.webp);
 }
 .gradient-bg {
@@ -584,7 +576,7 @@ html {
   display: flex;
   align-items: center;
   opacity: 0;
-  padding-top: calc(15vh - 30px);
+  padding-top: calc(5vh);
 
   .business_tool_inner_text {
     width: 60%;
@@ -609,13 +601,13 @@ html {
   margin-top: 48px;
 }
 .business_tool_inner_two_second {
-  width: 33%;
+  width: 40%;
   margin-right: auto;
   display: flex;
   align-items: center;
   font-weight: 300;
   gap: 32px;
-  padding-bottom: calc(17vh - 30px);
+  padding-bottom: calc(5vh);
 }
 .business_tool_inner_three_second {
   width: 100%;
@@ -668,8 +660,7 @@ html {
 }
 .venture_tranform-div1 .venture_tranform-img-container {
   position: relative;
-  justify-content: start;
-  gap: 90px;
+  justify-content: space-between;
   align-items: center;
 }
 .venture_tranform {
@@ -716,11 +707,9 @@ html {
   background: url(./assets/img/transform-img-3.png);
 }
 
-/* .venture_tranform-img4 { */
-/* right: 0%; */
-/* background: url(./assets/img/transform-img-4.png); */
-/* transform: translateX(100%); */
-/* } */
+.venture_tranform-img4 {
+  background: url(./assets/img/transform-img-4.png);
+}
 
 /* steps css  */
 .steps_heading .steps_heading_inner {

@@ -569,8 +569,8 @@ function initAnimations() {
   let ventureTranform = gsap.timeline({
     scrollTrigger: {
       trigger: ".venture_tranform",
-      start: "top 50% ",
-      end: "100% 100%",
+      start: "top 20% ",
+      end: "100% 0%",
       // markers: true,
       scrub: true,
       // pin: true,
@@ -584,17 +584,6 @@ function initAnimations() {
     y: 200,
     ease: "power4.out",
   });
-
-  const init = () => {
-    const effects = [{ selector: "[data-effect-4]", effect: BlurScrollEffect }];
-
-    effects.forEach(({ selector, effect }) => {
-      document.querySelectorAll(selector).forEach(el => {
-        new effect(el);
-      });
-    });
-  };
-  init();
 
   let ventureTranform1 = gsap.timeline({
     scrollTrigger: {
@@ -617,10 +606,10 @@ function initAnimations() {
     },
     "thisshouldo"
   );
-  // ventureTranform1.from(".fade-last", {
-  //   opacity: 0,
-  //   ease: "power4.out",
-  // });
+  ventureTranform1.from(".fade-last", {
+    opacity: 0,
+    ease: "power4.out",
+  });
 
   let imagreveal = gsap.timeline({
     scrollTrigger: {
