@@ -529,7 +529,7 @@ html {
 .business_development {
 	position: absolute;
 	z-index: 2;
-	bottom: 160px;
+	bottom: 80px;
 	right: calc(30%);
 }
 
@@ -630,7 +630,7 @@ html {
 	width: 100vw;
 	height: 100vh;
 	background: #313e47;
-	padding: 80px 80px 0;
+	padding: 40px 80px 0;
 	position: relative;
 	display: flex;
 	justify-content: space-between;
@@ -661,7 +661,7 @@ html {
 	position: relative;
 	justify-content: space-between;
 	align-items: center;
-}
+	}
 .venture_tranform {
 	min-height: 100vh;
 	overflow: hidden;
@@ -1080,6 +1080,7 @@ html {
 	background-color: #313e47;
 	padding-bottom: 100px;
 	margin-bottom: 100px;
+	margin-top: -20px;
 }
 .text-banner-image-flex {
 	display: flex;
