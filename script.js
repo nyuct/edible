@@ -554,30 +554,18 @@ function initAnimations() {
 	businesTools.from(".business_tool_inner_two_second .business_tool_inner_line", { clipPath: "inset(0 100% 0 0)", ease: "power4.out" })
 	businesTools.from(".business_tool_inner_two_second .business_tool_inner_text", { opacity: 0 })
 
-	let ventureTranformpin = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".venture_tranform",
-			start: "top 0% ",
-			end: "200% 100%",
-			// markers: true,
-			scrub: true,
-			pin: true,
-			pinSpacing: true,
-		},
-	})
 	let ventureTranform = gsap.timeline({
 		scrollTrigger: {
 			trigger: ".venture_tranform",
-			start: "top 20% ",
-			end: "100% 0%",
-			// markers: true,
+			start: "top 50% ",
+			end: "100% 50%",
+			markers: true,
 			scrub: true,
 			// pin: true,
-			pinSpacing: true,
 		},
 	})
 	ventureTranform.from(".venture_tranform-div", {
-		width: "80vw",
+		width: "90vw",
 		height: "80vh",
 		scale: 0.7,
 		y: "-50%",
@@ -588,7 +576,7 @@ function initAnimations() {
 		scrollTrigger: {
 			trigger: ".venture_tranform1",
 			start: "top 0% ",
-			end: "200% 100%",
+			end: "150% 100%",
 			// markers: true,
 			scrub: true,
 			pin: true,
@@ -625,7 +613,7 @@ function initAnimations() {
 			trigger: ".text-banner-section",
 			start: "top 0%",
 			end: "bottom 100%",
-			markers: true,
+			markers: false,
 			scrub: true,
 			toggleActions: "play none none reverse",
 		},

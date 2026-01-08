@@ -15,6 +15,10 @@
 
 :root {
 	--bg-blue: #1e1e1e;
+	--font-h1: clamp(40px, 4vw, 80px);
+	--font-h2: clamp(32px, 2.5vw, 60px);
+	--font-h3: clamp(24px, 1.5vw, 48px);
+	--font-body: clamp(16px, 1.2vw, 21px);
 }
 html {
 	overflow-y: overlay;
@@ -159,7 +163,7 @@ html {
 }
 .lower-text {
 	overflow: hidden;
-	font-size: 24px;
+	font-size: var(--font-h3);
 	font-family: "Fira Sans", sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -269,6 +273,7 @@ html {
 .ticker_uppersection p {
 	margin: 0;
 	width: 40%;
+	font-size: var(--font-body);
 }
 .ticker_uppersection {
 	margin-inline: 80px;
@@ -331,7 +336,7 @@ html {
 	font-weight: 400;
 	letter-spacing: 0px;
 	flex: 0 0 auto;
-	font-size: var(--font-size);
+	font-size: var(--font-h3);
 	white-space: nowrap;
 	margin-right: 0;
 	font-family: "Erode Italic", serif;
@@ -452,7 +457,7 @@ html {
 .business_tool_text {
 	padding-block: 40px;
 	text-align: center;
-	font-size: 4vw;
+	font-size: var(--font-h1);
 	color: #313e47;
 	font-weight: 400;
 	margin-bottom: 15vh;
@@ -491,7 +496,7 @@ html {
 	z-index: 1;
 }
 .business_text {
-	font-size: 32px;
+	font-size: var(--font-h3);
 	font-family: "Erode Italic", serif;
 	text-align: left;
 	color: #313e47;
@@ -567,13 +572,13 @@ html {
 	flex-direction: column;
 	justify-content: space-between;
 	padding-block: 80px;
+	font-size: var(--font-body);
 }
 
 .business_tool_inner_two_first {
 	width: 37%;
 	margin-left: auto;
 	display: flex;
-	align-items: center;
 	opacity: 0;
 	padding-top: calc(5vh);
 
@@ -586,10 +591,12 @@ html {
 }
 .business_tool_inner_text_anim {
 	width: 35% !important;
+	font-size: var(--font-body);
 }
 .business_tool_inner_line {
 	width: 45%;
-	height: 1px;
+	height: 0.5px;
+	margin-top: 5px;
 	/* clip-path: inset(0 0 0 0); */
 	background: #000;
 }
@@ -603,7 +610,6 @@ html {
 	width: 40%;
 	margin-right: auto;
 	display: flex;
-	align-items: center;
 	font-weight: 300;
 	gap: 32px;
 	padding-bottom: calc(5vh);
@@ -612,11 +618,11 @@ html {
 	width: 100%;
 	margin-right: auto;
 	display: flex;
-	align-items: center;
 	font-weight: 300;
 	gap: 32px;
 }
 .business_tool_inner_two_first .business_tool_inner_line {
+	margin-top: 5px;
 	width: 65%;
 }
 .business_tool_inner_two_first .business_tool_inner_text {
@@ -633,7 +639,7 @@ html {
 	padding: 40px 80px 0;
 	position: relative;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	flex-direction: column;
 
 	.d-flex {
@@ -648,7 +654,7 @@ html {
 .venture_tranform-div1 .text_venture_tranform {
 	color: #ede5d3;
 	font-family: "Erode", serif;
-	font-size: 3vw;
+	font-size: var(--font-h2);
 	font-weight: 300;
 	line-height: 1;
 	letter-spacing: -2px;
@@ -677,24 +683,19 @@ html {
 }
 .venture_tranform_line {
 	width: 20%;
-	margin: 0 auto 20px;
 }
 .venture_tranform_line_inner {
 	height: 1px;
 	background: #ede5d3;
 }
 .venture_tranform-img {
-	/* position: absolute; */
-	/* bottom: 20px; */
 	margin-bottom: 40px;
 	width: 17vw;
-	height: 40vh;
 	aspect-ratio: 1;
 	background: #000;
 	background-position: center !important;
 	background-size: cover !important;
 	background-repeat: no-repeat !important;
-	/* opacity: 0; */
 }
 
 .venture_tranform-img1 {
@@ -722,7 +723,7 @@ html {
 .steps_heading .steps_heading_inner {
 	font-weight: 400;
 	color: #313e47;
-	font-size: 4vw;
+	font-size: var(--font-h1);
 	font-family: "Erode";
 	gap: 26px;
 	justify-content: center;
@@ -750,7 +751,7 @@ html {
 	margin: 0 auto !important;
 	padding: 40px 0px 30px;
 	height: 100%;
-	max-height: 195px;
+	max-height: 12vw;
 	justify-content: space-evenly;
 	transition: all 1s;
 	align-items: start;
@@ -776,7 +777,7 @@ html {
 }
 
 .step_title {
-	font-size: 24px;
+	font-size: var(--font-h3);
 	font-weight: 500;
 	color: #313e47;
 	text-transform: uppercase;
@@ -784,13 +785,13 @@ html {
 	line-height: 1;
 }
 .steps-text {
-	font-size: 22px;
+	font-size: var(--font-body);
 }
 .steps-text-show {
 	margin-bottom: 40px;
 }
 .steps-line {
-	padding-top: 30px;
+	padding-top: 15px;
 }
 .steps-line-animation {
 	width: 0%;
@@ -804,12 +805,13 @@ html {
 .steps-text-container {
 	color: #313e47;
 	font-family: "Fira Sans";
+	line-height: 1.2;
 }
 .steps-text ul {
 	list-style: none;
 	padding-left: 0px;
 	margin: 0;
-	line-height: 1.5;
+	line-height: 1.2;
 }
 .steps-text-img img {
 	height: 100%;
@@ -821,9 +823,6 @@ html {
 }
 .right-side .steps-text-img {
 	height: 40vh;
-}
-.text-16 {
-	font-size: 22px;
 }
 .h-40 {
 	height: 40vh !important;
@@ -878,7 +877,7 @@ html {
 	opacity: 1;
 }
 .venture_tranform1 {
-	padding-bottom: 400px;
+	padding-bottom: 100px;
 	margin-top: -200px;
 	background: #313e47;
 }
@@ -1011,7 +1010,7 @@ html {
 /* bridge the gap updated css  */
 .bridge-title-sticky {
 	padding: 0;
-	font-size: 24px;
+	font-size: var(--font-h3);
 	font-weight: 500;
 	color: #313e47;
 	padding: 0;
@@ -1102,7 +1101,7 @@ html {
 .team-header {
 	font-weight: 400;
 	color: #313e47;
-	font-size: 4vw;
+	font-size: var(--font-h1);
 	font-family: "Erode";
 	gap: 26px;
 	justify-content: center;
@@ -1166,7 +1165,7 @@ html {
 	z-index: 9;
 	color: #ede5d3;
 	font-family: "Erode", serif;
-	font-size: 4vw;
+	font-size: var(--font-h2);
 	font-weight: 300;
 	line-height: 1;
 	letter-spacing: -3px;
@@ -1177,12 +1176,12 @@ html {
 	text-align: right;
 	font-weight: 300;
 	margin-left: auto;
-	font-size: 16px !important;
+	font-size: var(--font-body);
 }
 .slide-container h2 {
 	/* width: 60%; */
 	font-weight: 300;
-	font-size: 22px !important;
+	font-size: var(--font-body);
 	margin: 0;
 }
 .slide-container .d-flex {
@@ -1507,6 +1506,7 @@ footer {
 	padding-bottom: 100px;
 	align-items: center;
 	gap: 40px;
+	font-size: var(--font-body);
 }
 .footer_line {
 	width: 100%;
