@@ -997,6 +997,7 @@ html {
     margin-inline: 56px;
     padding: 0 24px;
 	font-size: 12vw;
+	justify-content: center;
 	color: #313e47;
 	gap: 32px;
 	font-family: "Erode", serif;
@@ -1088,7 +1089,7 @@ html {
 .text-banner-section {
 	overflow: hidden;
 	background-color: #313e47;
-	padding-bottom: 100px;
+	padding-bottom: 200px;
 	margin-bottom: 100px;
 	margin-top: -20px;
 }
@@ -1177,7 +1178,7 @@ html {
 	font-weight: 300;
 	line-height: 1;
 	letter-spacing: -3px;
-	min-height: 30vh;
+	min-height: 35vh;
 }
 .slide-container p {
 	width: 50%;

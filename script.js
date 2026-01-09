@@ -308,7 +308,7 @@ function initAnimations() {
 			trigger: ".ticker_line_inner",
 			start: "top 60% ",
 			end: "bottom 10%",
-			// markers: true,
+			markers: false,
 		},
 	})
 	tickerLine.to(".ticker_line_inner", {
@@ -559,7 +559,7 @@ function initAnimations() {
 			trigger: ".venture_tranform",
 			start: "top 70% ",
 			end: "50% 70%",
-			markers: true,
+			markers: false,
 			scrub: true,
 			// pin: true,
 		},
