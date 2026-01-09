@@ -77,6 +77,7 @@ html {
 	transition: transform 0.6s ease;
 	transform: translateY(0);
 	opacity: 0;
+	backdrop-filter: blur(1px);
 }
 .header-center {
 	font-weight: 300;
@@ -496,7 +497,7 @@ html {
 	z-index: 1;
 }
 .business_text {
-	font-size: var(--font-h3);
+	font-size: var(--font-h2);
 	font-family: "Erode Italic", serif;
 	text-align: left;
 	color: #313e47;
@@ -595,8 +596,8 @@ html {
 }
 .business_tool_inner_line {
 	width: 45%;
-	height: 0.5px;
-	margin-top: 5px;
+	height: 1px;
+	margin-top: 10px;
 	/* clip-path: inset(0 0 0 0); */
 	background: #000;
 }
@@ -683,6 +684,7 @@ html {
 }
 .venture_tranform_line {
 	width: 20%;
+	margin-bottom: 10px;
 }
 .venture_tranform_line_inner {
 	height: 1px;
@@ -751,7 +753,7 @@ html {
 	margin: 0 auto !important;
 	padding: 40px 0px 30px;
 	height: 100%;
-	max-height: 12vw;
+	max-height: 160px;
 	justify-content: space-evenly;
 	transition: all 1s;
 	align-items: start;
@@ -760,11 +762,19 @@ html {
 .step_box.step_opened {
 	height: 100%;
 	max-height: 100vh;
+	
+	.steps-text-img {
+		opacity: 1;
+	}
 }
 
 .step_box:hover {
 	height: 100%;
 	max-height: 100vh;
+
+	.steps-text-img {
+		opacity: 1;
+	}
 }
 
 .step_number {
@@ -853,10 +863,9 @@ html {
 }
 .steps-text-img {
 	width: 100%;
-	/* background: grey; */
 	margin-right: 20px;
-	/* transition: all 1.5s; */
-	/* opacity: 0; */
+	transition: all 1.5s;
+	opacity: 0;
 }
 .image-banner img {
 	width: 100%;
@@ -985,11 +994,10 @@ html {
 	width: 100%;
 }
 .bridge-the-gap-footer {
-	margin-top: -12px;
+    margin-inline: 56px;
+    padding: 0 24px;
 	font-size: 12vw;
-	text-align: center;
 	color: #313e47;
-	justify-content: center;
 	gap: 32px;
 	font-family: "Erode", serif;
 	font-weight: 300;
@@ -1169,6 +1177,7 @@ html {
 	font-weight: 300;
 	line-height: 1;
 	letter-spacing: -3px;
+	min-height: 30vh;
 }
 .slide-container p {
 	width: 50%;

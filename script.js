@@ -550,15 +550,15 @@ function initAnimations() {
 	businesTools.from(".business_development", { clipPath: "inset(0 100% 0 0)", opacity: 1 })
 	businesTools.from(".business_launch", { clipPath: "inset(0 100% 0 0)", opacity: 1 })
 	businesTools.to(".business_tool_inner_two_first", { opacity: 1 })
-	businesTools.from(".business_tool_inner_two_first .business_tool_inner_line", { clipPath: "inset(0 100% 0 0 )", ease: "power4.out" })
-	businesTools.from(".business_tool_inner_two_second .business_tool_inner_line", { clipPath: "inset(0 100% 0 0)", ease: "power4.out" })
+	businesTools.from(".business_tool_inner_two_first .business_tool_inner_line", { clipPath: "inset(0 90% 0 0 )", ease: "power4.out" })
+	businesTools.from(".business_tool_inner_two_second .business_tool_inner_line", { clipPath: "inset(0 90% 0 0)", ease: "power4.out" })
 	businesTools.from(".business_tool_inner_two_second .business_tool_inner_text", { opacity: 0 })
 
 	let ventureTranform = gsap.timeline({
 		scrollTrigger: {
 			trigger: ".venture_tranform",
-			start: "top 50% ",
-			end: "100% 50%",
+			start: "top 70% ",
+			end: "50% 70%",
 			markers: true,
 			scrub: true,
 			// pin: true,
@@ -726,7 +726,7 @@ function initAnimations() {
 	leftToRight.to(
 		".hidden-text .business_tool_inner_line",
 		{
-			clipPath: "inset(0 0% 0% 0%)",
+			clipPath: "inset(0 0% 10% 0%)",
 			ease: "power4.out",
 		},
 		"jdi",
