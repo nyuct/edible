@@ -634,22 +634,6 @@ function initAnimations() {
 			// pinSpacing: true
 		},
 	})
-	leftToRight.to(
-		".text-banner-text-0",
-		{
-			marginRight: "auto",
-			ease: "power4.out",
-		},
-		"a",
-	)
-	leftToRight.to(
-		".text-banner-text .ready-text",
-		{
-			opacity: 1,
-			ease: "power4.out",
-		},
-		"a",
-	)
 	leftToRight.from(
 		".fade-in-img",
 		{
@@ -661,16 +645,23 @@ function initAnimations() {
 	leftToRight.to(
 		".text-banner-text-1",
 		{
-			marginLeft: "auto",
+			opacity: 1,
 			ease: "power4.out",
 		},
 		"asdf",
 	)
-
+	leftToRight.to(
+		".text-banner-text-1",
+		{
+			opacity: 0.2,
+			ease: "power4.out",
+		},
+		"qwer",
+	)
 	leftToRight.to(
 		".text-banner-text-2",
 		{
-			marginLeft: "auto",
+			opacity: 1,
 			ease: "power4.out",
 		},
 		"qwer",
@@ -690,9 +681,17 @@ function initAnimations() {
 		"qwer",
 	)
 	leftToRight.to(
+		".text-banner-text-2",
+		{
+			opacity: 0.2,
+			ease: "power4.out",
+		},
+		"ret",
+	)
+	leftToRight.to(
 		".text-banner-text-3",
 		{
-			marginLeft: "auto",
+			opacity: 1,
 			ease: "power4.out",
 		},
 		"ret",
