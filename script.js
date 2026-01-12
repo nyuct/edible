@@ -309,13 +309,11 @@ function initAnimations() {
 			start: "top 60% ",
 			end: "bottom 10%",
 			markers: false,
+			scrub: true,
 		},
 	})
 	tickerLine.to(".ticker_line_inner", {
 		width: "100%",
-		// duration: 2,
-		ease: "power4.out",
-		// delay: 1,
 	})
 
 	/* JS: duplicate each .row's content, measure, create per-row keyframes and animation */
@@ -518,7 +516,6 @@ function initAnimations() {
 			scrollTrigger: {
 				trigger: elem,
 				start: "top 80%",
-				// markers: true,
 				scrub: true,
 				toggleActions: "play none none reverse",
 			},
