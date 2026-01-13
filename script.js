@@ -621,118 +621,214 @@ function initAnimations() {
 		scrub: true,
 	})
 
-	let leftToRight = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".text-banner-section",
-			start: "top top",
-			end: "380% top",
-			scrub: true,
-			pin: true,
-			// pinSpacing: true
-		},
-	})
-	leftToRight.from(
-		".fade-in-img",
-		{
-			opacity: 0,
-			ease: "power4.out",
-		},
-		"asdf",
-	)
-	leftToRight.to(
-		".text-banner-text-1",
-		{
+	if (window.innerWidth > 768) {
+		let leftToRight = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".text-banner-section",
+				start: "top top",
+				end: "380% top",
+				scrub: true,
+				pin: true,
+				// pinSpacing: true
+			},
+		})
+		leftToRight.from(
+			".fade-in-img",
+			{
+				opacity: 0,
+				ease: "power4.out",
+			},
+			"asdf",
+		)
+		leftToRight.to(
+			".text-banner-text-1",
+			{
+				opacity: 1,
+				ease: "power4.out",
+			},
+			"asdf",
+		)
+		leftToRight.to(
+			".text-banner-text-1",
+			{
+				opacity: 0.2,
+				ease: "power4.out",
+			},
+			"qwer",
+		)
+		leftToRight.to(
+			".text-banner-text-2",
+			{
+				opacity: 1,
+				ease: "power4.out",
+			},
+			"qwer",
+		)
+		leftToRight.to(
+			".expand-img-1",
+			{
+				width: "20%",
+			},
+			"qwer",
+		)
+		leftToRight.to(
+			".expand-img-2",
+			{
+				width: "60%",
+			},
+			"qwer",
+		)
+		leftToRight.to(
+			".text-banner-text-2",
+			{
+				opacity: 0.2,
+				ease: "power4.out",
+			},
+			"ret",
+		)
+		leftToRight.to(
+			".text-banner-text-3",
+			{
+				opacity: 1,
+				ease: "power4.out",
+			},
+			"ret",
+		)
+		leftToRight.to(
+			".expand-img-2",
+			{
+				width: "20%",
+			},
+			"ret",
+		)
+		leftToRight.to(
+			".expand-img-3",
+			{
+				width: "60%",
+			},
+			"ret",
+		)
+		leftToRight.fromTo(
+			".fade-in-img-5",
+			{
+				opacity: -1000,
+			},
+			{
+				opacity: 1,
+				clipPath: "inset(0 0% 30% 0%)",
+				ease: "power4.out",
+			},
+			"jdi",
+		)
+		leftToRight.to(
+			".hidden-text .business_tool_inner_line",
+			{
+				clipPath: "inset(0 0% 10% 0%)",
+				ease: "power4.out",
+			},
+			"jdi",
+		)
+		leftToRight.to(".fade-in-img-5", {
 			opacity: 1,
+			clipPath: "inset(0 0% 100% 0%)",
 			ease: "power4.out",
-		},
-		"asdf",
-	)
-	leftToRight.to(
-		".text-banner-text-1",
-		{
-			opacity: 0.2,
-			ease: "power4.out",
-		},
-		"qwer",
-	)
-	leftToRight.to(
-		".text-banner-text-2",
-		{
-			opacity: 1,
-			ease: "power4.out",
-		},
-		"qwer",
-	)
-	leftToRight.to(
-		".expand-img-1",
-		{
-      width: "20%",
-		},
-		"qwer",
-	)
-	leftToRight.to(
-		".expand-img-2",
-		{
-      width: "60%",
-		},
-		"qwer",
-	)
-	leftToRight.to(
-		".text-banner-text-2",
-		{
-			opacity: 0.2,
-			ease: "power4.out",
-		},
-		"ret",
-	)
-	leftToRight.to(
-		".text-banner-text-3",
-		{
-			opacity: 1,
-			ease: "power4.out",
-		},
-		"ret",
-	)
-  	leftToRight.to(
-		".expand-img-2",
-		{
-      width: "20%",
-		},
-		"ret",
-	)
-	leftToRight.to(
-		".expand-img-3",
-		{
-      width: "60%",
-		},
-		"ret",
-	)
-	leftToRight.fromTo(
-		".fade-in-img-5",
-		{
-			opacity: -1000,
-		},
-		{
-			opacity: 1,
-			clipPath: "inset(0 0% 30% 0%)",
-			ease: "power4.out",
-		},
-		"jdi",
-	)
-	leftToRight.to(
-		".hidden-text .business_tool_inner_line",
-		{
-			clipPath: "inset(0 0% 10% 0%)",
-			ease: "power4.out",
-		},
-		"jdi",
-	)
-	leftToRight.to(".fade-in-img-5", {
-		opacity: 1,
-		clipPath: "inset(0 0% 100% 0%)",
-		ease: "power4.out",
-	})
-
+		})
+	} else {
+		let leftToRight = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".text-banner-section",
+				start: "top top",
+				end: "380% top",
+				scrub: true,
+				pin: true,
+				// pinSpacing: true
+			},
+		})
+		leftToRight.from(
+			".fade-in-img",
+			{
+				opacity: 0,
+				ease: "power4.out",
+			},
+			"asdf",
+		)
+		leftToRight.to(
+			".text-banner-text-1",
+			{
+				opacity: 1,
+				ease: "power4.out",
+			},
+			"asdf",
+		)
+		leftToRight.to(
+			".text-banner-text-1",
+			{
+				opacity: 0.2,
+				ease: "power4.out",
+			},
+			"qwer",
+		)
+		leftToRight.to(
+			".text-banner-text-2",
+			{
+				opacity: 1,
+				ease: "power4.out",
+			},
+			"qwer",
+		)
+		leftToRight.to(
+			".expand-img-1",
+			{
+				width: "0%",
+			},
+			"qwer",
+		)
+		leftToRight.to(
+			".expand-img-2",
+			{
+				width: "100%",
+			},
+			"qwer",
+		)
+		leftToRight.to(
+			".text-banner-text-2",
+			{
+				opacity: 0.2,
+				ease: "power4.out",
+			},
+			"ret",
+		)
+		leftToRight.to(
+			".text-banner-text-3",
+			{
+				opacity: 1,
+				ease: "power4.out",
+			},
+			"ret",
+		)
+		leftToRight.to(
+			".expand-img-2",
+			{
+				width: "0%",
+			},
+			"ret",
+		)
+		leftToRight.to(
+			".expand-img-3",
+			{
+				width: "100%",
+			},
+			"ret",
+		)
+		leftToRight.to(
+			".hidden-text .business_tool_inner_line",
+			{
+				clipPath: "inset(0 0% 10% 0%)",
+				ease: "power4.out",
+			},
+			"jdi",
+		)
+	}
 	const ovalPath = document.querySelector("#ovalPath")
 
 	if (ovalPath) {
