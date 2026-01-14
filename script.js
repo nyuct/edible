@@ -626,7 +626,7 @@ function initAnimations() {
 			scrollTrigger: {
 				trigger: ".text-banner-section",
 				start: "top top",
-				end: "380% top",
+				end: "200% top",
 				scrub: true,
 				pin: true,
 				// pinSpacing: true
