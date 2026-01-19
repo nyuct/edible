@@ -5,11 +5,6 @@ import { BlurScrollEffect } from "./blurScrollEffect.js"
 ------------------------------------------------------------*/
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin)
 
-ScrollTrigger.config({
-	fastScrollEnd: true,
-	ignoreMobileResize: true,
-})
-
 /* ---------------------------------------------------------
    2) LENIS + SCROLLTRIGGER INTEGRATION (from Lenis docs)
 ------------------------------------------------------------*/
