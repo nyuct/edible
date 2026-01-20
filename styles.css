@@ -778,7 +778,7 @@ html {
 }
 
 .step_number {
-  font-size: clamp(60px, 5vw, 100px);
+  font-size: var(--font-h2);
   text-transform: uppercase;
   font-family: "Erode italic";
   font-weight: normal;
