@@ -72,7 +72,7 @@ html {
   align-items: center;
   z-index: 9999;
   color: #ede5d3;
-  font-size: 1.7vw;
+  font-size: var(--font-h2);
   font-family: "Erode", serif;
   transition: transform 0.6s ease;
   transform: translateY(0);
@@ -941,7 +941,7 @@ html {
   background: url(https://s3.nyuct.com/edible/img/maker-1.JPG);
 }
 .community-img-2 {
-  background: url(https://s3.nyuct.com/edible/img/makers-2.JPG);
+  background: url(./assets/img/makers-community.JPEG);
 }
 .hospitality-img-3 {
   background: url(https://s3.nyuct.com/edible/img/hospitality-3.png);
@@ -1234,11 +1234,7 @@ html {
 .hospitality-mid-container {
   height: 100%;
 }
-.hospitality-container .bridge-left-cont p {
-  width: 80%;
-  margin-left: auto;
-  text-align: right;
-}
+
 .hospitality-container .bridge-right-cont .bridge-the-gap-img {
   height: 100%;
 }

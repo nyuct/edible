@@ -309,7 +309,7 @@
   }
   .step_box {
     flex-flow: column;
-	max-height: 220px;
+    max-height: 220px;
   }
   .step_box .col-1,
   .step_box .col-3,
@@ -317,15 +317,71 @@
     max-width: 100%;
     width: 100%;
   }
-  .step_number  {
-	margin-bottom: 20px;
+  .step_number {
+    margin-bottom: 20px;
   }
   .step_title br {
-	display: none;
+    display: none;
   }
   .bridge-the-gap-footer {
-	font-size: 10vw;
-}
+    font-size: 10vw;
+  }
+  .ticker {
+    padding-top: 100px;
+  }
+  .group {
+    margin-top: 100px;
+  }
+  .ticker_uppersection p {
+    width: 20%;
+  }
+  .ticker_line {
+    width: 50%;
+  }
+  .concept_img {
+    height: 25vh;
+    width: 50vw;
+  }
+  .business_design {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-100%);
+    right: 0px;
+    left: auto;
+  }
+  .design_img {
+    width: 45vw;
+    height: 20vh;
+    background: url(https://s3.nyuct.com/edible/img/design-3.jpg);
+    background-position: center;
+  }
+  .business_development {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(0%);
+    left: 0;
+  }
+  .development_img {
+    width: 45vw;
+    height: 20vh;
+    background: url(https://s3.nyuct.com/edible/img/design.jpg);
+  }
+  .launch_img {
+    width: 50vw;
+    height: 25vh;
+    background: url(https://s3.nyuct.com/edible/four-stages/LAUNCH.webp);
+  }
+  .business_launch {
+    position: absolute;
+    z-index: 2;
+    bottom: 40px;
+    right: 0px;
+  }
+  .text-banner-text {
+    letter-spacing: 0px;
+  }
 }
 
 @media (min-width: 1900px) {
