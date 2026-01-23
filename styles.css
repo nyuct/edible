@@ -429,8 +429,8 @@ html {
 @media (max-width: 700px) {
   :root {
     --font-size: 22px;
-    --thumb-w: 110px;
-    --thumb-h: 56px;
+    --thumb-w: 200px;
+    --thumb-h: 100px;
     --gap: 24px;
     --px-per-sec: 30;
   }
@@ -452,7 +452,7 @@ html {
   margin: 0 auto;
   width: 1px;
   height: 0%;
-  background: #000;
+  background: #313e47;
 }
 
 .business_tool_text {
@@ -599,7 +599,7 @@ html {
   height: 1px;
   margin-top: 10px;
   /* clip-path: inset(0 0 0 0); */
-  background: #000;
+  background: #313e47;
 }
 .text-right {
   text-align: right;
@@ -694,7 +694,7 @@ html {
   margin-bottom: 40px;
   width: 17vw;
   aspect-ratio: 1;
-  background: #000;
+  background: #313e47;
   background-position: center !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -743,7 +743,7 @@ html {
   }
 }
 .steps_boxes {
-  border-top: 1px solid #000;
+  border-top: 1px solid #313e47;
 }
 .steps_innersection {
   padding: 200px 80px;
@@ -806,7 +806,7 @@ html {
 .steps-line-animation {
   width: 0%;
   height: 1px;
-  background: #000;
+  background: #313e47;
   transition: all 0.5s;
 }
 .step_box:hover .steps-line-animation {
@@ -1311,7 +1311,7 @@ footer {
 
 .bridge-the-gap-sticky-line {
   height: 1px;
-  background: #000;
+  background: #313e47;
   margin: 10px 80px;
   max-width: 1400px;
   width: 20%;

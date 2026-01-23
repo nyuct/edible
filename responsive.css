@@ -10,6 +10,16 @@
       width: 100%;
     }
   }
+  .development-img-2,
+  .architect-img-2,
+  .hospitality-img-2,
+  .community-img-1 {
+    display: none;
+  }
+  .development-container .bridge-left-cont,
+  .development-container .bridge-right-cont {
+    width: 50%;
+  }
   .header-banner-text {
     padding-inline: 10px;
   }
@@ -24,7 +34,7 @@
   }
 
   .step_box {
-    max-height: 200px;
+    max-height: 250px;
   }
   .trace-oval {
     justify-content: center;
@@ -106,13 +116,22 @@
     overflow: hidden;
     font-size: 14px;
   }
-  .concept_img,
-  .design_img,
-  .development_img,
-  .launch_img {
-    height: 20vh;
-    width: 50vw;
+  .business_tool_inner_two_first {
+    width: 50%;
   }
+  .concept_img,
+  .launch_img {
+    height: 22vh;
+    width: 40vw;
+    background-size: cover !important;
+  }
+  .design_img,
+  .development_img {
+    width: 55vw;
+    height: 15vh;
+    background-position: center !important;
+  }
+
   .business_text {
     font-size: 21px;
     margin-left: 0;
@@ -139,9 +158,6 @@
   }
   .business_tool_inner_two {
     padding: 0;
-  }
-  .business_tool_inner_two .business_tool_inner_line {
-    display: none;
   }
   .business_tool_inner_two_second {
     padding-bottom: 20px;
@@ -381,6 +397,16 @@
   }
   .text-banner-text {
     letter-spacing: 0px;
+  }
+  .development-img-2,
+  .architect-img-2,
+  .hospitality-img-2,
+  .community-img-1 {
+    display: none;
+  }
+  .development-container .bridge-left-cont,
+  .development-container .bridge-right-cont {
+    width: 50%;
   }
 }
 
