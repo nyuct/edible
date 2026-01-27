@@ -369,7 +369,7 @@
   .design_img {
     width: 45vw;
     height: 20vh;
-    background: url(https://s3.nyuct.com/edible/img/design-3.jpg);
+    background: url(https://s3.nyuct.com/edible/img/design-3.webp);
     background-position: center;
   }
   .business_development {
@@ -382,7 +382,7 @@
   .development_img {
     width: 45vw;
     height: 20vh;
-    background: url(https://s3.nyuct.com/edible/img/design.jpg);
+    background: url(https://s3.nyuct.com/edible/img/design.webp);
   }
   .launch_img {
     width: 50vw;
