@@ -1059,14 +1059,6 @@ html {
   padding-top: 50px;
   color: #ede5d3;
 }
-.reveal-image {
-  z-index: 3;
-  position: relative;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://s3.nyuct.com/edible/img/left-to-rt-1.jpg");
-}
 .hidden-text .business_tool_inner_line {
   width: 60%;
   background: #ede5d3;
