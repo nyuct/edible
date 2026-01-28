@@ -2,13 +2,13 @@
 
 @font-face {
   font-family: "Erode";
-  src: url("./fonts/Erode-Variable.woff2") format("woff2-variations");
+  src: url("https://s3.nyuct.com/edible/fonts/Erode-Variable.woff2") format("woff2-variations");
   font-weight: 100 900;
   font-style: normal italic;
 }
 @font-face {
   font-family: "Erode Italic";
-  src: url("./fonts/Erode-VariableItalic.woff2") format("woff2-variations");
+  src: url("https://s3.nyuct.com/edible/fonts/Erode-VariableItalic.woff2") format("woff2-variations");
   font-weight: 100 900;
   font-style: normal italic;
 }
@@ -361,55 +361,55 @@ html {
   transition: all 0.5s ease;
 }
 .exp .thumb {
-  background: url(./assets/images/food-exp.webp);
+  background: url(https://s3.nyuct.com/edible/images/food-exp.webp);
 }
 .spaces .thumb {
-  background: url(./assets/images/spaces-2.webp);
+  background: url(https://s3.nyuct.com/edible/images/spaces-2.webp);
 }
 .culture .thumb {
-  background: url(./assets/images/culture.webp);
+  background: url(https://s3.nyuct.com/edible/images/culture.webp);
 }
 .design .thumb {
-  background: url(./assets/images/development-2.webp);
+  background: url(https://s3.nyuct.com/edible/images/development-2.webp);
 }
 .revival .thumb {
-  background: url(./assets/images/revival.webp);
+  background: url(https://s3.nyuct.com/edible/images/revival.webp);
 }
 .brands .thumb {
-  background: url(./assets/images/brands.webp);
+  background: url(https://s3.nyuct.com/edible/images/brands.webp);
 }
 .restaurants .thumb {
-  background: url(./assets/images/culture.webp);
+  background: url(https://s3.nyuct.com/edible/images/culture.webp);
 }
 .economics .thumb {
-  background: url(./assets/images/economics.webp);
+  background: url(https://s3.nyuct.com/edible/images/economics.webp);
 }
 .sourcing .thumb {
-  background: url(./assets/images/sourcing.webp);
+  background: url(https://s3.nyuct.com/edible/images/sourcing.webp);
 }
 .chefs .thumb {
-  background: url(./assets/images/chefs-2.webp);
+  background: url(https://s3.nyuct.com/edible/images/chefs-2.webp);
 }
 .recipes .thumb {
-  background: url(./assets/images/recipes.webp);
+  background: url(https://s3.nyuct.com/edible/images/recipes.webp);
 }
 .innovation .thumb {
-  background: url(./assets/images/innovation.webp);
+  background: url(https://s3.nyuct.com/edible/images/innovation.webp);
 }
 .makers .thumb {
-  background: url(./assets/images/MAKERS.webp);
+  background: url(https://s3.nyuct.com/edible/images/MAKERS.webp);
 }
 .kitchen .thumb {
-  background: url(./assets/images/kitchen.webp);
+  background: url(https://s3.nyuct.com/edible/images/kitchen.webp);
 }
 .growers .thumb {
-  background: url(./assets/images/GROWERS.webp);
+  background: url(https://s3.nyuct.com/edible/images/GROWERS.webp);
 }
 .services .thumb {
-  background: url(./assets/images/SERVICES.webp);
+  background: url(https://s3.nyuct.com/edible/images/SERVICES.webp);
 }
 .communities .thumb {
-  background: url(./assets/images/communities.webp);
+  background: url(https://s3.nyuct.com/edible/images/communities.webp);
 }
 
 /* animation applied via inline styles from JS (per-row @keyframes) */
@@ -481,7 +481,7 @@ html {
 .launch_img {
   height: 40vh;
   width: 25vw;
-  background: url(./assets/images/concept-2.webp);
+  background: url(https://s3.nyuct.com/edible/images/concept-2.webp);
   background-position: top !important;
   background-size: 110% !important;
   background-repeat: no-repeat !important;
@@ -529,7 +529,7 @@ html {
 .design_img {
   width: 25vw;
   height: 30vh;
-  background: url(./assets/images/design-3.webp);
+  background: url(https://s3.nyuct.com/edible/images/design-3.webp);
   background-position: center !important;
 }
 
@@ -543,7 +543,7 @@ html {
 .development_img {
   width: 25vw;
   height: 30vh;
-  background: url(./assets/images/design.webp);
+  background: url(https://s3.nyuct.com/edible/images/design.webp);
 }
 
 .business_launch {
@@ -556,7 +556,7 @@ html {
 .launch_img {
   width: 25vw;
   height: 40vh;
-  background: url(./assets/images/LAUNCH.webp);
+  background: url(https://s3.nyuct.com/edible/images/LAUNCH.webp);
 }
 .gradient-bg {
   position: absolute;
@@ -704,11 +704,11 @@ html {
 .venture_tranform-img2 {
   /* left: 25%; */
   /* transform: translateX(10%); */
-  background: url(./assets/images/transform-img-2.webp);
+  background: url(https://s3.nyuct.com/edible/images/transform-img-2.webp);
 }
 
 .venture_tranform-img4 {
-  background: url(./assets/images/transform-img-4.webp);
+  background: url(https://s3.nyuct.com/edible/images/transform-img-4.webp);
 }
 .steps-text-img.steps-text-img-bottom {
   background-position: bottom !important;
@@ -927,43 +927,43 @@ html {
   background-repeat: no-repeat !important;
 }
 .community-img {
-  background: url(./assets/images/communities-2.webp);
+  background: url(https://s3.nyuct.com/edible/images/communities-2.webp);
 }
 .community-img-1 {
-  background: url(./assets/images/maker-1.webp);
+  background: url(https://s3.nyuct.com/edible/images/maker-1.webp);
 }
 .community-img-2 {
-  background: url(./assets/images/makers-community.webp);
+  background: url(https://s3.nyuct.com/edible/images/makers-community.webp);
 }
 .hospitality-img-3 {
-  background: url(./assets/images/hospitality-3.webp);
+  background: url(https://s3.nyuct.com/edible/images/hospitality-3.webp);
 }
 .hospitality-img-1 {
-  background: url(./assets/images/hospitality-1.webp);
+  background: url(https://s3.nyuct.com/edible/images/hospitality-1.webp);
 }
 .hospitality-video-2 {
   transform: translateY(-25%);
 }
 .hospitality-img-2 {
-  background: url(./assets/images/hospitality-3.webp);
+  background: url(https://s3.nyuct.com/edible/images/hospitality-3.webp);
 }
 .architect-img-3 {
-  background: url(./assets/images/architect-3.webp);
+  background: url(https://s3.nyuct.com/edible/images/architect-3.webp);
 }
 .architect-img-1 {
-  background: url(./assets/images/architect-1.webp);
+  background: url(https://s3.nyuct.com/edible/images/architect-1.webp);
 }
 .architect-img-2 {
-  background: url(./assets/images/architect-2.webp);
+  background: url(https://s3.nyuct.com/edible/images/architect-2.webp);
 }
 .development-img-1 {
-  background: url(./assets/images/development-img-1.webp);
+  background: url(https://s3.nyuct.com/edible/images/development-img-1.webp);
 }
 .development-img-2 {
-  background: url(./assets/images/development-img-2.webp);
+  background: url(https://s3.nyuct.com/edible/images/development-img-2.webp);
 }
 .development-img-3 {
-  background: url(./assets/images/development-img-3.webp);
+  background: url(https://s3.nyuct.com/edible/images/development-img-3.webp);
 }
 .community-video-1 {
   object-fit: cover;
@@ -971,10 +971,10 @@ html {
   height: 100%;
 }
 .venture-design-img-1 {
-  background: url(./assets/images/venture-designer-1.webp);
+  background: url(https://s3.nyuct.com/edible/images/venture-designer-1.webp);
 }
 .venture-design-img-2 {
-  background: url(./assets/images/venture-designer-2.webp);
+  background: url(https://s3.nyuct.com/edible/images/venture-designer-2.webp);
 }
 .bridge-the-gap-img-right {
   height: 100%;
