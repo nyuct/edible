@@ -390,6 +390,9 @@ html {
 .chefs .thumb {
   background: url(https://s3.nyuct.com/edible/images/chefs-2.webp);
 }
+.packaging .thumb {
+  background: url(./assets/images/packaging.webp);
+}
 .recipes .thumb {
   background: url(https://s3.nyuct.com/edible/images/recipes.webp);
 }
@@ -942,28 +945,33 @@ html {
   background: url(https://s3.nyuct.com/edible/images/hospitality-1.webp);
 }
 .hospitality-video-2 {
-  transform: translateY(-25%);
+  /* transform: translateY(-25%); */
 }
 .hospitality-img-2 {
   background: url(https://s3.nyuct.com/edible/images/hospitality-3.webp);
 }
 .architect-img-3 {
-  background: url(https://s3.nyuct.com/edible/images/architect-3.webp);
+  background: url(./assets/images/architect-img-1.webp);
 }
 .architect-img-1 {
   background: url(https://s3.nyuct.com/edible/images/architect-1.webp);
 }
 .architect-img-2 {
-  background: url(https://s3.nyuct.com/edible/images/architect-2.webp);
+  background: url(./assets/images/architect-img-2.webp);
 }
 .development-img-1 {
   background: url(https://s3.nyuct.com/edible/images/development-img-1.webp);
 }
 .development-img-2 {
-  background: url(https://s3.nyuct.com/edible/images/development-img-2.webp);
+  background: url(https://s3.nyuct.com/edible/images/service6-1.webp);
 }
 .development-img-3 {
-  background: url(https://s3.nyuct.com/edible/images/development-img-3.webp);
+  height: 100%;
+  video {
+    height: 100%;
+    object-fit: cover;
+    background-color: transparent;
+  }
 }
 .community-video-1 {
   object-fit: cover;
@@ -1510,7 +1518,7 @@ footer {
   font-size: var(--font-body);
 }
 .footer_line {
-  width: 100%;
+  width: 60%;
   height: 0.5px;
   background: #eae3d2;
 }
