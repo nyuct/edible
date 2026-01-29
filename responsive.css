@@ -50,13 +50,16 @@
   }
   .trace-oval {
     justify-content: center;
-    
+
     svg {
-      max-width: 39%;
-      transform: translate(-51%, -45%);
+      max-width: 100px;
+      transform: translate(-25%, -45%);
       top: 75%;
       left: 20%;
     }
+  }
+  .steps_heading .steps_heading_inner {
+    font-size: 40px;
   }
   .col-6.steps-img {
     width: 100%;
@@ -121,7 +124,7 @@
   }
   .venture_tranform-img {
     margin-bottom: 40px;
-    width: 40vw;
+    width: 35vw;
     height: 20vh;
   }
   .upper-text {
@@ -197,18 +200,18 @@
     padding-top: 50px;
     flex-flow: wrap;
   }
-  .steps_heading .steps_heading_inner {
-    font-size: 60px;
-  }
   .venture_tranform-div1 .text_venture_tranform {
     font-size: 21px;
+  }
+  .steps_heading .text-black {
+    width: 300px;
+    margin: 0 auto;
   }
   .text-banner-text {
     padding: 40px 20px;
     z-index: 9;
     background: #ede5d3;
     color: #313e47;
-    font-family: "begum";
   }
   .ticker {
     min-height: auto;
