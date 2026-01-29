@@ -2,13 +2,13 @@
 
 @font-face {
   font-family: "Erode";
-  src: url("https://s3.nyuct.com/edible/fonts/Erode-Variable.woff2") format("woff2-variations");
+  src: url("./fonts/Erode-Variable.woff2") format("woff2-variations");
   font-weight: 100 900;
   font-style: normal italic;
 }
 @font-face {
   font-family: "Erode Italic";
-  src: url("https://s3.nyuct.com/edible/fonts/Erode-VariableItalic.woff2") format("woff2-variations");
+  src: url("./fonts/Erode-VariableItalic.woff2") format("woff2-variations");
   font-weight: 100 900;
   font-style: normal italic;
 }
