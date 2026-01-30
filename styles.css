@@ -357,6 +357,9 @@ html {
 .item:nth-child(even) {
   /* flex-direction: column-reverse; */
 }
+.group-mobile {
+  display: none;
+}
 /* thumbnail box */
 .thumb {
   width: var(--thumb-w);
@@ -434,13 +437,13 @@ html {
     transition: border-radius 3s; */
   }
 }
-
+video::-webkit-media-controls { display: none !important; }
 /* responsive tweaks */
 @media (max-width: 700px) {
   :root {
     --font-size: 22px;
     --thumb-w: 200px;
-    --thumb-h: 100px;
+    --thumb-h: 200px;
     --gap: 24px;
     --px-per-sec: 30;
   }

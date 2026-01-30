@@ -87,6 +87,12 @@
       border-radius: 10px;
     }
   }
+  .group-mobile {
+    display: block;
+  }
+  .group-desktop {
+    display: none;
+  }
   .footer-bottom {
     flex-direction: column;
     gap: 20px;
