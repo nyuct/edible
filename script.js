@@ -103,16 +103,18 @@ function initAnimations() {
   preloader.to(
     "#edible",
     {
-      x: "-40%",
+      x: window.innerWidth >= 767 ? "-40%" : "-0%",
+      y: window.innerWidth >= 767 ? "0%" : "-40%",
       duration: 0.7,
       ease: "power4.out",
     },
     "preloader",
-  );    
+  );
   preloader.to(
     "#ventures",
     {
-      x: "40%",
+      x: window.innerWidth >= 767 ? "40%" : "0%",
+      y: window.innerWidth >= 767 ? "0%" : "40%",
       duration: 0.7,
       ease: "power4.out",
     },
@@ -311,8 +313,6 @@ function initAnimations() {
     width: "100%",
   });
 
- 
-
   let header = gsap.timeline({
     scrollTrigger: {
       trigger: ".ticker",
@@ -370,16 +370,15 @@ function initAnimations() {
   let ventureTranform = gsap.timeline({
     scrollTrigger: {
       trigger: ".venture_tranform",
-      start: "top 70% ",
-      end: "50% 70%",
+      start: window.innerWidth >= 767 ? "top 70%" : "100% 100%",
+      end: window.innerWidth >= 767 ? "50% 70%" : "0% 80%",
       markers: false,
       scrub: true,
-      // pin: true,
     },
   });
   ventureTranform.from(".venture_tranform-div", {
     width: "90vw",
-    height: "80vh",
+    height: window.innerWidth >= 767 ? "80vh" : "30vh",
     scale: 0.7,
     y: "-50%",
     ease: "power4.out",
@@ -389,8 +388,7 @@ function initAnimations() {
     scrollTrigger: {
       trigger: ".venture_tranform1",
       start: "top 0% ",
-      end: "150% 100%",
-      // markers: true,
+      end: window.innerWidth >= 767 ? "150% 100%" : "200% 100%",
       scrub: true,
       pin: true,
       pinSpacing: true,
@@ -554,7 +552,7 @@ function initAnimations() {
       scrollTrigger: {
         trigger: ".text-banner-section",
         start: "top top",
-        end: "380% top",
+        end: "200% top",
         scrub: true,
         pin: true,
         // pinSpacing: true
@@ -841,9 +839,9 @@ function initAnimations() {
   let footerTimeline = gsap.timeline({
     scrollTrigger: {
       trigger: ".section_footer",
-      start: "20% 100% ",
-      end: "150% 20%",
-      // markers: true,
+      start: window.innerWidth >= 767 ? "20% 100% " : "20% 50%",
+      end: window.innerWidth >= 767 ? "150% 20%" : "100% 40%",
+      markers: true,
       scrub: true,
       pin: true,
     },

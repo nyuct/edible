@@ -929,6 +929,7 @@ video::-webkit-media-controls {
   position: relative;
   justify-content: center;
 }
+
 .trace-oval svg {
   position: absolute;
   top: 50%;
