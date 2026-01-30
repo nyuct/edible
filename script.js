@@ -841,7 +841,7 @@ function initAnimations() {
       trigger: ".section_footer",
       start: window.innerWidth >= 767 ? "20% 100% " : "20% 80%",
       end: window.innerWidth >= 767 ? "150% 20%" : "100% 50%",
-      markers: true,
+      markers: false,
       scrub: true,
       pin: true,
     },
