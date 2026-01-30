@@ -17,10 +17,10 @@
     transform: translateX(-50% -20%);
   }
   #edible {
-    transform: translate(-50%, -20%);
+    transform: translate(-50%, -3%);
   }
   #ventures {
-    transform: translate(-50%, 20%);
+    transform: translate(-50%, 3%);
   }
   .development-img-2,
   .architect-img-2,
@@ -220,7 +220,11 @@
     height: 200px;
   }
   .venture_tranform1 {
-    margin-top: -70vh;
+    margin-top: -85vh;
+
+  }
+  .business_tool {
+    padding-bottom: 0;
   }
   .business_tool_inner_two {
     padding: 0;
@@ -322,7 +326,7 @@
   }
 
   .steps-text .row {
-    flex-direction: column;
+    height: 100% !important;
     gap: 20px;
 
     .col-6 {

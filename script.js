@@ -370,25 +370,24 @@ function initAnimations() {
   let ventureTranform = gsap.timeline({
     scrollTrigger: {
       trigger: ".venture_tranform",
-      start: window.innerWidth >= 767 ? "top 70%" : "30% 100%",
-      end: window.innerWidth >= 767 ? "50% 70%" : "20% 80%",
-      markers: false,
+      start: window.innerWidth >= 767 ? "top 70%" : "5% 100%",
+      end: window.innerWidth >= 767 ? "50% 70%" : "10% 90%",
+      markers: true,
       scrub: true,
     },
   });
   ventureTranform.from(".venture_tranform-div", {
     width: "90vw",
-    height: window.innerWidth >= 767 ? "80vh" : "30vh",
+    height: "80vh",
     scale: 0.7,
     y: "-50%",
-    opacity: 0
   });
 
   let ventureTranform1 = gsap.timeline({
     scrollTrigger: {
       trigger: ".venture_tranform1",
       start: "top 0% ",
-      end: window.innerWidth >= 767 ? "150% 100%" : "200% 100%",
+      end: window.innerWidth >= 767 ? "150% 100%" : "250% 100%",
       scrub: true,
       pin: true,
       pinSpacing: true,
@@ -552,7 +551,7 @@ function initAnimations() {
       scrollTrigger: {
         trigger: ".text-banner-section",
         start: "top top",
-        end: "200% top",
+        end: "250% top",
         scrub: true,
         pin: true,
         // pinSpacing: true
@@ -672,7 +671,7 @@ function initAnimations() {
     scrollTrigger: {
       trigger: ".bridge-the-gap-section-outer",
       start: "top 0%",
-      end: "500% 100%",
+      end: window.innerWidth > 767 ? "500% 100%" : "900% 100%",
       markers: false,
       scrub: true,
       pin: true,
