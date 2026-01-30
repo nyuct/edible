@@ -30,7 +30,7 @@
     padding: 100px 30px;
   }
   .bridge-the-gap-img {
-    height: 300px !important;
+    height: 25vh !important;
   }
   .hospitality-video-2,
   .community-video-1 {
@@ -44,6 +44,9 @@
   }
   .steps-text-img {
     opacity: 1;
+  }
+  .bridge-the-gap-text-container {
+    height: 50vh;
   }
   .step_box {
     max-height: 300vh;
@@ -95,12 +98,20 @@
   /* .bridge-the-gap-img {
     display: none;
   } */
-
+  .venture-design-img-2,
+  .development-img-3,
+  .architect-img-3,
+  .hospitality-img-3,
+  .community-img {
+      display: none;
+   }
   .bridge-the-gap-sticky-title {
-    padding: 0 20px;
+    width: 100%;
+    margin: 0 24px !important;
+    flex-direction: column;
   }
   .bridge-the-gap-footer {
-    padding-top: 50px;
+    padding-top: 20px;
     margin-inline: 0px;
     gap: 12px;
   }
@@ -129,7 +140,6 @@
     height: 20vh;
   }
   .upper-text {
-    font-size: 40px;
     letter-spacing: normal;
     padding-bottom: 0;
   }
@@ -154,7 +164,6 @@
   }
 
   .business_text {
-    font-size: 21px;
     margin-left: 0;
     text-align: start;
   }
@@ -177,6 +186,11 @@
   .business_launch {
     top: 55%;
   }
+  .venture_tranform {
+    min-height: 30vh;
+    height: 100%;
+    max-height: 30vh;
+  }
   .business_tool_inner_two {
     padding: 0;
   }
@@ -184,7 +198,6 @@
     padding-bottom: 20px;
   }
   .business_tool_inner_text {
-    font-size: 14px;
     line-height: 1.5;
   }
   .business_tool_inner_two_second {
@@ -263,8 +276,11 @@
   .venture-designer-container {
     .d-flex {
       flex-direction: column;
-      gap: 30px;
+      gap: 10px;
     }
+  }
+  .slide-container h2 {
+    padding-bottom: 10px;
   }
   .header-container {
     font-size: 40px;
@@ -328,7 +344,6 @@
   }
   .slide-container .d-flex {
     flex-direction: column;
-    gap: 30px;
 
     .bridge-left-cont,
     .bridge-right-cont {

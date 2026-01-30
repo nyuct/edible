@@ -16,9 +16,9 @@
 :root {
   --bg-blue: #1e1e1e;
   --font-h1: clamp(40px, 4vw, 80px);
-  --font-h2: clamp(32px, 2.5vw, 60px);
-  --font-h3: clamp(24px, 1.5vw, 48px);
-  --font-body: clamp(16px, 1.2vw, 21px);
+  --font-h2: clamp(22px, 2.5vw, 60px);
+  --font-h3: clamp(20px, 1.5vw, 48px);
+  --font-body: clamp(12px, 1.2vw, 21px);
 }
 html {
   overflow-y: overlay;
@@ -1288,7 +1288,7 @@ video::-webkit-media-controls {
   height: 100%;
 }
 .development-container .bridge-the-gap-text h2 {
-  padding: 12px;
+  padding: 12px 0;
 }
 .hospitality-mid-container {
   height: 100%;
