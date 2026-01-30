@@ -14,7 +14,7 @@ const lenis = new Lenis({
   // you can tweak if needed
   duration: 1.5,
   smooth: true,
-  lerp: 0.08, // <= LOWER = smoother & more even motion
+  lerp: 0.06, // <= LOWER = smoother & more even motion
   wheelMultiplier: 0.7,
 });
 
@@ -840,7 +840,7 @@ function initAnimations() {
     scrollTrigger: {
       trigger: ".section_footer",
       start: window.innerWidth >= 767 ? "20% 100% " : "20% 80%",
-      end: window.innerWidth >= 767 ? "150% 20%" : "100% 50%",
+      end: window.innerWidth >= 767 ? "150% 20%" : "50% 50%",
       markers: false,
       scrub: true,
       pin: true
