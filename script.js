@@ -372,7 +372,7 @@ function initAnimations() {
       trigger: ".venture_tranform",
       start: window.innerWidth >= 767 ? "top 70%" : "5% 100%",
       end: window.innerWidth >= 767 ? "50% 70%" : "10% 90%",
-      markers: true,
+      markers: false,
       scrub: true,
     },
   });
