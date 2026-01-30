@@ -213,6 +213,12 @@
   .business_launch {
     bottom: 10%;
   }
+  .numbers-container {
+    width: 50vw;
+  }
+  .step_number {
+    font-size: var(--font-h1);
+  }
   .step_title br {
     display: none;
   }

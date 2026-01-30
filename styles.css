@@ -251,7 +251,8 @@ html {
   background-color: #ede5d3;
 }
 .numbers {
-  font-size: 1.7vw;
+  font-size: var(--font-h2);
+  font-weight: 400;
 }
 /* Ticker css  */
 :root {
