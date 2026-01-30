@@ -839,9 +839,9 @@ function initAnimations() {
   let footerTimeline = gsap.timeline({
     scrollTrigger: {
       trigger: ".section_footer",
-      start: window.innerWidth >= 767 ? "20% 100% " : "20% 50%",
-      end: window.innerWidth >= 767 ? "150% 20%" : "100% 40%",
-      markers: false,
+      start: window.innerWidth >= 767 ? "20% 100% " : "20% 80%",
+      end: window.innerWidth >= 767 ? "150% 20%" : "100% 50%",
+      markers: true,
       scrub: true,
       pin: true,
     },
