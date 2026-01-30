@@ -64,7 +64,6 @@
     max-height: 300vh;
   }
   .trace-oval {
-    justify-content: center;
     svg {
       max-width: 100px;
       top: 27%;
@@ -77,9 +76,6 @@
   }
   .text-banner-section {
     padding-bottom: 100px;
-  }
-  .steps_heading .steps_heading_inner {
-    font-size: 40px;
   }
   .col-6.steps-img {
     width: 100%;
