@@ -507,12 +507,12 @@ function initAnimations() {
       trigger: ".ticker",
       start: "top 0%",
       end: "bottom 100%",
-      markers: true,
+      markers: false,
       scrub: true,
       toggleActions: "play none none reverse",
     },
   });
-  header.to(".header-video", { opacity: 0 });
+  header.to(".header-container", { display: "none" });
   gsap.utils.toArray(".reveal-left").forEach(elem => {
     gsap.from(elem, {
       clipPath: "inset(0 100% 0 0)",
