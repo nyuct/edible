@@ -262,6 +262,7 @@ html {
   --font-size: 32px;
 }
 
+
 * {
   box-sizing: border-box;
 }
@@ -348,6 +349,7 @@ html {
   white-space: nowrap;
   margin-right: 0;
   font-family: "Erode Italic", serif;
+  margin-inline: 20px;
 }
 .item:hover {
   .thumb {
@@ -424,6 +426,46 @@ html {
 .communities .thumb {
   background: url(https://s3.nyuct.com/edible/images/communities.webp);
 }
+.item-row::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.item-row::before {
+  left: 0;
+  top: 0;
+}
+.item-row {
+  -webkit-animation: scroll 40s linear infinite;
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: max-content;
+}
+.item-row:nth-child(even) {
+  -webkit-animation: scroll 40s linear infinite;
+  animation: scroll 40s linear infinite;
+  animation-direction: reverse;
+  display: flex;
+  width: max-content;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
 
 /* animation applied via inline styles from JS (per-row @keyframes) */
 /* pause on hover */
@@ -437,13 +479,15 @@ html {
     transition: border-radius 3s; */
   }
 }
-video::-webkit-media-controls { display: none !important; }
+video::-webkit-media-controls {
+  display: none !important;
+}
 /* responsive tweaks */
 @media (max-width: 700px) {
   :root {
     --font-size: 22px;
     --thumb-w: 200px;
-    --thumb-h: 200px;
+    --thumb-h: 100px;
     --gap: 24px;
     --px-per-sec: 30;
   }
