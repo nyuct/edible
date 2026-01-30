@@ -108,11 +108,11 @@ function initAnimations() {
       ease: "power4.out",
     },
     "preloader",
-  ); // ← 0 means start at the same time
+  );    
   preloader.to(
     "#ventures",
     {
-      x: "30%",
+      x: "40%",
       duration: 0.7,
       ease: "power4.out",
     },
@@ -310,6 +310,8 @@ function initAnimations() {
   tickerLine.to(".ticker_line_inner", {
     width: "100%",
   });
+
+ 
 
   let header = gsap.timeline({
     scrollTrigger: {

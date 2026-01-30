@@ -69,6 +69,7 @@
       top: 27%;
       right: -16%;
       left: unset;
+      display: none;
     }
   }
   .steps_innersection {
