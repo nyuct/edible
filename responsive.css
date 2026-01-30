@@ -10,6 +10,18 @@
       width: 100%;
     }
   }
+  #edible,
+  #ventures {
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50% -20%);
+  }
+  #edible {
+    transform: translate(-50%, -20%);
+  }
+  #ventures {
+    transform: translate(-50%, 20%);
+  }
   .development-img-2,
   .architect-img-2,
   .hospitality-img-2,
@@ -53,13 +65,18 @@
   }
   .trace-oval {
     justify-content: center;
-
     svg {
       max-width: 100px;
-      transform: translate(-25%, -45%);
-      top: 75%;
-      left: 20%;
+      top: 27%;
+      right: -16%;
+      left: unset;
     }
+  }
+  .steps_innersection {
+    padding-block: 0px;
+  }
+  .text-banner-section {
+    padding-bottom: 100px;
   }
   .steps_heading .steps_heading_inner {
     font-size: 40px;
@@ -103,8 +120,8 @@
   .architect-img-3,
   .hospitality-img-3,
   .community-img {
-      display: none;
-   }
+    display: none;
+  }
   .bridge-the-gap-sticky-title {
     width: 100%;
     margin: 0 24px !important;
@@ -148,6 +165,7 @@
     font-size: 14px;
   }
   .business_tool_inner_two_first {
+    padding-top: 10vh;
     width: 50%;
   }
   .concept_img,
@@ -175,21 +193,22 @@
   .business_design {
     position: absolute;
     left: unset;
-    top: 22%;
+    top: 25%;
     right: 0%;
   }
   .business_development {
     position: absolute;
-    top: 42%;
+    bottom: 35%;
     left: 0%;
   }
   .business_launch {
-    top: 55%;
+    bottom: 10%;
   }
-  .venture_tranform {
-    min-height: 30vh;
-    height: 100%;
-    max-height: 30vh;
+  .business_tool_line {
+    height: 200px;
+  }
+  .venture_tranform1 {
+    margin-top: -400px;
   }
   .business_tool_inner_two {
     padding: 0;
@@ -201,8 +220,10 @@
     line-height: 1.5;
   }
   .business_tool_inner_two_second {
-    width: 100%;
+    width: 60%;
     padding-inline: 20px;
+    padding-bottom: 12vh;
+    gap: 10px;
   }
   .venture_tranform-div1 {
     padding: 60px 20px;
@@ -243,6 +264,7 @@
   }
   .hidden-text {
     right: 20px;
+    padding-right: 20px;
 
     div {
       font-size: 14px;
@@ -286,12 +308,7 @@
     font-size: 40px;
     flex-direction: column;
   }
-  #edible {
-    transform: translate(25%, -20%);
-  }
-  #ventures {
-    transform: translate(-25%, 20%);
-  }
+
   .steps-text .row {
     flex-direction: column;
     gap: 20px;
