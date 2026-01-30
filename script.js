@@ -1103,37 +1103,37 @@ if (document.readyState === "loading") {
 }
 gsap.registerPlugin(ScrollTrigger);
 
-const headings = gsap.utils.toArray(".animation_title");
+// const headings = gsap.utils.toArray(".animation_title");
 
-headings.forEach(target => {
-  const split = new SplitType(target, { types: "words, chars" }); // NOTE: SplitType, not SplitText
-  const chars = split.chars;
+// headings.forEach(target => {
+//   const split = new SplitType(target, { types: "words, chars" }); // NOTE: SplitType, not SplitText
+//   const chars = split.chars;
 
-  gsap.fromTo(
-    chars,
-    {
-      opacity: 0.2,
-      transformOrigin: "50% 0%",
-      willChange: "transform",
-      x: 2,
-      // skewX: -20,
-    },
-    {
-      opacity: 1,
-      x: 0,
-      // skewX: 0,
-      ease: "sine.in",
-      stagger: {
-        each: 0.02,
-        from: "start",
-      },
-      scrollTrigger: {
-        trigger: target,
-        start: "50% 80%",
-        end: "50% 70%",
-        scrub: 1,
-        markers: 0,
-      },
-    },
-  );
-});
+//   gsap.fromTo(
+//     chars,
+//     {
+//       opacity: 0.2,
+//       transformOrigin: "50% 0%",
+//       willChange: "transform",
+//       x: 2,
+//       // skewX: -20,
+//     },
+//     {
+//       opacity: 1,
+//       x: 0,
+//       // skewX: 0,
+//       ease: "sine.in",
+//       stagger: {
+//         each: 0.02,
+//         from: "start",
+//       },
+//       scrollTrigger: {
+//         trigger: target,
+//         start: "50% 80%",
+//         end: "50% 70%",
+//         scrub: 1,
+//         markers: 0,
+//       },
+//     },
+//   );
+// });
