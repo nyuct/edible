@@ -81,7 +81,7 @@ function initAnimations() {
   });
 
   // window.scrollTo(0, 0);
-  const preloader = gsap.timeline({ delay: 3, ease: "power3.out" });
+  const preloader = gsap.timeline({ delay: 2, ease: "power3.out" });
 
   preloader.to(
     ".numbers-container",
@@ -370,8 +370,8 @@ function initAnimations() {
   let ventureTranform = gsap.timeline({
     scrollTrigger: {
       trigger: ".venture_tranform",
-      start: window.innerWidth >= 767 ? "top 70%" : "100% 100%",
-      end: window.innerWidth >= 767 ? "50% 70%" : "0% 80%",
+      start: window.innerWidth >= 767 ? "top 70%" : "30% 100%",
+      end: window.innerWidth >= 767 ? "50% 70%" : "20% 80%",
       markers: false,
       scrub: true,
     },
@@ -381,7 +381,7 @@ function initAnimations() {
     height: window.innerWidth >= 767 ? "80vh" : "30vh",
     scale: 0.7,
     y: "-50%",
-    ease: "power4.out",
+    opacity: 0
   });
 
   let ventureTranform1 = gsap.timeline({
@@ -843,7 +843,7 @@ function initAnimations() {
       end: window.innerWidth >= 767 ? "150% 20%" : "100% 50%",
       markers: false,
       scrub: true,
-      pin: true,
+      pin: true
     },
   });
   footerTimeline.to(
@@ -851,7 +851,20 @@ function initAnimations() {
     {
       y: "-70%",
       opacity: 0,
-      ease: "power4.out",
+    },
+    "a",
+  );
+  footerTimeline.to(
+    ".steps_section",
+    {
+      backgroundColor: "#171f24",
+    },
+    "a",
+  );
+  footerTimeline.to(
+    ".footer",
+    {
+      backgroundColor: "#171f24",
     },
     "a",
   );
@@ -861,7 +874,6 @@ function initAnimations() {
       transform: "translateX(45%)",
       scale: 2,
       color: "#fff",
-      ease: "power4.out",
     },
     "a",
   );
@@ -871,15 +883,6 @@ function initAnimations() {
       transform: "translate(-45%, 110%)",
       scale: 2,
       color: "#fff",
-      ease: "power4.out",
-    },
-    "a",
-  );
-  footerTimeline.to(
-    ".steps_section",
-    {
-      backgroundColor: "#171f24",
-      ease: "power4.out",
     },
     "a",
   );
