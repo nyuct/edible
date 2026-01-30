@@ -474,11 +474,13 @@ html {
   margin-bottom: 15vh;
   letter-spacing: -2.4px;
   line-height: 0.9;
+  font-family: "Erode", serif;
   .char {
     font-family: "Erode", serif;
   }
   p {
     margin: 0;
+    font-family: "Erode Italic", serif !important;
     .char {
       font-family: "Erode Italic", serif !important;
     }
