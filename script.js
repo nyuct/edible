@@ -81,7 +81,7 @@ function initAnimations() {
   });
 
   // window.scrollTo(0, 0);
-  const preloader = gsap.timeline({ delay: 1, ease: "power3.out" });
+  const preloader = gsap.timeline({ delay: 3, ease: "power3.out" });
 
   preloader.to(
     ".numbers-container",
@@ -841,7 +841,7 @@ function initAnimations() {
       trigger: ".section_footer",
       start: window.innerWidth >= 767 ? "20% 100% " : "20% 50%",
       end: window.innerWidth >= 767 ? "150% 20%" : "100% 40%",
-      markers: true,
+      markers: false,
       scrub: true,
       pin: true,
     },
