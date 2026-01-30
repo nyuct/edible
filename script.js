@@ -671,7 +671,7 @@ function initAnimations() {
     scrollTrigger: {
       trigger: ".bridge-the-gap-section-outer",
       start: "top 0%",
-      end: window.innerWidth > 767 ? "500% 100%" : "900% 100%",
+      end: window.innerWidth > 767 ? "500% 100%" : "600% 100%",
       markers: false,
       scrub: true,
       pin: true,
