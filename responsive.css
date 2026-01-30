@@ -90,6 +90,7 @@
   .footer-bottom {
     flex-direction: column;
     gap: 20px;
+    padding-bottom: 0px;
   }
   /* .bridge-the-gap-img {
     display: none;
@@ -195,6 +196,13 @@
     h1 {
       font-size: 21px;
     }
+  }
+  .footer_line {
+    width: 100%;
+  }
+  .footer-bottom .contact_info,
+  .footer-bottom .copy-rights {
+    width: auto;
   }
   .venture_tranform-div1 .venture_tranform-img-container {
     padding-top: 50px;
