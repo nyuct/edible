@@ -22,6 +22,7 @@
 }
 html {
   overflow-y: overlay;
+  box-sizing: border-box;
 }
 /* Custom scrollbar */
 ::-webkit-scrollbar {
@@ -1577,18 +1578,28 @@ footer {
 .footer-bottom {
   display: flex;
   padding-bottom: 100px;
-  align-items: center;
+  align-items: start;
   gap: 40px;
   font-size: var(--font-body);
+  max-width: 90vw;
+  margin: 0 auto;
 }
-.footer-bottom .contact_info,
 .footer-bottom .copy-rights {
   width: 20%;
+  margin: 0;
+}
+.content_us_button {
+  background: #ede5d3;
+  padding: 12px 16px;
+  a {
+    color: #171f24;
+  }
 }
 .footer_line {
-  width: 60%;
+  width: 67%;
   height: 0.5px;
   background: #eae3d2;
+  margin-top: 10px;
 }
 .menu {
   width: 50px;

@@ -8,7 +8,10 @@
 	font-size: 1.7vw;
 	font-weight: 600;
 	color: #e2dbca;
-	background: #171f24;
+	mix-blend-mode: difference;
+}
+.w-50 {
+	width: 50%;
 }
 * {
 	margin: 0;
@@ -84,6 +87,9 @@
     margin-bottom: 20px;
 ;
 }
+.footer {
+	background: #252e35;
+}
 .member-bio {
     font-size: 16px;
     line-height: 1;
@@ -94,14 +100,78 @@
 .member-flex {
     display: flex;
     gap: 20px;
-
-    img {
-        width: 100%;
-    }
 }
 .member-section-1 {
-    width: 50%;
+    min-width: 50%;
+	width: 50%;
+    max-width: 50%;
 }
 .pt-100 {
     padding-top: 100px;
+}
+.pb-100 {
+    padding-bottom: 100px;
+}
+.bg-member-pranali {
+	background-image: url("./assets/images/team/pranali-4.jpg");
+	width: 100%;
+	min-height: 400px;
+	background-size: cover;
+	background-position: center;
+}
+.member-side-pranali {
+	width: 100%;
+	min-height: 400px;
+	background-image: url("./assets/images/team/pranali-1.JPG");
+	background-size: cover;
+	background-position: center;
+}
+.member-side-pranali-2 {
+	width: 100%;
+	min-height: 400px;
+	background-image: url("./assets/images/team/pranali-2.JPG");
+	background-size: cover;
+	background-position: center;
+}
+.member-side-manojeet {
+	width: 100%;
+	min-height: 400px;
+	background-image: url("./assets/images/team/manojeet-1.png");
+	background-size: cover;
+	background-position: center;
+}
+.member-side-manojeet-2 {
+	width: 100%;
+	min-height: 400px;
+	background-image: url("./assets/images/team/manojeet-3.JPG");
+	background-size: cover;
+	background-position: center;
+}
+.bg-member-priyamwada {
+	background-image: url("./assets/images/team/Priyamvada-3.jpg");
+	width: 100%;
+	min-height: 400px;
+	background-size: cover;
+	background-position: center;
+}
+.member-side-priyamwada {
+	width: 100%;
+	min-height: 400px;
+	background-image: url("./assets/images/team/priyamvada-4.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.member-side-samir {
+	width: 100%;
+	min-height: 400px;
+	background-image: url("./assets/images/team/samir-3.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.member-side-samir-2 {
+	width: 100%;
+	min-height: 400px;
+	background-image: url("./assets/images/team/samir-4.jpg");
+	background-size: cover;
+	background-position: center;
 }
