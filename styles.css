@@ -1725,6 +1725,7 @@ body.is-active {
   right: 50px;
   top: -50%;
   opacity: 0;
+  visibility: hidden;
   transition: all 0.2s ease-in-out;
   img {
     width: 30%;
@@ -1749,6 +1750,7 @@ body.is-active {
 }
 .popover-menu.is-active {
   opacity: 1;
+  visibility: visible;
 }
 .section-container.is-active{
   filter: brightness(0.1);
