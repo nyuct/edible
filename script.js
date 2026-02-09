@@ -844,7 +844,7 @@ function initAnimations() {
       end: window.innerWidth >= 767 ? "150% 20%" : "50% 50%",
       markers: false,
       scrub: true,
-      pin: true
+      pin: true,
     },
   });
   footerTimeline.to(
@@ -954,30 +954,37 @@ if (!isSafari) {
   });
 }
 
-document.addEventListener("contextmenu", function (event) {
-  event.preventDefault();
+// document.addEventListener("contextmenu", function (event) {
+//   event.preventDefault();
+// });
+// console.log(
+//   Object.defineProperties(new Error(), {
+//     toString: {
+//       value() {
+//         new Error().stack.includes("toString@") && alert("Safari devtools");
+//       },
+//     },
+//     message: {
+//       get() {
+//         alert("Close the Devtool");
+//       },
+//     },
+//   })
+// );
+// document.onkeydown = function (e) {
+//   switch (e.keyCode) {
+//     case 123: // F12
+//     case "I".charCodeAt(0): // Ctrl + Shift + I
+//     case "J".charCodeAt(0): // Ctrl + Shift + J
+//     case "U".charCodeAt(0): // Ctrl + U
+//     case "C".charCodeAt(0): // Ctrl + C
+//       return false;
+//   }
+// };
+
+document.querySelector(".hamburger").addEventListener("click", function (e) {
+  e.preventDefault();
+  this.classList.toggle("is-active");
+  document.querySelector(".popover-menu").classList.toggle("is-active");
+  document.querySelector(".section-container").classList.toggle("is-active");
 });
-console.log(
-  Object.defineProperties(new Error(), {
-    toString: {
-      value() {
-        new Error().stack.includes("toString@") && alert("Safari devtools");
-      },
-    },
-    message: {
-      get() {
-        alert("Close the Devtool");
-      },
-    },
-  })
-);
-document.onkeydown = function (e) {
-  switch (e.keyCode) {
-    case 123: // F12
-    case "I".charCodeAt(0): // Ctrl + Shift + I
-    case "J".charCodeAt(0): // Ctrl + Shift + J
-    case "U".charCodeAt(0): // Ctrl + U
-    case "C".charCodeAt(0): // Ctrl + C
-      return false;
-  }
-};
