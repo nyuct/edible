@@ -841,7 +841,7 @@ function initAnimations() {
     scrollTrigger: {
       trigger: ".section_footer",
       start: window.innerWidth >= 767 ? "20% 100% " : "20% 80%",
-      end: window.innerWidth >= 767 ? "150% 20%" : "50% 50%",
+      end: window.innerWidth >= 767 ? "150% 20%" : "150% 50%",
       markers: false,
       scrub: true,
       pin: true,

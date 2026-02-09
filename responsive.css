@@ -40,6 +40,7 @@
   }
   footer {
     padding: 100px 30px;
+    margin-top: -2px;
   }
   .bridge-the-gap-img {
     height: 25vh !important;
@@ -107,7 +108,7 @@
   }
   .footer-bottom {
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     padding-bottom: 0px;
     text-align: center;
     align-items: center;
@@ -137,10 +138,14 @@
     margin: 0 24px !important;
     flex-direction: column;
   }
+  .bridge-the-gap-sticky {
+    overflow: hidden;
+  }
   .bridge-the-gap-footer {
     padding-top: 20px;
     margin-inline: 0px;
     gap: 12px;
+    overflow-x: clip;
   }
   .venture_tranform-div1 .d-flex {
     flex-direction: column;
@@ -253,9 +258,6 @@
     h1 {
       font-size: 21px;
     }
-  }
-  .footer_line {
-    width: 100%;
   }
   .footer-bottom .contact_info,
   .footer-bottom .copy-rights {
