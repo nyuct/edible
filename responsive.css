@@ -108,7 +108,7 @@
   }
   .footer-bottom {
     flex-direction: column;
-    gap: 10px;
+    gap: 0px;
     padding-bottom: 0px;
     text-align: center;
     align-items: center;
