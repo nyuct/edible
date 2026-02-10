@@ -371,7 +371,7 @@
   }
   .member-flex {
     flex-direction: column;
-    gap: 30px;
+    gap: 1rem;
   }
   .member-section-1 {
     width: 100%;
