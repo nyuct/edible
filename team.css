@@ -322,3 +322,7 @@
     max-width: 100%;
   }
 }
+
+.pt-0 {
+  padding-top: 0;
+}
