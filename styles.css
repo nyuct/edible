@@ -1559,7 +1559,6 @@ footer {
   text-decoration: none;
   display: block;
   position: relative;
-  overflow: hidden;
 }
 .footer__meta {
   grid-column-gap: 2rem;
