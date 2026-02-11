@@ -115,7 +115,7 @@
   }
   .logo-footer-video-w {
     width: 50%;
-            margin: 0 auto;
+    margin: 0 auto;
   }
   .bridge-the-gap-section-outer {
     min-height: 100vh;
@@ -146,7 +146,9 @@
     padding-top: 20px;
     margin-inline: 0px;
     gap: 12px;
-    overflow-x: clip;
+    height: 100%;
+    align-items: center;
+    overflow: hidden;
   }
   .venture_tranform-div1 .d-flex {
     flex-direction: column;
@@ -234,7 +236,6 @@
   }
   .venture_tranform1 {
     margin-top: -85vh;
-
   }
   .business_tool {
     padding-bottom: 0;
