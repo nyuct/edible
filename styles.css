@@ -1751,7 +1751,7 @@ body.is-active {
   opacity: 1;
   visibility: visible;
 }
-.section-container.is-active{
+.section-container.is-active {
   filter: brightness(0.1);
 }
 .menu-li.active::before {
@@ -1791,4 +1791,110 @@ body.is-active {
   width: 20%;
   height: 0.5px;
   background: white;
+}
+
+.contact-page .header-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px 0;
+  max-width: 90vw;
+  margin: 0 auto;
+  font-family: "Erode";
+  font-size: 1.8vw;
+  font-weight: 600;
+  color: #313e47;
+  mix-blend-mocontactde: difference;
+}
+.contact-page .header-bridge {
+  font-family: "Erode";
+  font-size: 8vw;
+  font-weight: 200;
+  text-align: center;
+  max-width: 90vw;
+  margin: 0 auto;
+  line-height: 1;
+  color: #313e47;
+}
+.container-contact {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+/* LEFT COLUMN */
+.email-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 40%;
+}
+
+.email-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* RIGHT COLUMN */
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.contact-page .row {
+  justify-content: space-around;;
+  margin-top: 0px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 45%;
+}
+.form-group.w-100 {
+  width: 100%;
+}
+
+.contact-page label {
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+}
+
+input,
+select,
+textarea {
+  border: none;
+  border-bottom: 1px solid #555;
+  background: transparent;
+  padding: 8px 0;
+  font-size: 14px;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+.submit-btn {
+  width: 120px;
+  padding: 12px;
+  background: #2e3238;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
 }
