@@ -14,11 +14,11 @@ module.exports = async function handler(req, res) {
         .status(400)
         .json({ success: false, error: "name, email, and message are required" });
     }
-
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+
       return res
         .status(500)
-        .json({ success: false, error: "EMAIL_USER and EMAIL_PASS are not configured" });
+        .json({ success: false, error: process.env });
     }
 
     const transporter = nodemailer.createTransport({
