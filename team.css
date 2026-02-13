@@ -57,6 +57,7 @@
   cursor: pointer;
   padding-bottom: 10px;
   position: relative;
+  font-family: "Fira Sans", sans-serif;
 }
 
 .tab-btn.active {

@@ -1797,7 +1797,7 @@ body.is-active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0px 0;
+  padding: 20px 0px 50px;
   max-width: 90vw;
   margin: 0 auto;
   font-family: "Erode";
@@ -1818,14 +1818,13 @@ body.is-active {
   margin: 0 auto;
   line-height: 1;
   color: #313e47;
-  padding-top: 50px;
 }
 .container-contact {
   width: 70%;
   margin: 0 auto;
   display: flex;
   gap: 40px;
-  padding: 50px 40px 150px;
+  padding: 30px 40px 150px;
 }
 
 /* LEFT COLUMN */
@@ -1842,6 +1841,7 @@ body.is-active {
   gap: 15px;
   font-size: 16px;
   color: #333;
+  font-size: 14px;
 }
 
 /* RIGHT COLUMN */
@@ -1849,19 +1849,20 @@ body.is-active {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 60%;
+  width: 100%;
 }
 
 .contact-page .row {
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 0px;
+  margin: 0;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 45%;
+  width: 30%;
 }
 .form-group.w-100 {
   width: 100%;
@@ -1883,10 +1884,13 @@ textarea {
   font-size: 14px;
   outline: none;
 }
-
+.radio-flex {
+  gap: 30px;
+}
 textarea {
   resize: none;
-  height: 100px;
+  height: 80px;
+  font-family: "Fira Sans", sans-serif;
 }
 
 .submit-btn {
@@ -1901,4 +1905,49 @@ textarea {
 
 .submit-btn:hover {
   opacity: 0.9;
+}
+.contact-page .body-copy {
+  font-size: var(--font-body);
+}
+.email-item .d-flex {
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  .container-contact {
+    width: 90%;
+  }
+  .contact-page .header-contact {
+    font-size: var(--font-h2);
+  }
+}
+@media (max-width: 767px) {
+  .contact-page .header-contact {
+    font-size: var(--font-h2);
+  }
+  .container-contact {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .email-list {
+    width: 100%;
+  }
+  #contact-form {
+    width: 100%;
+  }
+  .contact-page .row {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+  }
+  .contact-page .row .form-group {
+    width: 100%;
+  }
+  .form-group.mt-3 {
+    margin-top: 0;
+  }
+  .form-group.mt-3.w-100 {
+    padding-top: 20px;
+  }
 }
