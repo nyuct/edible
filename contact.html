@@ -251,6 +251,10 @@
 
         const name = this.querySelector('input[name="Fullname"]').value.trim();
         const email = this.querySelector('input[name="Email"]').value.trim();
+        const phone = this.querySelector('input[name="Phone Number"]').value.trim();
+        const jobTitle = this.querySelector('input[name="Job Title"]').value.trim();
+        const organisation = this.querySelector('input[name="Organisation"]').value.trim();
+        const enquiry = this.querySelector('input[name="Enquiry"]:checked')?.value || '';
         const message = this.querySelector('textarea[name="Message"]').value.trim();
 
         try {
@@ -259,7 +263,7 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ name, email, message })
+                body: JSON.stringify({ name, email, phone, jobTitle, organisation, enquiry, message })
             });
 
             const result = await response.json();

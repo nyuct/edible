@@ -7,12 +7,16 @@ module.exports = async function handler(req, res) {
 
   try {
     const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
-    const { name, email, message } = body || {};
+    const { name, email, phone, jobTitle, organisation, enquiry, message } = body || {};
 
-    if (!name || !email || !message) {
+    if (!name || !email || !phone || !organisation || !enquiry || !message) {
       return res
         .status(400)
-        .json({ success: false, error: "name, email, and message are required" });
+        .json({
+          success: false,
+          error:
+            "name, email, phone, organisation, enquiry, and message are required",
+        });
     }
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
       return res.status(500).json({
@@ -35,7 +39,9 @@ module.exports = async function handler(req, res) {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
       subject: "New Contact Form Submission",
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nJob Title: ${
+        jobTitle || "Not provided"
+      }\nOrganisation: ${organisation}\nEnquiry: ${enquiry}\nMessage: ${message}`,
     });
 
     return res.status(200).json({ success: true });
