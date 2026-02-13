@@ -30,9 +30,14 @@
             </div>
             <div class="header-right">10</div>
         </header>
-        <div class="header-bridge">
-            LETS'S GET IN TOUCH
+        <div class="header-bridge pt-100">
+            LET'S GET IN TOUCH
         </div>
+    </div>
+    <div class="w-50 mx-auto text-center">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quae, ipsa nihil quasi ratione molestias molestiae.
+        </p>
     </div>
     <div>
         <div class="container-contact">
@@ -60,38 +65,58 @@
             </div>
 
             <!-- RIGHT SIDE -->
-            <div class="form-wrapper">
+            <form id="contact-form" class="form-wrapper" >
 
                 <div class="row">
                     <div class="form-group">
-                        <label>First name</label>
-                        <input type="text">
+                        <label>Full name*</label>
+                        <input name="Fullname" type="text" required>
                     </div>
                     <div class="form-group">
-                        <label>Last name</label>
-                        <input type="text">
+                        <label>Email*</label>
+                        <input name="Email" type="email" required>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="form-group mt-3">
-                        <label>Email</label>
-                        <input type="email">
+                        <label>Phone Number*</label>
+                        <input name="Phone Number" type="text" required>
                     </div>
                     <div class="form-group mt-3">
-                        <label>Phone Number</label>
-                        <input type="text">
+                        <label>Job Title</label>
+                        <input name="Job Title" type="text">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group mt-3">
+                        <label>Organisation*</label>
+                        <input name="Organisation" type="text" required>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label>Enquiry Type* </label>
+                        <div class="d-flex">
+                            <div>
+                                <label for="Business">Business</label>
+                                <input type="radio" id="Business" name="Enquiry" value="Business" required> 
+                            </div>
+                            <div>
+                                <label for="MediaEnquiry">MediaEnquiry</label>
+                                <input type="radio" id="MediaEnquiry" name="Enquiry" value="MediaEnquiry">
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="form-group mt-3 w-100">
-                    <label>Message</label>
-                    <textarea placeholder="Type your message..."></textarea>
+                    <label>Message*</label>
+                    <textarea name="Message" placeholder="Type your message..." required></textarea>
                 </div>
 
-                <button class="submit-btn">Submit</button>
-
-            </div>
+                <button type="submit" class="submit-btn">Submit</button>
+                <p id="form-status" aria-live="polite"></p>
+            </form>
 
         </div>
     </div>
@@ -215,5 +240,4 @@
             </div>
     </footer>
 </body>
-
 </html>

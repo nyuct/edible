@@ -1806,6 +1806,9 @@ body.is-active {
   color: #313e47;
   mix-blend-mocontactde: difference;
 }
+.mx-auto {
+  margin: 0 auto;
+}
 .contact-page .header-bridge {
   font-family: "Erode";
   font-size: 8vw;
@@ -1815,13 +1818,14 @@ body.is-active {
   margin: 0 auto;
   line-height: 1;
   color: #313e47;
+  padding-top: 50px;
 }
 .container-contact {
   width: 70%;
   margin: 0 auto;
   display: flex;
   gap: 40px;
-  padding: 40px;
+  padding: 50px 40px 150px;
 }
 
 /* LEFT COLUMN */
@@ -1849,14 +1853,14 @@ body.is-active {
 }
 
 .contact-page .row {
-  justify-content: space-around;;
+  justify-content: space-around;
   margin-top: 0px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  justify-content: space-between;
   width: 45%;
 }
 .form-group.w-100 {
