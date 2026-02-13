@@ -36,7 +36,8 @@
     </div>
     <div class="w-50 mx-auto text-center">
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quae, ipsa nihil quasi ratione molestias molestiae.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quae, ipsa nihil quasi ratione molestias
+            molestiae.
         </p>
     </div>
     <div>
@@ -65,8 +66,9 @@
             </div>
 
             <!-- RIGHT SIDE -->
-            <form id="contact-form" class="form-wrapper" >
-
+            <form id="contact-form" class="form-wrapper" method="POST">
+                <input type="hidden" name="_subject" value="New Contact Form Submission">
+                <input type="hidden" name="_next" value="http://127.0.0.2:5500/contact.html">
                 <div class="row">
                     <div class="form-group">
                         <label>Full name*</label>
@@ -99,7 +101,7 @@
                         <div class="d-flex">
                             <div>
                                 <label for="Business">Business</label>
-                                <input type="radio" id="Business" name="Enquiry" value="Business" required> 
+                                <input type="radio" id="Business" name="Enquiry" value="Business" required>
                             </div>
                             <div>
                                 <label for="MediaEnquiry">MediaEnquiry</label>
@@ -239,5 +241,41 @@
                         Labs</a> Pvt. Ltd.</p>
             </div>
     </footer>
+<script>
+    // Submit contact form data to the Node.js backend
+    document.getElementById('contact-form').addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const statusEl = document.getElementById('form-status');
+        statusEl.textContent = 'Sending...';
+
+        const name = this.querySelector('input[name="Fullname"]').value.trim();
+        const email = this.querySelector('input[name="Email"]').value.trim();
+        const message = this.querySelector('textarea[name="Message"]').value.trim();
+
+        try {
+            const response = await fetch('http://localhost:5000/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email, message })
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                statusEl.textContent = 'Message sent successfully.';
+                this.reset();
+            } else {
+                statusEl.textContent = 'Failed to send message. Please try again.';
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            statusEl.textContent = 'Server error. Please try again later.';
+        }
+    });
+</script>
 </body>
+
 </html>
