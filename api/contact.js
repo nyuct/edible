@@ -22,6 +22,7 @@ module.exports = async function handler(req, res) {
       return res.status(500).json({
         success: false,
         error: "EMAIL_USER and EMAIL_PASS are not configured",
+        data: process.env
       });
     }
 
