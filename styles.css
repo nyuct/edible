@@ -1852,7 +1852,7 @@ body.is-active {
   width: 100%;
 }
 
-.contact-page .row {
+.contact-page .form-wrapper .row {
   justify-content: space-between;
   margin-top: 0px;
   margin: 0;
@@ -1936,7 +1936,7 @@ textarea {
   #contact-form {
     width: 100%;
   }
-  .contact-page .row {
+  .contact-page .form-wrapper .row {
     flex-direction: column;
     gap: 20px;
     padding-top: 20px;
