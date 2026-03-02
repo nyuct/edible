@@ -296,8 +296,8 @@
 
             const name = this.querySelector('input[name="Fullname"]').value.trim();
             const email = this.querySelector('input[name="Email"]').value.trim();
-            const phone = this.querySelector('input[name="Phone Number"]').value.trim();
-            const jobTitle = this.querySelector('input[name="Job Title"]').value.trim();
+            const phone = this.querySelector('input[name="Phone Number"]').value.trim() || 'N/A';
+            const jobTitle = this.querySelector('input[name="Job Title"]').value.trim() || 'N/A';
             const organisation = this.querySelector('input[name="Organisation"]').value.trim();
             const enquiry = this.querySelector('input[name="Enquiry"]:checked')?.value || '';
             const message = this.querySelector('textarea[name="Message"]').value.trim();

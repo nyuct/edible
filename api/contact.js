@@ -9,13 +9,13 @@ module.exports = async function handler(req, res) {
     const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
     const { name, email, phone, jobTitle, organisation, enquiry, message } = body || {};
 
-    if (!name || !email || !phone || !organisation || !enquiry || !message) {
+    if (!name || !email || !organisation || !enquiry || !message) {
       return res
         .status(400)
         .json({
           success: false,
           error:
-            "name, email, phone, organisation, enquiry, and message are required",
+            "name, email, organisation, enquiry, and message are required",
         });
     }
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {

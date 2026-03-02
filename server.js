@@ -33,11 +33,11 @@ app.get('/', (_req, res) => {
 // Shared handler for contact form routes
 async function handleContactForm(req, res) {
   try {
-    const { name, email, message } = req.body;
+    const { name, email, phone, jobTitle, organisation, enquiry, message } = req.body;
 
     // Basic required-field validation
-    if (!name || !email || !message) {
-      return res.status(400).json({ success: false, error: 'name, email, and message are required' });
+    if (!name || !email || !organisation || !enquiry || !message) {
+      return res.status(400).json({ success: false, error: 'name, email, phone, organisation, enquiry, and message are required' });
     }
 
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
@@ -48,7 +48,7 @@ async function handleContactForm(req, res) {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
       subject: 'New Contact Form Submission',
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'N/A'}\nJob Title: ${jobTitle || 'N/A'}\nOrganisation: ${organisation}\nEnquiry: ${enquiry}\nMessage: ${message}`,
     };
 
     await transporter.sendMail(mailOptions);
@@ -56,7 +56,8 @@ async function handleContactForm(req, res) {
     return res.json({ success: true });
   } catch (error) {
     console.error('Error sending email:', error);
-    return res.status(500).json({ success: false });
+    // Always return valid JSON
+    return res.status(500).json({ success: false, error: 'Server error. Please try again later.' });
   }
 }
 
