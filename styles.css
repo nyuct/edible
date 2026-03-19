@@ -1951,3 +1951,52 @@ textarea {
     padding-top: 20px;
   }
 }
+
+.project-page {
+  .steps_heading {
+    margin-bottom: 100px;
+  }
+  .trace-oval {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .trace-oval svg {
+    position: absolute;
+    top: 50%;
+    left: unset;
+    right: 0%;
+    transform: translate(0%, -45%);
+    max-width: 32%;
+  }
+  .steps_heading_inner span {
+    margin: 0 20px;
+  }
+  .steps-line-animation {
+    width: 100%;
+  }
+  .step_opened {
+    width: 100%;
+    margin: 0px 100px !important;
+  }
+  .steps_boxes  {
+    width: max-content;
+    transition: all 1s ease-in;
+    transform: translateX(0%);
+  }
+  .steps_boxes:hover {
+    transform: translateX(-50%);
+  }
+  .read-more-button,.go-back-button {
+    border: 1px solid currentColor;
+    padding: 5px 10px;
+    width: max-content;
+  }
+}
+
+
+@media (max-width: 768px) and (min-width: 1024px) {
+  .mySwiper .slider-bg {
+    min-height: 50vh;
+  }
+}
