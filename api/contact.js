@@ -38,7 +38,7 @@ module.exports = async function handler(req, res) {
 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
+      to: "edibleventures@nyuct.com",
       subject: "New Contact Form Submission from Edible Ventures",
       text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nJob Title: ${
         jobTitle || "Not provided"
