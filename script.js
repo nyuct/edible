@@ -1,1 +1,196 @@
-import{BlurScrollEffect}from"./blurScrollEffect.js";gsap.registerPlugin(ScrollTrigger);const lenis=new Lenis({duration:1.5,smooth:!0,lerp:.06,wheelMultiplier:.7});lenis.on("scroll",(()=>{ScrollTrigger.update()})),gsap.ticker.add((e=>{lenis.raf(1e3*e)})),gsap.ticker.lagSmoothing(0);const numLeft=document.getElementById("numLeft"),numRight=document.getElementById("numRight"),leftRect=numLeft.getBoundingClientRect(),rightRect=numRight.getBoundingClientRect(),targetLeftX=80,targetLeftY=60,targetRightX=window.innerWidth-80-rightRect.width,targetRightY=60;function initAnimations(){let e=window.scrollY;const t=document.querySelector(".header"),o=document.querySelector("#bannerVideo"),r=document.querySelector(".video2");window.addEventListener("scroll",(()=>{window.scrollY>e?t.classList.add("hidden"):t.classList.remove("hidden"),e=window.scrollY}));const i=gsap.timeline({delay:2,ease:"power3.out"});i.to(".numbers-container",{zIndex:999,ease:"power4.out"},"pre-preloader"),i.add((()=>o.play())),i.to(".header-video",{zIndex:99,ease:"power4.out"},"pre-preloader"),i.to("#edible",{x:window.innerWidth>=767?"-40%":"-0%",y:window.innerWidth>=767?"0%":"-40%",duration:.7,ease:"power4.out"},"preloader"),i.to("#ventures",{x:window.innerWidth>=767?"40%":"0%",y:window.innerWidth>=767?"0%":"40%",duration:.7,ease:"power4.out"},"preloader"),i.to(".header-video",{zIndex:101,ease:"power4.out"},"preloader"),i.to(".header",{opacity:1,ease:"power4.out"},"preloader"),i.from(".number-left",{x:100,opacity:0,duration:.7,ease:"power4.out"},"preloader"),i.from(".number-right",{x:-100,opacity:0,duration:1,ease:"power4.out"},"preloader"),i.from(".header-video",{clipPath:"inset(100% 100% 100% 100%)",opacity:0,duration:1,ease:"power4.out"},"preloader"),i.to(".header-container",{marginRight:"0",duration:1,ease:"power4.out"},"preload2"),i.to(".header-video",{width:"102vw",height:"100vh",duration:1,ease:"power4.out"},"preload2"),i.add((()=>r.play())),i.to("#edible, #ventures",{x:"0%",duration:1,ease:"power4.out"},"preload2"),i.to("#edible, #ventures",{opacity:0,ease:"power4.out"},"preload2"),i.to(".number-left",{x:80-leftRect.left,y:60-leftRect.top,duration:.8,opacity:0,ease:"power4.out"},"preload2"),i.to(".number-right",{x:targetRightX-rightRect.left,y:60-rightRect.top,duration:.8,opacity:0,ease:"power4.out"},"preload2"),i.to("#bannerVideo",{opacity:0,ease:"power4.out"},"preload3"),i.from(".video2",{opacity:0,ease:"power4.out"},"preload3"),i.to(".number-right, .number-left",{opacity:0,ease:"power4.out"},"preload3"),i.to(".header-banner-text",{zIndex:102,ease:"power4.out"},"preload3"),i.from(".header .header-left, .header .header-right",{opacity:0,ease:"power4.out"},"preload3"),i.from(".header-center",{y:-200,ease:"power4.out"}),i.from(".horizontal-line",{clipPath:"inset(0 100% 0 0)",duration:1,ease:"power4.out"}),i.from(".upper-text div",{y:600,duration:.8,ease:"power4.out"},"together"),i.from(".lower-text div",{y:-200,duration:.8,ease:"power4.out"},"together"),i.add((()=>{document.body.classList.remove("no-scroll")})),gsap.timeline({scrollTrigger:{trigger:".ticker_line_inner",start:"top 60% ",end:"bottom 10%",markers:!1,scrub:!0}}).to(".ticker_line_inner",{width:"100%"}),gsap.timeline({scrollTrigger:{trigger:".ticker",start:"top 0%",end:"bottom 100%",markers:!1,scrub:!0,toggleActions:"play none none reverse"}}).to(".header-container",{display:"none"}),gsap.utils.toArray(".reveal-left").forEach((e=>{gsap.from(e,{clipPath:"inset(0 100% 0 0)",ease:"power3.out",scrub:!0,scrollTrigger:{trigger:e,start:"top 80%",scrub:!0,toggleActions:"play none none reverse"}})})),gsap.timeline({scrollTrigger:{trigger:".business_tool_line",start:"top 60% ",end:"250% 60%",scrub:!0}}).to(".business_tool_line_inner",{height:"100%"});let n=gsap.timeline({scrollTrigger:{trigger:".business_tool_inner",start:"top 0% ",end:"250% 0%",scrub:!0,pin:!0}});n.from(".business_design",{clipPath:"inset(0 100% 0 0)",opacity:1}),n.from(".business_development",{clipPath:"inset(0 100% 0 0)",opacity:1}),n.from(".business_launch",{clipPath:"inset(0 100% 0 0)",opacity:1}),n.to(".business_tool_inner_two_first",{opacity:1}),n.from(".business_tool_inner_two_first .business_tool_inner_line",{clipPath:"inset(0 90% 0 0 )",ease:"power4.out"}),n.from(".business_tool_inner_two_second .business_tool_inner_line",{clipPath:"inset(0 90% 0 0)",ease:"power4.out"}),n.from(".business_tool_inner_two_second .business_tool_inner_text",{opacity:0}),gsap.timeline({scrollTrigger:{trigger:".venture_tranform",start:window.innerWidth>=767?"top 70%":"5% 100%",end:window.innerWidth>=767?"50% 70%":"10% 90%",markers:!1,scrub:!0}}).from(".venture_tranform-div",{width:"90vw",height:"80vh",scale:.7,y:"-50%"});let a=gsap.timeline({scrollTrigger:{trigger:".venture_tranform1",start:"top 0% ",end:window.innerWidth>=767?"150% 100%":"250% 100%",scrub:!0,pin:!0,pinSpacing:!0}});if(a.from(".venture_tranform-img",{opacity:0,y:"-100%",stagger:.1,ease:"power4.out"},"thisshouldo"),a.fromTo(".venture_tranform_line_inner",{width:0},{width:"100%",ease:"power4.out"}),a.from(".fade-last",{opacity:0,ease:"power4.out"}),gsap.timeline({scrollTrigger:{trigger:".text-banner-section",start:"top 0%",end:"bottom 100%",markers:!1,scrub:!0,toggleActions:"play none none reverse"}}).from(".reveal-image",{clipPath:"inset(0 0% 0 0)",ease:"power3.out",scrub:!0}),window.innerWidth>768){let e=gsap.timeline({scrollTrigger:{trigger:".text-banner-section",start:"top top",end:"200% top",scrub:!0,pin:!0}});e.from(".fade-in-img",{opacity:0,ease:"power4.out"},"asdf"),e.to(".text-banner-text-1",{opacity:1,ease:"power4.out"},"asdf"),e.to(".text-banner-text-1",{opacity:.2,ease:"power4.out"},"qwer"),e.to(".text-banner-text-2",{opacity:1,ease:"power4.out"},"qwer"),e.to(".expand-img-1",{width:"20%"},"qwer"),e.to(".expand-img-2",{width:"60%"},"qwer"),e.to(".text-banner-text-2",{opacity:.2,ease:"power4.out"},"ret"),e.to(".text-banner-text-3",{opacity:1,ease:"power4.out"},"ret"),e.to(".expand-img-2",{width:"20%"},"ret"),e.to(".expand-img-3",{width:"60%"},"ret"),e.fromTo(".fade-in-img-5",{opacity:-1e3},{opacity:1,clipPath:"inset(0 0% 30% 0%)",ease:"power4.out"},"jdi"),e.to(".hidden-text .business_tool_inner_line",{clipPath:"inset(0 0% 10% 0%)",ease:"power4.out"},"jdi"),e.to(".fade-in-img-5",{opacity:1,clipPath:"inset(0 0% 100% 0%)",ease:"power4.out"})}else{let e=gsap.timeline({scrollTrigger:{trigger:".text-banner-section",start:"top top",end:"250% top",scrub:!0,pin:!0}});e.from(".fade-in-img",{opacity:0,ease:"power4.out"},"asdf"),e.to(".text-banner-text-1",{opacity:1,ease:"power4.out"},"asdf"),e.to(".text-banner-text-1",{opacity:.2,ease:"power4.out"},"qwer"),e.to(".text-banner-text-2",{opacity:1,ease:"power4.out"},"qwer"),e.to(".expand-img-1",{width:"0%"},"qwer"),e.to(".expand-img-2",{width:"100%"},"qwer"),e.to(".text-banner-text-2",{opacity:.2,ease:"power4.out"},"ret"),e.to(".text-banner-text-3",{opacity:1,ease:"power4.out"},"ret"),e.to(".expand-img-2",{width:"0%"},"ret"),e.to(".expand-img-3",{width:"100%"},"ret"),e.to(".hidden-text .business_tool_inner_line",{clipPath:"inset(0 0% 10% 0%)",ease:"power4.out"},"jdi")}const s=document.querySelector("#ovalPath");if(s){const e=s.getTotalLength();gsap.set(s,{strokeDasharray:e,strokeDashoffset:e}),gsap.to(s,{strokeDashoffset:0,ease:"power2.out",scrollTrigger:{trigger:s,start:"top 60%",end:"top 10%",toggleActions:"play none none reverse",scrub:!0}})}let d=gsap.timeline({scrollTrigger:{trigger:".bridge-the-gap-section-outer",start:"top 0%",end:window.innerWidth>767?"500% 100%":"600% 100%",markers:!1,scrub:!0,pin:!0,pinSpacing:!0}});d.from(".slide-left-container-1",{x:"220%",ease:"power4.out"},"bridge-1"),d.from(".bridge-title-2",{x:"620%",ease:"power4.out"},"bridge-1"),d.to(".bridge-title-1",{opacity:.4,ease:"power4.out"},"bridge-1"),d.fromTo(".bridge-the-gap-span",{x:"120%"},{x:"80%",ease:"power4.out"},"bridge-1"),d.to(".bridge-the-gap-sticky-line",{width:"40%",ease:"power4.out"},"bridge-1"),d.from(".slide-left-container-2",{x:"220%",ease:"power4.out"},"bridge-2"),d.from(".bridge-title-3",{x:"500%",ease:"power4.out"},"bridge-2"),d.to(".bridge-title-2",{opacity:.4,ease:"power4.out"},"bridge-2"),d.to(".bridge-the-gap-span",{x:"50%",ease:"power4.out"},"bridge-2"),d.to(".bridge-the-gap-sticky-line",{width:"60%",ease:"power4.out"},"bridge-2"),d.from(".slide-left-container-3",{x:"220%",ease:"power4.out"},"bridge-3"),d.from(".bridge-title-4",{x:"500%",ease:"power4.out"},"bridge-3"),d.to(".bridge-title-3",{opacity:.4,ease:"power4.out"},"bridge-3"),d.to(".bridge-the-gap-span",{x:"25%",ease:"power4.out"},"bridge-3"),d.to(".bridge-the-gap-sticky-line",{width:"80%",ease:"power4.out"},"bridge-3"),d.from(".slide-left-container-4",{x:"220%",ease:"power4.out"},"bridge-4"),d.from(".bridge-title-5",{x:"500%",ease:"power4.out"},"bridge-4"),d.to(".bridge-the-gap-span",{x:"0%",ease:"power4.out"},"bridge-4"),d.to(".bridge-title-4",{opacity:.4,ease:"power4.out"},"bridge-4"),d.to(".bridge-the-gap-sticky-line",{width:"100%",ease:"power4.out"},"bridge-4");let p=gsap.timeline({scrollTrigger:{trigger:".section_footer",start:window.innerWidth>=767?"20% 100% ":"20% 80%",end:window.innerWidth>=767?"150% 20%":"150% 50%",markers:!1,scrub:!0,pin:!0}});p.to(".bridge-the-gap-sticky",{y:"-70%",opacity:0},"a"),p.to(".steps_section",{backgroundColor:"#171f24"},"a"),p.to(".footer",{backgroundColor:"#171f24"},"a"),p.to(".bridge-the-gap-left",{transform:"translateX(45%)",scale:2,color:"#fff"},"a"),p.to(".bridge-the-gap-span",{transform:"translate(-45%, 110%)",scale:2,color:"#fff"},"a")}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",initAnimations):initAnimations(),gsap.registerPlugin(ScrollTrigger);const isSafari=/^((?!chrome|android|crios|fxios).)*safari/i.test(navigator.userAgent);if(!isSafari){gsap.utils.toArray(".animation_title").forEach((e=>{const t=new SplitType(e,{types:"words, chars"}).chars;gsap.fromTo(t,{opacity:.2,transformOrigin:"50% 0%",willChange:"transform",x:2},{opacity:1,x:0,ease:"sine.in",stagger:{each:.02,from:"start"},scrollTrigger:{trigger:e,start:"50% 80%",end:"50% 70%",scrub:1,markers:0}})}))}document.addEventListener("contextmenu",(function(e){e.preventDefault()})),console.log(Object.defineProperties(new Error,{toString:{value(){(new Error).stack.includes("toString@")&&alert("Safari devtools")}},message:{get(){alert("Close the Devtool")}}})),document.onkeydown=function(e){switch(e.keyCode){case 123:case"I".charCodeAt(0):case"J".charCodeAt(0):case"U".charCodeAt(0):case"C".charCodeAt(0):return!1}},document.querySelector(".hamburger").addEventListener("click",(function(e){e.preventDefault(),this.classList.toggle("is-active"),document.querySelector(".popover-menu").classList.toggle("is-active"),document.querySelector(".section-container").classList.toggle("is-active")}));
+import { BlurScrollEffect } from "./blurScrollEffect.js";
+gsap.registerPlugin(ScrollTrigger);
+const lenis = new Lenis({ duration: 1.5, smooth: !0, lerp: 0.06, wheelMultiplier: 0.7 });
+(lenis.on("scroll", () => {
+  ScrollTrigger.update();
+}),
+  gsap.ticker.add(e => {
+    lenis.raf(1e3 * e);
+  }),
+  gsap.ticker.lagSmoothing(0));
+const numLeft = document.getElementById("numLeft"),
+  numRight = document.getElementById("numRight"),
+  leftRect = numLeft.getBoundingClientRect(),
+  rightRect = numRight.getBoundingClientRect(),
+  targetLeftX = 80,
+  targetLeftY = 60,
+  targetRightX = window.innerWidth - 80 - rightRect.width,
+  targetRightY = 60;
+function initAnimations() {
+  let e = window.scrollY;
+  const t = document.querySelector(".header"),
+    o = document.querySelector("#bannerVideo"),
+    r = document.querySelector(".video2");
+  window.addEventListener("scroll", () => {
+    (window.scrollY > e ? t.classList.add("hidden") : t.classList.remove("hidden"), (e = window.scrollY));
+  });
+  const i = gsap.timeline({ delay: 2, ease: "power3.out" });
+  (i.to(".numbers-container", { zIndex: 999, ease: "power4.out" }, "pre-preloader"),
+    i.add(() => o.play()),
+    i.to(".header-video", { zIndex: 99, ease: "power4.out" }, "pre-preloader"),
+    i.to("#edible", { x: window.innerWidth >= 767 ? "-40%" : "-0%", y: window.innerWidth >= 767 ? "0%" : "-40%", duration: 0.7, ease: "power4.out" }, "preloader"),
+    i.to("#ventures", { x: window.innerWidth >= 767 ? "40%" : "0%", y: window.innerWidth >= 767 ? "0%" : "40%", duration: 0.7, ease: "power4.out" }, "preloader"),
+    i.to(".header-video", { zIndex: 101, ease: "power4.out" }, "preloader"),
+    i.to(".header", { opacity: 1, ease: "power4.out" }, "preloader"),
+    i.from(".header-video", { clipPath: "inset(100% 100% 100% 100%)", opacity: 0, duration: 1, ease: "power4.out" }, "preloader"),
+    i.to(".header-container", { marginRight: "0", duration: 1, ease: "power4.out" }, "preload2"),
+    i.to(".header-video", { width: "102vw", height: "100vh", duration: 1, ease: "power4.out" }, "preload2"),
+    i.add(() => r.play()),
+    i.to("#edible, #ventures", { x: "0%", duration: 1, ease: "power4.out" }, "preload2"),
+    i.to("#edible, #ventures", { opacity: 0, ease: "power4.out" }, "preload2"),
+    i.to(".number-left", { x: 80 - leftRect.left, y: 60 - leftRect.top, duration: 0.8, opacity: 0, ease: "power4.out" }, "preload2"),
+    i.to(".number-right", { x: targetRightX - rightRect.left, y: 60 - rightRect.top, duration: 0.8, opacity: 0, ease: "power4.out" }, "preload2"),
+    i.to("#bannerVideo", { opacity: 0, ease: "power4.out" }, "preload3"),
+    i.from(".video2", { opacity: 0, ease: "power4.out" }, "preload3"),
+    i.to(".number-right, .number-left", { opacity: 0, ease: "power4.out" }, "preload3"),
+    i.to(".header-banner-text", { zIndex: 102, ease: "power4.out" }, "preload3"),
+    i.from(".header .header-left, .header .header-right", { opacity: 0, ease: "power4.out" }, "preload3"),
+    i.from(".header-center", { y: -200, ease: "power4.out" }),
+    i.from(".horizontal-line", { clipPath: "inset(0 100% 0 0)", duration: 1, ease: "power4.out" }),
+    i.from(".upper-text div", { y: 600, duration: 0.8, ease: "power4.out" }, "together"),
+    i.from(".lower-text div", { y: -200, duration: 0.8, ease: "power4.out" }, "together"),
+    i.add(() => {
+      document.body.classList.remove("no-scroll");
+    }),
+    gsap.timeline({ scrollTrigger: { trigger: ".ticker_line_inner", start: "top 60% ", end: "bottom 10%", markers: !1, scrub: !0 } }).to(".ticker_line_inner", { width: "100%" }),
+    gsap
+      .timeline({ scrollTrigger: { trigger: ".ticker", start: "top 0%", end: "bottom 100%", markers: !1, scrub: !0, toggleActions: "play none none reverse" } })
+      .to(".header-container", { display: "none" }),
+    gsap.utils.toArray(".reveal-left").forEach(e => {
+      gsap.from(e, { clipPath: "inset(0 100% 0 0)", ease: "power3.out", scrub: !0, scrollTrigger: { trigger: e, start: "top 80%", scrub: !0, toggleActions: "play none none reverse" } });
+    }),
+    gsap.timeline({ scrollTrigger: { trigger: ".business_tool_line", start: "top 60% ", end: "250% 60%", scrub: !0 } }).to(".business_tool_line_inner", { height: "100%" }));
+  let n = gsap.timeline({ scrollTrigger: { trigger: ".business_tool_inner", start: "top 0% ", end: "250% 0%", scrub: !0, pin: !0 } });
+  (n.from(".business_design", { clipPath: "inset(0 100% 0 0)", opacity: 1 }),
+    n.from(".business_development", { clipPath: "inset(0 100% 0 0)", opacity: 1 }),
+    n.from(".business_launch", { clipPath: "inset(0 100% 0 0)", opacity: 1 }),
+    n.to(".business_tool_inner_two_first", { opacity: 1 }),
+    n.from(".business_tool_inner_two_first .business_tool_inner_line", { clipPath: "inset(0 90% 0 0 )", ease: "power4.out" }),
+    n.from(".business_tool_inner_two_second .business_tool_inner_line", { clipPath: "inset(0 90% 0 0)", ease: "power4.out" }),
+    n.from(".business_tool_inner_two_second .business_tool_inner_text", { opacity: 0 }),
+    gsap
+      .timeline({
+        scrollTrigger: { trigger: ".venture_tranform", start: window.innerWidth >= 767 ? "top 70%" : "5% 100%", end: window.innerWidth >= 767 ? "50% 70%" : "10% 90%", markers: !1, scrub: !0 },
+      })
+      .from(".venture_tranform-div", { width: "90vw", height: "80vh", scale: 0.7, y: "-50%" }));
+  let a = gsap.timeline({ scrollTrigger: { trigger: ".venture_tranform1", start: "top 0% ", end: window.innerWidth >= 767 ? "150% 100%" : "250% 100%", scrub: !0, pin: !0, pinSpacing: !0 } });
+  if (
+    (a.from(".venture_tranform-img", { opacity: 0, y: "-100%", stagger: 0.1, ease: "power4.out" }, "thisshouldo"),
+    a.fromTo(".venture_tranform_line_inner", { width: 0 }, { width: "100%", ease: "power4.out" }),
+    a.from(".fade-last", { opacity: 0, ease: "power4.out" }),
+    gsap
+      .timeline({ scrollTrigger: { trigger: ".text-banner-section", start: "top 0%", end: "bottom 100%", markers: !1, scrub: !0, toggleActions: "play none none reverse" } })
+      .from(".reveal-image", { clipPath: "inset(0 0% 0 0)", ease: "power3.out", scrub: !0 }),
+    window.innerWidth > 768)
+  ) {
+    let e = gsap.timeline({ scrollTrigger: { trigger: ".text-banner-section", start: "top top", end: "200% top", scrub: !0, pin: !0 } });
+    (e.from(".fade-in-img", { opacity: 0, ease: "power4.out" }, "asdf"),
+      e.to(".text-banner-text-1", { opacity: 1, ease: "power4.out" }, "asdf"),
+      e.to(".text-banner-text-1", { opacity: 0.2, ease: "power4.out" }, "qwer"),
+      e.to(".text-banner-text-2", { opacity: 1, ease: "power4.out" }, "qwer"),
+      e.to(".expand-img-1", { width: "20%" }, "qwer"),
+      e.to(".expand-img-2", { width: "60%" }, "qwer"),
+      e.to(".text-banner-text-2", { opacity: 0.2, ease: "power4.out" }, "ret"),
+      e.to(".text-banner-text-3", { opacity: 1, ease: "power4.out" }, "ret"),
+      e.to(".expand-img-2", { width: "20%" }, "ret"),
+      e.to(".expand-img-3", { width: "60%" }, "ret"),
+      e.fromTo(".fade-in-img-5", { opacity: -1e3 }, { opacity: 1, clipPath: "inset(0 0% 30% 0%)", ease: "power4.out" }, "jdi"),
+      e.to(".hidden-text .business_tool_inner_line", { clipPath: "inset(0 0% 10% 0%)", ease: "power4.out" }, "jdi"),
+      e.to(".fade-in-img-5", { opacity: 1, clipPath: "inset(0 0% 100% 0%)", ease: "power4.out" }));
+  } else {
+    let e = gsap.timeline({ scrollTrigger: { trigger: ".text-banner-section", start: "top top", end: "250% top", scrub: !0, pin: !0 } });
+    (e.from(".fade-in-img", { opacity: 0, ease: "power4.out" }, "asdf"),
+      e.to(".text-banner-text-1", { opacity: 1, ease: "power4.out" }, "asdf"),
+      e.to(".text-banner-text-1", { opacity: 0.2, ease: "power4.out" }, "qwer"),
+      e.to(".text-banner-text-2", { opacity: 1, ease: "power4.out" }, "qwer"),
+      e.to(".expand-img-1", { width: "0%" }, "qwer"),
+      e.to(".expand-img-2", { width: "100%" }, "qwer"),
+      e.to(".text-banner-text-2", { opacity: 0.2, ease: "power4.out" }, "ret"),
+      e.to(".text-banner-text-3", { opacity: 1, ease: "power4.out" }, "ret"),
+      e.to(".expand-img-2", { width: "0%" }, "ret"),
+      e.to(".expand-img-3", { width: "100%" }, "ret"),
+      e.to(".hidden-text .business_tool_inner_line", { clipPath: "inset(0 0% 10% 0%)", ease: "power4.out" }, "jdi"));
+  }
+  const s = document.querySelector("#ovalPath");
+  if (s) {
+    const e = s.getTotalLength();
+    (gsap.set(s, { strokeDasharray: e, strokeDashoffset: e }),
+      gsap.to(s, { strokeDashoffset: 0, ease: "power2.out", scrollTrigger: { trigger: s, start: "top 60%", end: "top 10%", toggleActions: "play none none reverse", scrub: !0 } }));
+  }
+  let d = gsap.timeline({
+    scrollTrigger: { trigger: ".bridge-the-gap-section-outer", start: "top 0%", end: window.innerWidth > 767 ? "500% 100%" : "600% 100%", markers: !1, scrub: !0, pin: !0, pinSpacing: !0 },
+  });
+  (d.from(".slide-left-container-1", { x: "220%", ease: "power4.out" }, "bridge-1"),
+    d.from(".bridge-title-2", { x: "620%", ease: "power4.out" }, "bridge-1"),
+    d.to(".bridge-title-1", { opacity: 0.4, ease: "power4.out" }, "bridge-1"),
+    d.fromTo(".bridge-the-gap-span", { x: "120%" }, { x: "80%", ease: "power4.out" }, "bridge-1"),
+    d.to(".bridge-the-gap-sticky-line", { width: "40%", ease: "power4.out" }, "bridge-1"),
+    d.from(".slide-left-container-2", { x: "220%", ease: "power4.out" }, "bridge-2"),
+    d.from(".bridge-title-3", { x: "500%", ease: "power4.out" }, "bridge-2"),
+    d.to(".bridge-title-2", { opacity: 0.4, ease: "power4.out" }, "bridge-2"),
+    d.to(".bridge-the-gap-span", { x: "50%", ease: "power4.out" }, "bridge-2"),
+    d.to(".bridge-the-gap-sticky-line", { width: "60%", ease: "power4.out" }, "bridge-2"),
+    d.from(".slide-left-container-3", { x: "220%", ease: "power4.out" }, "bridge-3"),
+    d.from(".bridge-title-4", { x: "500%", ease: "power4.out" }, "bridge-3"),
+    d.to(".bridge-title-3", { opacity: 0.4, ease: "power4.out" }, "bridge-3"),
+    d.to(".bridge-the-gap-span", { x: "25%", ease: "power4.out" }, "bridge-3"),
+    d.to(".bridge-the-gap-sticky-line", { width: "80%", ease: "power4.out" }, "bridge-3"),
+    d.from(".slide-left-container-4", { x: "220%", ease: "power4.out" }, "bridge-4"),
+    d.from(".bridge-title-5", { x: "500%", ease: "power4.out" }, "bridge-4"),
+    d.to(".bridge-the-gap-span", { x: "0%", ease: "power4.out" }, "bridge-4"),
+    d.to(".bridge-title-4", { opacity: 0.4, ease: "power4.out" }, "bridge-4"),
+    d.to(".bridge-the-gap-sticky-line", { width: "100%", ease: "power4.out" }, "bridge-4"));
+  let p = gsap.timeline({
+    scrollTrigger: { trigger: ".section_footer", start: window.innerWidth >= 767 ? "20% 100% " : "20% 80%", end: window.innerWidth >= 767 ? "150% 20%" : "150% 50%", markers: !1, scrub: !0, pin: !0 },
+  });
+  (p.to(".bridge-the-gap-sticky", { y: "-70%", opacity: 0 }, "a"),
+    p.to(".steps_section", { backgroundColor: "#171f24" }, "a"),
+    p.to(".footer", { backgroundColor: "#171f24" }, "a"),
+    p.to(".bridge-the-gap-left", { transform: "translateX(45%)", scale: 2, color: "#fff" }, "a"),
+    p.to(".bridge-the-gap-span", { transform: "translate(-45%, 110%)", scale: 2, color: "#fff" }, "a"));
+}
+("loading" === document.readyState ? document.addEventListener("DOMContentLoaded", initAnimations) : initAnimations(), gsap.registerPlugin(ScrollTrigger));
+const isSafari = /^((?!chrome|android|crios|fxios).)*safari/i.test(navigator.userAgent);
+if (!isSafari) {
+  gsap.utils.toArray(".animation_title").forEach(e => {
+    const t = new SplitType(e, { types: "words, chars" }).chars;
+    gsap.fromTo(
+      t,
+      { opacity: 0.2, transformOrigin: "50% 0%", willChange: "transform", x: 2 },
+      { opacity: 1, x: 0, ease: "sine.in", stagger: { each: 0.02, from: "start" }, scrollTrigger: { trigger: e, start: "50% 80%", end: "50% 70%", scrub: 1, markers: 0 } },
+    );
+  });
+}
+(document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+}),
+  console.log(
+    Object.defineProperties(new Error(), {
+      toString: {
+        value() {
+          new Error().stack.includes("toString@") && alert("Safari devtools");
+        },
+      },
+      message: {
+        get() {
+          alert("Close the Devtool");
+        },
+      },
+    }),
+  ),
+//   (document.onkeydown = function (e) {
+//     switch (e.keyCode) {
+//       case 123:
+//       case "I".charCodeAt(0):
+//       case "J".charCodeAt(0):
+//       case "U".charCodeAt(0):
+//       case "C".charCodeAt(0):
+//         return !1;
+//     }
+//   }),
+  document.querySelector(".hamburger").addEventListener("click", function (e) {
+    (e.preventDefault(),
+      this.classList.toggle("is-active"),
+      document.querySelector(".popover-menu").classList.toggle("is-active"),
+      document.querySelector(".section-container").classList.toggle("is-active"));
+  }));
