@@ -1987,9 +1987,6 @@ textarea {
     transition: all 1s ease-in;
     transform: translateX(0%);
   }
-  .steps_boxes:hover {
-    transform: translateX(-50%);
-  }
   .read-more-button,.go-back-button {
     border: 1px solid currentColor;
     padding: 5px 10px;

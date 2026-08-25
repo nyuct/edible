@@ -331,3 +331,7 @@
 .pt-0 {
   padding-top: 0;
 }
+
+.tabs-header.labs {
+  justify-content: space-around;  
+}
