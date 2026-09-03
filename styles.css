@@ -802,9 +802,8 @@ video::-webkit-media-controls {
   padding: 200px 80px;
 }
 .step_box {
-  max-width: 1400px;
   margin: 0 auto !important;
-  padding: 40px 0px 30px;
+  padding: 40px 0px 40px;
   height: 100%;
   max-height: 160px;
   justify-content: space-evenly;
@@ -899,7 +898,7 @@ video::-webkit-media-controls {
 }
 .steps-text .left-side {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 20px;
   justify-content: space-between;
 }
@@ -917,7 +916,6 @@ video::-webkit-media-controls {
 }
 .steps-text-img {
   width: 100%;
-  margin-right: 20px;
   transition: all 1.5s;
   opacity: 0;
 }
@@ -1980,23 +1978,233 @@ textarea {
   }
   .step_opened {
     width: 100%;
-    margin: 0px 100px !important;
+    margin: 0px 0px 0 0 !important;
   }
-  .steps_boxes  {
-    width: max-content;
+  .steps_boxes {
+    width: 200%;
     transition: all 1s ease-in;
     transform: translateX(0%);
   }
-  .read-more-button,.go-back-button {
+  .read-more-button,
+  .go-back-button {
     border: 1px solid currentColor;
     padding: 5px 10px;
     width: max-content;
   }
 }
-
+.projec-details {
+  overflow: hidden;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+.read-more-button {
+  cursor: pointer;
+}
 
 @media (max-width: 768px) and (min-width: 1024px) {
   .mySwiper .slider-bg {
     min-height: 50vh;
+  }
+}
+
+.tabs-header {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #999;
+  padding-block: 24px;
+  justify-content: space-between;
+  background-color: #ede5d3;
+  position: sticky;
+  top: 0px;
+}
+.tab-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #999;
+  cursor: pointer;
+  /* padding-bottom: 10px; */
+  position: relative;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.tab-btn.active {
+  color: #222;
+  font-weight: 600;
+}
+
+.tab-btn.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -25px;
+  width: 100%;
+  height: 2px;
+  background: #222;
+}
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.journey {
+  max-width: 100vw;
+  overflow: hidden;
+  padding-bottom: 200px;
+  padding-left: 100px;
+}
+.timeline-wrapper {
+  width: max-content;
+  max-width: 200vw;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.zero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.zero-text {
+  font-size: 120px;
+  font-family: "Erode", serif;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+}
+.zero_heading {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+}
+.time_heading {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+}
+.time-fade {
+  opacity: 0;
+}
+.zero-img {
+  width: 100px;
+  height: 100px;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-color: #000000;
+  border-radius: 200px;
+}
+.time-one {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 500px;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+.time-two {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 500px;
+  position: absolute;
+  top: 80%;
+  left: -3%;
+  flex-direction: row-reverse;
+
+  .time_heading {
+    text-align: right;
+    width: 50%;
+  }
+}
+.time-three {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 500px;
+  position: absolute;
+  top: 60%;
+  left: 25%;
+}
+.time-four {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 500px;
+  position: absolute;
+  top: 100%;
+  left: 35%;
+  .time_heading {
+    width: 50%;
+  }
+}
+.time-five {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 500px;
+  position: absolute;
+  top: 85%;
+  left: 49%;
+}
+.time-six {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 500px;
+  position: absolute;
+  top: 30%;
+  left: 55%;
+}
+.time-seven {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 500px;
+  position: absolute;
+  top: 62%;
+  left: 67%;
+  .time_heading {
+    width: 50%;
+  }
+}
+.time-eight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 500px;
+  position: absolute;
+  top: 15%;
+  left: 79%;
+  .time_heading {
+    width: 50%;
+  }
+}
+.time-nine {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 500px;
+  position: absolute;
+  top: 49%;
+  left: 85%;
+  .time_heading {
+    width: 50%;
+  }
+}
+.time-ten {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 20px;
+  width: 300px;
+  position: absolute;
+  top: 69%;
+  left: 87%;
+  .time_heading {
+    width: 30%;
   }
 }
