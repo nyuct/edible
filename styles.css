@@ -2208,3 +2208,18 @@ textarea {
     width: 30%;
   }
 }
+.project-hero {
+  margin-inline: 80px;
+  padding-top: 50px;
+
+  .project-hero-img {
+    margin-top: 50px;
+  }
+  h1{
+    font-size: var(--font-h1);
+    font-family: "Erode", serif;
+    font-weight: 400;
+    color: #313e47;
+    line-height: 1;
+  }
+}
